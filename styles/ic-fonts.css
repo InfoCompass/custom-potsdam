@@ -1,0 +1,26 @@
+html,
+ic-tag,
+ic-page .tiles > * > small,
+.bubble
+{
+	font-family:				Calibri, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+ic-page p,
+ic-page a.boxed,
+ic-page .tiles > *,
+ic-page p,
+ic-page a.boxed
+{
+	font-family: 				Calibri, sans-serif;
+}
+
+
+ic-header ic-main-menu {
+	font-family: 				Calibri, sans-serif;
+}
+
+ic-header ic-main-menu ul > li > ul > li {
+	font-family: 				Calibri, sans-serif;
+}
