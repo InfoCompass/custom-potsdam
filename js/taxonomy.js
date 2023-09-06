@@ -217,15 +217,6 @@
 			'free_pc_usage',		// Kostenlose PC Nutzung
 		],
 
-		
-		default_languages: [
-			'arabic', 			//	Arabisch
-			'english', 			//	Englisch
-			'french', 			//	Französisch
-			'russian', 			//	Russisch
-			'turkish', 			//	Türkisch
-		],
-
 		languages: [
 			'albanian', 		//	Albanisch
 			'amharic', 			//	Amharisch
