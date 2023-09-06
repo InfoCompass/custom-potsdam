@@ -23,7 +23,8 @@
                                             "accessibility",
                                             "privacy", 
                                             "funding",
-                                            "legal"
+                                            "legal",
+                                            "tags"
                                         ],
                 
                 "adminPages":           [
