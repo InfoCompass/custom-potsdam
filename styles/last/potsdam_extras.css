@@ -20,6 +20,16 @@ ic-header .logo ic-logo-full {
 	margin-top: 				0.5rem;
 }
 
+ic-logo-line{
+	display:						inline-block;
+	background-image:				url(/images/large/logo_line.svg);
+	background-repeat:				no-repeat;
+	background-size:				16rem 0.7em;
+	background-position: 			0 77%;
+	height:							1em;
+	width:							10em;
+}
+
 /* main menu*/
 
 ic-header ic-main-menu  {
