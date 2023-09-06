@@ -17,158 +17,125 @@
 
 		{
 			name:	'encounters',			//Begegnung
-			colors:	['#4fb1ff'],
+			colors:	['#4FB1FF'],
 			tags:	[
-						'encounters_games',			// Gemeinsames Spielen
-						'encounters_dining',		// Essen und Trinken
-						'encounters_tea',			// Kaffeetrinken und Beisammensein
-						'encounters_groups',		// Feste Gruppentreffen
-						'encounters_conversations',	// Offene Gesprächskreise
-						'encounters_tanztee',		// Tanztee
-						'encounters_dating',		// Kennenlerntreffen (Dating)
-						'encounters_gardening',		// Gemeinsames Gärtnern
-
-						'encounters_collectors',	// Sammelleidenschaften !!
-						'encounters_parties'		// Feste und Feiern !!
-
-					]
-		},
-
-		{
-	
-			name:	'arts',					//Kunst und Kreativität
-			colors:	['#da535e'],
-			tags: 	[
-						'arts_paint_craft', // Mal- und Bastelkurse
-						'arts_choir', 		// Singen und Chor
-						'arts_handicrafts',	// Handarbeit !!
-						'arts_cosmetic',	// Kosmetik
-						'arts_misc'			// Andere künstlerische Angebote
-					]
-		},
-
-		{
-			name:	'culture',				//Gesellschaft_Kultur_Politik
-			colors:	['#488ec5'],
-			tags: 	[
-						'culture_trips',					// Ausflüge und Exkursionen
-						'culture_meetings',					// Informationstreffen
-						'culture_music_theatre_film',		// Musik, Theater, Film
-						'culture_literature', 				// Literatur
-						'culture_politics', 				// Politische Themen
-						'culture_culture',					// Kulturelle Themen
-						'culture_relegion',					// Religiöse Themen
-						'culture_environment',				// Klima, Natur und Umwelt
-						'culture_senior_represantatives'	// Sprechstunden der Seniorenvertretungen
-					]
-		},
-
-		{
-			name:	'exercise',				//Bewegung_und_Gesundheit
-			colors:	['#bb53bb'],
-			tags:	[
-						'exercise_motor',			// Bewegungsangebote
-						'exercise_dance',			// Tanzgruppe
-						'exercise_walking',			// Spazieren gehen und wandern
-						'exercise_self_help',		// Selbsthilfegruppen
-						'exercise_memory',			// Gedächtnistraining
-						'exercise_parcours',		// Aktivplätze und Bewegungsparcours
-						'exercise_fall_prevention'	// Sturzprävention
-
-					]
-		},
-
-		{
-			name:	'intercultural',		//Sprachen_und_Interkulturelles
-			colors:	['#f29d22'],
-			tags:	[
-						'intercultural_language_course',	// Sprachkurse
-						'intercultural_language_specific', 	// Sprachspezifische Angebote
-						'intercultural_encounters'			// Interkulturelle Treffen
-
-					],
-		},
-
-		{
-			name:	'it',					//Computer_und_Technik
-			colors:	['#f36a07'],
-			tags: 	[
-						'it_courses',	// Kurse und Lernmöglichkeiten
-						'it_seniors',	// Technik und Alter
-						'it_lending',	// Leihmöglichkeiten von Tablets und Smartphones
-						//'it_free_wifi'	// Kostenlose WLAN - Hotspots !!
-					]
-		},
-
-		{
-			name:	'support',				//Alltagshilfen_Ehrenamt
-			colors:	['#729052'],
-			tags: 	[
-						'support_open_lunch',			// Offener Mittagstisch
-						'support_meals_on_wheels',		// Essen auf Rädern
-						'support_give_away',			// Kleiderkammer, Bücherbasar
-						'support_neighborhood', 		// Einkaufshilfen und Nachbarschaftshilfen
-														// Monilitätsdienste??
-						'support_visiting_service',		// Besuchsdienste
-						'support_repairs',				// Reparaturhilfe
-						'support_helpline', 			// Telefonseelsorge
-						'support_public_restrooms',		// Öffentliche Toiletten
-						'support_mobility'				// Mobilitätshilfedienste
+						'encounters_meet',
+						'encounters_play',
+						'encounters_eatndrink',
+						'encounters_groups',
+						'encounters_conversations',
+						'encounters_gardening',
+						'encounters_party'
 					]
 		},
 
 		{
 			name:	'counseling',			//Beratung
-			colors:	['#62aa54'],
+			colors:	['#966CE1'],
 			tags: 	[
-						'counseling_social', 	// Sozialberatung
-						'counseling_debt', 		// Schuldnerberatung
-						'counseling_tenant',	// Mieterberatung
-						'counseling_housing',	// Wohnberatung
-						'counseling_migration',	// Migrationsberatung
-						'counseling_pension',	// Rentenberatung
-						'counseling_police',	// Polizeiberatung
-						'counseling_volunteers',// Ehrenamtsberatung !!
-						'counseling_legal'		// Rechtsberatung !!
+						'counseling_social',
+				    'counseling_housing',
+				    'counseling_care',
+				    'counseling_legal',
+				    'counseling_pension',
+				    'counseling_volunteers'
+					]
+		},
+
+		{
+			name:	'exercise',				//Bewegung_und_Gesundheit
+			colors:	['#A0C543'],
+			tags:	[
+						'exercise_walk',
+				    'exercise_sports',
+				    'exercise_dance',
+				    'exercise_memory',
+				    'exercise_prevention',
+				    'exercise_nutrition'
+
+					]
+		},
+
+		{
+		  name: 'education',
+		  colors: ['#F29D22'],
+		  tags:   [
+		        'education_language',
+		        'education_internet',
+		        'education_health',
+		        'education_learning',
+		        'education_misc'
+		      ]
+		},
+
+		{
+	
+			name:	'arts',					//Kunst und Kreativität
+			colors:	['#DA535E'],
+			tags: 	[
+						'arts_paint_craft',
+						'arts_handicrafts',
+						'arts_choir',
+						'arts_music',
+						'arts_fotographie',
+						'arts_literature',
+						'arts_excursions'
+					]
+		},
+
+		{
+		  name: 'society',
+		  colors: ['#488EC5'],
+		  tags:   [
+		        'society_volunteering',
+		        'society_politics',
+		        'society_religion',
+		        'society_enviroment',
+		        'society_information'
+		      ]
+		},
+
+		{
+			name:	'it',					//Computer_und_Technik
+			colors:	['#F36A07'],
+			tags: 	[
+						'it_courses',	// Kurse und Lernmöglichkeiten
+						'it_seniors',	// Technik und Alter
+						'it_lending',	// Leihmöglichkeiten von Tablets und Smartphones
+						'it_repair'
+					]
+		},
+
+		{
+			name:	'support',				//Alltagshilfen_Ehrenamt
+			colors:	['#D878E3'],
+			tags: 	[
+						'support_open_lunch',			// Offener Mittagstisch
+						'support_meals_on_wheels',		// Essen auf Rädern
+						'support_give_away',			// Kleiderkammer, Bücherbasar
+						'support_neighborhood', 		// Einkaufshilfen und Nachbarschaftshilfen
+						'support_visiting_service',		// Besuchsdienste
+						'support_helpline', 			// Telefonseelsorge
+						'support_support_groups'
 					]
 		},
 
 		{
 			name:	'care',					//Rund_um_die_Pflege	
-			colors:	['#00adc3'],
+			colors:	['#00ADC3'],
 			tags: 	[
-						'care_consulting',				// Pflegeberatung
-						'care_in_facility',				// Angebote in Pflegeeinrichtungen
-						'care_services',				// Betreuungsangebote
-						'care_relief_everyday_life',	// Entlastung im Alltag
-						'care_relief_caregivers',		// Entlastung Pflegender
-						'care_dementia'					// Angebote für Demenzkranke und deren Angehörige
-
-			]
-		},
-
-		{
-			name:	'medical',				//Medizinische Angebote 
-			colors:	['#D878E3'],
-			tags:	[]
-		},
-
-
-		{
-			name:	'housing',				//Wohnen
-			colors:	['#ebc000'],
-			tags: 	[
-						'housing_assisted', 	// Wohnen mit Service
-						'housing_smart',		// Smart Wohnen
-						'housing_project'		// Wohnprojekte
-
+						'care_facility',
+						'care_consulting',
+						'care_relief_everyday_life',
+						'care_relief_caregivers',
+						'care_dementia'
 			]
 		},
 
 
 		{
 			name:	'misc_category',					//Sonstige_Angebote
-			colors:	['#966ce1'],
+			colors:	['#9CAEC2'],
 			tags: 	[]
 		},
 
