@@ -4,7 +4,6 @@
                 "frontendLocation":     "http://78.46.152.176:8099",
                 "publicItems":          "http://78.46.152.176:3005/items",
                 "publicApi":            "http://78.46.152.176:3005",
-                "tilesUrl":             "https://place.sanliegen.com/wp-json/wp/v2/kacheln",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
                 "disableLists":         true,
@@ -13,26 +12,18 @@
                 "activeIconColor":      "#373475",
                 "plainIconColor":       "#666666",
                 "pages":                [
-                                            "home", 
-                                            "tags", 
+                                            "manual",
+                                            "accessible_language",
+                                            "digitaloffers_potsdam",
+                                            "stuetzpunkt_potsdam",
                                             "about",
-                                            "volunteers", 
-                                            "project_partners",
-                                            "accessibility", 
-                                            "legal", 
-                                            "contact", 
-                                            "tiles", 
-                                            "manual", 
-                                            "accessible_language", 
-                                            "privacy",
-                                            "press",
-                                            "emergency_numbers",
-                                            "feedback",
-                                            "info_boxes",
-                                            "tablet_courses",
-                                            "howto_suggestions",
-                                            "polizei",
-                                            "districts"
+                                            "newsletter",
+                                            "cooperation",
+                                            "contact",
+                                            "accessibility",
+                                            "privacy", 
+                                            "funding",
+                                            "legal"
                                         ],
                 
                 "adminPages":           [
@@ -56,7 +47,7 @@
 		},
 		"sharing": {
 				"twitter": {
-						"hashtag": "seniorennetz-berlin"
+						"hashtag": "mittendrin-in-potsdam"
 				},
 				"email": true,
                 "facebook"  :   true,
