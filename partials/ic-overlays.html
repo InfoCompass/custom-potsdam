@@ -1,0 +1,108 @@
+<ic-language-menu 		
+	ng-class 	= "{'ic-hide': !ic.overlays.show.languageMenu}" 	
+	class 		= "bg-0 right"
+	focus-me = "ic.overlays.show.languageMenu"
+	ic-tab-group
+>	
+</ic-language-menu>	
+
+<ic-main-menu			ng-class = "{'ic-hide': !ic.overlays.show.mainMenu}"		class = "bg-0 left" ic-plain = "true">			</ic-main-menu>
+ 
+<ic-spinner				ng-class = "{'ic-hide': !ic.overlays.show.spinner}" 		active = "true">								</ic-spinner>
+
+<ic-sharing-menu 		ng-class = "{'ic-hide': !ic.overlays.show.sharingMenu}" 	class = "bg-0 center">							</ic-sharing-menu>
+
+<ic-confirmation-modal	
+	ng-if 			= "ic.overlays.show.confirmationModal" 				
+	class 			= "bg-0 center"
+	focus-me		= "ic.overlays.show.confirmationModal"
+>							
+</ic-confirmation-modal>
+
+<ic-popup				
+	ng-if 			= "ic.overlays.show.popup" 							
+	class 			= "bg-0 center"
+	ic-focus-me 	= "ic.overlays.show.popup"
+>		
+</ic-popup>
+
+<ic-auto-popup				
+	ng-if 			= "ic.overlays.show.autoPopup" 							
+	class 			= "bg-0 center"
+	ic-focus-me 	= "ic.overlays.show.autoPopup"
+>		
+</ic-auto-popup>
+
+<ic-taxonomy-filter 	
+	ng-class 	= "{'ic-hide': !ic.overlays.show.taxonomyFilter}" 	
+	class 		= "bg-1 left"
+	focus-me	= "ic.overlays.show.taxonomyFilter"
+	ic-tab-group
+>
+	
+</ic-taxonomy-filter >
+
+<ic-lor-filter			ng-class = "{'ic-hide': !ic.overlays.show.lorFilter}" 		class = "bg-0 center">							</ic-lor-filter >
+
+
+
+<ic-item-proposal-preview 
+	ng-if 		= "ic.overlays.show.itemProposalPreview"
+	class		= "bg-0 center max"
+	ic-proposal = "ic.overlays.messages.itemProposalPreview[0]"
+	ic-item		= "ic.site.activeItem"
+></ic-item-proposal-preview>
+
+
+
+<ic-taxonomy-overlay	
+	ng-class	= "{'ic-hide' :!ic.overlays.show.taxonomyOverlayCategories}"		
+	class 		= "bg-0 center max" 
+	ic-expand 	= "'categories'"
+	focus-me	= "ic.overlays.show.taxonomyOverlayCategories"
+	ic-tab-group
+></ic-taxonomy-overlay>
+
+
+<ic-taxonomy-overlay	
+	ng-class	= "{'ic-hide': !ic.overlays.show['taxonomyOverlay_'+key]}"		
+	class 		= "bg-0 center max" 
+	ic-expand 	= "key"
+	ng-repeat	= "(key, tagGroup) in ic.taxonomy.tags"	
+	focus-me	= "ic.overlays.show['taxonomyOverlay_'+key]"
+	ic-tab-group
+></ic-taxonomy-overlay>
+
+<ic-taxonomy-overlay	
+	ng-class	= "{'ic-hide': !ic.overlays.show['taxonomyLorOverlay']}"		
+	class 		= "bg-0 center" 
+	ic-expand 	= "'lor'"
+	focus-me	= "ic.overlays.show['taxonomyLorOverlay']"
+	ic-tab-group
+></ic-taxonomy-overlay>
+
+
+
+<ic-login 
+	ng-if 				= "ic.overlays.show.login" 
+	class 				= "bg-0 center"
+>
+
+</ic-login>
+
+<div 
+	class 				=	"qrcode black full"
+	ng-click			=	"ic.overlays.toggle('qrcode')"
+	ng-if				=	"ic.overlays.show.qrcode"
+>
+	<qrcode 
+		version					=	"4" 
+		error-correction-level	=	"M" 
+		size					=	"200" 
+		data					=	"{{ic.site.activeItem | icItemLink}}"
+	>
+	</qrcode>
+	<div>{{ic.site.activeItem | icItemLink}}</div>
+</div>
+
+
