@@ -170,7 +170,18 @@
 			'men',				// Männer
 			'lgtbiq', 			// LSBTI*
 			'young_and_old',	// Jung und Alt
-		],	
+		],
+
+		districts: [
+			'bz_01',
+			'bz_02',
+			'bz_03',
+			'bz_04',
+			'bz_05',
+			'bz_06',
+			'bz_07',
+			'bz_08'
+		],
 
 		accessibility:[				
 			'wheelchair_accessible_wc',	// Rollstuhlgerechtes WC
