@@ -1,0 +1,83 @@
+<div 
+	class 				= "ng-hide" 
+	ic-auto-popup-trigger 
+	ic-popup-id 		= "feedback-23"
+	ic-popup-message	= "'CONTENT.POPUP_TOUR' | translate | markdown"
+></div>
+
+
+
+<header 
+	class 		= "image-01"
+>
+	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
+	<ic-carousel
+		ng-if			= "ic.layout.mode.name != 'XS'"
+		ic-images  		= "['image-01', 'image-02', 'image-03', 'image-04', 'image-05', 'image-06', 'image-07']"
+		ic-auto-turn	= "20000"
+	>
+	</ic-carousel>
+
+	<a 
+		class 		=	"image image-Alpha_Siegel"
+		ng-href		= 	"{{ {page:'accessible_language'} | icLink}}"
+		aria-label	=	"{{'ALT.ALPHA_SIEGEL' | translate}}"
+		title 		=	"{{'ALT.ALPHA_SIEGEL' | translate}}"
+	></a>
+	
+</header>	
+
+<article class = "search">	
+	
+	<ic-search 
+		ic-button-label = "ic.layout.mode.name != 'XS' ? ('INTERFACE.SEARCH' | translate) : true"
+	>
+	</ic-search>
+
+	<div ng-bind-html = "('CONTENT.HOME' | translate | markdown)">
+
+	</div>
+
+</article>
+
+
+<section>
+	<ic-tiles class = "tiles">
+	</ic-tiles>
+</section>
+
+
+
+<article class = "" id = "sponsors">
+
+	<div>
+		<h4 class = "">{{'INTERFACE.PROJECT_OF' | translate}}</h4>
+
+		<div class = "logos">
+			<a 
+				class 		= "image-AWO_Landesverband_b"
+				href		= "https://www.awoberlin.de/" 
+				aria-label	= "{{'ALT.LOGO_AWO_LANDESVERBAND' | translate}}"
+				title		= "{{'ALT.LOGO_AWO_LANDESVERBAND' | translate}}"
+			>				
+			</a>
+		</div>
+	</div>
+
+	<div>
+		<h4 class = "">{{'INTERFACE.SPONSORED_BY' | translate}}</h4>
+
+		<div class = "logos">
+			<a 
+				class 		= "image-LOGO_P_Lotto"
+				href		= "http://www.lotto-stiftung-berlin.de/" 
+				aria-label	= "{{'ALT.LOGO_LOTTO_STIFTUNG' | translate}}"
+				title		= "{{'ALT.LOGO_LOTTO_STIFTUNG' | translate}}"
+			>
+				
+			</a>				
+		</div>
+
+	</div>
+</article>
+
