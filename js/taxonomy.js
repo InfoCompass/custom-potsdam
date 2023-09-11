@@ -170,6 +170,8 @@
 			'men',				// Männer
 			'lgtbiq', 			// LSBTI*
 			'young_and_old',	// Jung und Alt
+			'care_needs',
+			'affiliated'
 		],
 
 		districts: [
@@ -255,12 +257,10 @@
 
 		institution_type: [
 			'meeting_place',			//Begegnungsstätte
-			'multigenerational_house', 	//Mehrgenerationenhaus
-			'district_center',			//Stadtteilzentrum
-			'family_center',			//Familienzentrum
 			'counseling_center',		//Beratungsstelle
-			'neighborhood_center',		//Nachbarschaftstreff
-			'misc_institution' 			//andere
+			'education',
+			'caring',
+			'other'
 		],
 
 		extra: [
