@@ -240,7 +240,7 @@ ic-item-property .title {
 }
 
 .card-header {
-  color: #373475;
+  color: #096402;
   font-weight: normal;
   line-height: 1.2;
   background-color: #D7D7E4;
@@ -252,13 +252,13 @@ ic-item-property .title {
   flex-direction: row-reverse; 
   justify-content: space-between;
   padding: 5px 10px;
-  color: #373475; 
+  color: #096402; 
   font-weight: lighter;
 }
 
 .card-bg-dark {
 	color: white;
-	background-color: #373475;
+	background-color: #096402;
 }
 
 .card-image {
