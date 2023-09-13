@@ -134,7 +134,7 @@
 
 
 		{
-			name:	'misc_category',					//Sonstige_Angebote
+			name:	'misc',					//Sonstige_Angebote
 			colors:	['#9CAEC2'],
 			tags: 	[]
 		},
