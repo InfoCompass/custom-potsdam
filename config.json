@@ -33,11 +33,11 @@
                                             "icons"
                                         ],
                 "map":{
-                                "center":               [52.428247,12.862607],
-                                "zoom":                 10,
-                                "minZoom":              11,
+                                "center":               [52.4284,13.0669],
+                                "zoom":                 13,
+                                "minZoom":              12,
                                 "maxZoom":              18,
-                                "maxBounds":            [[52.8,13.8],[52.2,13]],
+                                "maxBounds":            [[52.448477162829136,12.947438037317427], [52.3552640202125,13.145464909873466]],
                                 "maxClusterRadius":     60,
 
 				"tiles":		"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
