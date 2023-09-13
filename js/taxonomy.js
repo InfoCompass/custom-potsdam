@@ -46,7 +46,7 @@
 			name:	'exercise',				//Bewegung_und_Gesundheit
 			colors:	['#A0C543'],
 			tags:	[
-						'exercise_walk',
+					'exercise_walk',
 				    'exercise_sports',
 				    'exercise_dance',
 				    'exercise_memory',
