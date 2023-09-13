@@ -3,6 +3,7 @@
                 "xstatsLocation":        "https://stats.seniorennetz.berlin",
                 "frontendLocation":     "http://78.46.152.176:8099",
                 "publicItems":          "http://78.46.152.176:3005/items",
+                "tilesUrl":             "https://place.sanliegen.com/wp-json/wp/v2/kacheln",
                 "publicApi":            "http://78.46.152.176:3005",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
