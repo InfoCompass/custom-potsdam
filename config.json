@@ -27,7 +27,16 @@
                                             "funding",
                                             "legal"
                                         ],
-                
+                "remotePages":          {
+                                            "url": "https://place.sanliegen.com/wp-json/wp/v2/beitragsseiten",
+                                            "pages":{
+                                                "about" : 100
+                                            },
+                                            "map": {
+                                                "id":       "id",
+                                                "content":   "content.rendered"
+                                            }
+                                        },
                 "adminPages":           [
                                             "options", 
                                             "icons"
