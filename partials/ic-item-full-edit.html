@@ -443,6 +443,25 @@
 			</div>
 		</div>
 	</article>
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	
+	<!-- responsible -->
+
+	<article>
+		<div> <!-- spacer --> </div>
+		<div>
+			<h4> {{'ITEMS.RESPONSIBLE_INSTITUTION' | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-item					= "icItem"
+				ic-type 				= "string"
+				ic-key					= "responsibleInstitution"
+			></ic-item-property-edit>
+			
+		</div>
+	</article>
 	
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
@@ -543,6 +562,42 @@
 
 		</div>
 	</article>
+
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+	<!-- languages -->
+	<article 
+	    ng-repeat   =   "(key,value) in ic.taxonomy.tags"
+	    ng-if   =   "showAllLanguages ?  key == 'languages' : key == 'default_languages'"
+	  >
+	    <div> <!-- spacer --> </div>
+	    <div>
+	      <h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+
+	      <ic-item-property-edit
+	        ng-if           = "key != 'extra'"
+	        ic-item           = "icItem"
+	        ic-type           = "array"
+	        ic-translation-key      = "{{key}}"
+	        ic-options          = "ic.taxonomy.tags[key]"
+	        ic-option-label       = "'UNSORTED_TAGS.%s' | fill: option | translate"
+	        ic-allow-multiple-choices = "true"
+	        ic-key            = "tags"
+	        ic-check-none       = "key == 'target_groups' && 'INTERFACE.FOR_ALL'"
+	      ></ic-item-property-edit>
+	      
+	      <button
+	    		class 		= "active border-0 bg-0 padding"
+	     		ng-click = "toggleLanguageSelect()"
+	    	>
+	         {{showAllLanguages == true ? 'ITEMS.SHOW_LESS_LANGUAGES' : 'ITEMS.SHOW_MORE_LANGUAGES' | translate}}
+	    	</button>
+
+	    </div>
+	</article>
+
 
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
