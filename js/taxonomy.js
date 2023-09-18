@@ -111,11 +111,10 @@
 			colors:	['#D878E3'],
 			tags: 	[
 						'support_open_lunch',			// Offener Mittagstisch
-						'support_meals_on_wheels',		// Essen auf Rädern
 						'support_give_away',			// Kleiderkammer, Bücherbasar
 						'support_neighborhood', 		// Einkaufshilfen und Nachbarschaftshilfen
 						'support_visiting_service',		// Besuchsdienste
-						'support_helpline', 			// Telefonseelsorge
+						'support_spiritual_welfare', 			// Telefonseelsorge
 						'support_support_groups'
 					]
 		},
@@ -198,62 +197,70 @@
 			'free_pc_usage',		// Kostenlose PC Nutzung
 		],
 
-		// languages: [
-		// 	'albanian', 		//	Albanisch
-		// 	'amharic', 			//	Amharisch
-		// 	'arabic', 			//	Arabisch
-		// 	'aramaic', 			//	Aramäisch
-		// 	'armenian', 		//	Armenisch
-		// 	'azerbaijani', 		//	Aserbaidschanisch
-		// 	'bengali', 			//	Bengali
-		// 	'bulgarian', 		//	Bulgarisch
-		// 	'chechen', 			//	Tschetschenisch
-		// 	'chinese', 			//	Chinesisch
-		// 	'creole', 			//	Kreolisch
-		// 	'dari', 			//	Dari
-		// 	'dutch', 			//	Niederländisch
-		// 	'english', 			//	Englisch
-		// 	'farsi', 			//	Farsi
-		// 	'french', 			//	Französisch
-		// 	'greek',			//	Griechisch
-		// 	'hebrew', 			//	Hebräisch
-		// 	'hindu', 			//	Hindi
-		// 	'hungarian', 		//	Ungarisch
-		// 	'italian', 			//	Italienisch
-		// 	'japanese', 		//	Japanisch
-		// 	'kikuyu', 			//	Kikuyu
-		// 	'korean', 			//	Koreanisch
-		// 	'kurdish', 			//	Kurdisch
-		// 	'laz', 				//	Lasisch
-		// 	'lithuanian', 		//	Litauisch
-		// 	'luo', 				//	Luo
-		// 	'macedonian', 		//	Mazedonisch
-		// 	'montenegrin', 		//	Montenegrinisch
-		// 	'nepali', 			//	Nepali
-		// 	'oromo', 			//	Oromo
-		// 	'pashto',	 		//	Paschtu
-		// 	'polish', 			//	Polnisch
-		// 	'portuguese', 		//	Portugiesisch
-		// 	'punjabi', 			//	Punjabi
-		// 	'romani', 			//	Romanes
-		// 	'romanian', 		//	Rumänisch
-		// 	'russian', 			//	Russisch
-		// 	'serbian_croatian', //	Bosnisch/Kroatisch/Serbisch
-		// 	'slovene', 			//	Slowenisch
-		// 	'spanish', 			//	Spanisch
-		// 	'suomi', 			//	Finnisch
-		// 	'swahili',			//	Kisuaheli
-		// 	'tajiki', 			//	Tadschikisch
-		// 	'thai', 			//	Thailändisch
-		// 	'tigrinya', 		//	Tigrinya
-		// 	'turkish', 			//	Türkisch
-		// 	'turkmen', 			//	Turkmenisch
-		// 	'ukranian', 		//	Ukrainisch
-		// 	'urdu', 			//	Urdu
-		// 	'uzbek', 			//	Usbekisch
-		// 	'vietnamese', 		//	Vietnamesisch
-		// 	'wolof',			//	Wolof
-		// ],
+		default_languages: [
+			'arabic', 			//	Arabisch
+			'english', 			//	Englisch
+			'french', 			//	Französisch
+			'russian', 			//	Russisch
+			'turkish', 			//	Türkisch
+		],
+
+		languages: [
+			'albanian', 		//	Albanisch
+			'amharic', 			//	Amharisch
+			'arabic', 			//	Arabisch
+			'aramaic', 			//	Aramäisch
+			'armenian', 		//	Armenisch
+			'azerbaijani', 		//	Aserbaidschanisch
+			'bengali', 			//	Bengali
+			'bulgarian', 		//	Bulgarisch
+			'chechen', 			//	Tschetschenisch
+			'chinese', 			//	Chinesisch
+			'creole', 			//	Kreolisch
+			'dari', 			//	Dari
+			'dutch', 			//	Niederländisch
+			'english', 			//	Englisch
+			'farsi', 			//	Farsi
+			'french', 			//	Französisch
+			'greek',			//	Griechisch
+			'hebrew', 			//	Hebräisch
+			'hindu', 			//	Hindi
+			'hungarian', 		//	Ungarisch
+			'italian', 			//	Italienisch
+			'japanese', 		//	Japanisch
+			'kikuyu', 			//	Kikuyu
+			'korean', 			//	Koreanisch
+			'kurdish', 			//	Kurdisch
+			'laz', 				//	Lasisch
+			'lithuanian', 		//	Litauisch
+			'luo', 				//	Luo
+			'macedonian', 		//	Mazedonisch
+			'montenegrin', 		//	Montenegrinisch
+			'nepali', 			//	Nepali
+			'oromo', 			//	Oromo
+			'pashto',	 		//	Paschtu
+			'polish', 			//	Polnisch
+			'portuguese', 		//	Portugiesisch
+			'punjabi', 			//	Punjabi
+			'romani', 			//	Romanes
+			'romanian', 		//	Rumänisch
+			'russian', 			//	Russisch
+			'serbian_croatian', //	Bosnisch/Kroatisch/Serbisch
+			'slovene', 			//	Slowenisch
+			'spanish', 			//	Spanisch
+			'suomi', 			//	Finnisch
+			'swahili',			//	Kisuaheli
+			'tajiki', 			//	Tadschikisch
+			'thai', 			//	Thailändisch
+			'tigrinya', 		//	Tigrinya
+			'turkish', 			//	Türkisch
+			'turkmen', 			//	Turkmenisch
+			'ukranian', 		//	Ukrainisch
+			'urdu', 			//	Urdu
+			'uzbek', 			//	Usbekisch
+			'vietnamese', 		//	Vietnamesisch
+			'wolof',			//	Wolof
+		],
 
 		institution_type: [
 			'meeting_place',			//Begegnungsstätte
