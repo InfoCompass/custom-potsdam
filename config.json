@@ -1,10 +1,10 @@
 {
-                "backendLocation":      "http://78.46.152.176:2420",
-                "xstatsLocation":        "https://stats.seniorennetz.berlin",
-                "frontendLocation":     "http://78.46.152.176:8099",
-                "publicItems":          "http://78.46.152.176:3005/items",
+                "backendLocation":      "https://api.mittendrin.in",
+                "xstatsLocation":       "https://stats.mittendrin.in",
+                "frontendLocation":     "https://www.mittendrin.in",
+                "publicItems":          "https://public.mittendrin.in/items",
                 "tilesUrl":             "https://place.sanliegen.com/wp-json/wp/v2/kacheln",
-                "publicApi":            "http://78.46.152.176:3005",
+                "publicApi":            "https://api.mittendrin.in",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
                 "disableLists":         true,
@@ -50,22 +50,22 @@
                                 "maxBounds":            [[52.448477162829136,12.947438037317427], [52.3552640202125,13.145464909873466]],
                                 "maxClusterRadius":     60,
 
-				"tiles":		"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
+                "tiles":        "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
                 "consent":              {
                                                 "server":       "mapbox.com, USA",
                                                 "default":      true
                                         }
 
-		},
-		"sharing": {
-				"twitter": {
-						"hashtag": "mittendrin-in-potsdam"
-				},
-				"email": true,
+        },
+        "sharing": {
+                "twitter": {
+                        "hashtag": "mittendrin-in-potsdam"
+                },
+                "email": true,
                 "facebook"  :   true,
                 "whatsapp"  :   true,
                 "telegram"  :   true
-		},
+        },
 
         "export":{
             "properties": ["title", "brief", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
