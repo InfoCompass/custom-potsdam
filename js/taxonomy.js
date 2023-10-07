@@ -197,69 +197,17 @@
 			'free_pc_usage',		// Kostenlose PC Nutzung
 		],
 
-		default_languages: [
-			'arabic', 			//	Arabisch
-			'english', 			//	Englisch
-			'french', 			//	Französisch
-			'russian', 			//	Russisch
-			'turkish', 			//	Türkisch
-		],
+	languages: [
 
-		languages: [
-			'albanian', 		//	Albanisch
-			'amharic', 			//	Amharisch
-			'arabic', 			//	Arabisch
-			'aramaic', 			//	Aramäisch
-			'armenian', 		//	Armenisch
-			'azerbaijani', 		//	Aserbaidschanisch
-			'bengali', 			//	Bengali
-			'bulgarian', 		//	Bulgarisch
-			'chechen', 			//	Tschetschenisch
-			'chinese', 			//	Chinesisch
-			'creole', 			//	Kreolisch
-			'dari', 			//	Dari
-			'dutch', 			//	Niederländisch
-			'english', 			//	Englisch
-			'farsi', 			//	Farsi
-			'french', 			//	Französisch
-			'greek',			//	Griechisch
-			'hebrew', 			//	Hebräisch
-			'hindu', 			//	Hindi
-			'hungarian', 		//	Ungarisch
-			'italian', 			//	Italienisch
-			'japanese', 		//	Japanisch
-			'kikuyu', 			//	Kikuyu
-			'korean', 			//	Koreanisch
-			'kurdish', 			//	Kurdisch
-			'laz', 				//	Lasisch
-			'lithuanian', 		//	Litauisch
-			'luo', 				//	Luo
-			'macedonian', 		//	Mazedonisch
-			'montenegrin', 		//	Montenegrinisch
-			'nepali', 			//	Nepali
-			'oromo', 			//	Oromo
-			'pashto',	 		//	Paschtu
-			'polish', 			//	Polnisch
-			'portuguese', 		//	Portugiesisch
-			'punjabi', 			//	Punjabi
-			'romani', 			//	Romanes
-			'romanian', 		//	Rumänisch
-			'russian', 			//	Russisch
-			'serbian_croatian', //	Bosnisch/Kroatisch/Serbisch
-			'slovene', 			//	Slowenisch
-			'spanish', 			//	Spanisch
-			'suomi', 			//	Finnisch
-			'swahili',			//	Kisuaheli
-			'tajiki', 			//	Tadschikisch
-			'thai', 			//	Thailändisch
-			'tigrinya', 		//	Tigrinya
-			'turkish', 			//	Türkisch
-			'turkmen', 			//	Turkmenisch
-			'ukranian', 		//	Ukrainisch
-			'urdu', 			//	Urdu
-			'uzbek', 			//	Usbekisch
-			'vietnamese', 		//	Vietnamesisch
-			'wolof',			//	Wolof
+			'albanian',
+			'arabic',
+			'english',
+			'farsi',
+			'french',
+			'russian',
+			'serbian_croatian',
+			'turkish',
+			'urdu',
 		],
 
 		institution_type: [
