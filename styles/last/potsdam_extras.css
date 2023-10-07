@@ -124,6 +124,11 @@ ic-page header > .image {
 	width: 						6rem;
 }
 
+ic-page .tiles>:focus .background,ic-page .tiles>:hover .background {
+    background-color: #075002!important;
+    opacity: 1!important
+}
+
 
 ic-page #sponsors {
 	display:					flex;
