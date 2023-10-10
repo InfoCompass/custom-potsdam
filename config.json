@@ -3,7 +3,7 @@
                 "xstatsLocation":       "https://stats.mittendrin.in",
                 "frontendLocation":     "https://www.mittendrin.in",
                 "publicItems":          "https://public.mittendrin.in/items",
-                "tilesUrl":             "https://place.sanliegen.com/wp-json/wp/v2/kacheln",
+                "tilesUrl":             "https://dev.mittendrin.in/wp-json/custom/v1/allTiles",
                 "publicApi":            "https://api.mittendrin.in",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
@@ -21,21 +21,35 @@
                                             "stuetzpunkt_potsdam",
                                             "about",
                                             "newsletter",
-                                            "cooperation",
                                             "contact",
                                             "accessibility",
                                             "privacy", 
                                             "funding",
-                                            "legal"
+                                            "legal",
+                                            "sponsors",
+                                            "partners",
+                                            "vz_brandenburg"
                                         ],
                 "remotePages":          {
-                                            "url": "https://place.sanliegen.com/wp-json/wp/v2/beitragsseiten",
+                                            "url": "https://dev.mittendrin.in/wp-json/custom/v1/allPages",
                                             "pages":{
-                                                "about" : 100
+                                                "vz_brandenburg":           198,
+                                                "stuetzpunkt_potsdam":      155,
+                                                "sponsors":                 134,
+                                                "partners":                 132,
+                                                "legal":                    131,
+                                                "contact":                  130,
+                                                "accessibility":            129,
+                                                "vz_brandenburg":           128,
+                                                "digitaloffers_potsdam":    127,
+                                                "manual":                   126,
+                                                "newsletter":               123,
+                                                "accessible_language":      121,
+                                                "about":                    100
                                             },
                                             "map": {
-                                                "id":       "id",
-                                                "content":   "content.rendered"
+                                                "id":           "id",
+                                                "translations": "translations"
                                             }
                                         },
                 "adminPages":           [
