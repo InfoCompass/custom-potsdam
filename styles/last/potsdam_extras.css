@@ -271,3 +271,7 @@ ic-item-property .title {
     .box>* {
         flex: 1 1 160px;
     }
+
+.no-header-spacer {
+	height: 60px
+}
