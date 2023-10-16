@@ -7,14 +7,13 @@
 	<div 
 		class 		= "hero-wrapper screen-only {{item.image ? 'bg-0'  : (item|icType).name == 'location' && 'disabled ic-bg-type-location' || (item|icCategory) && 'disabled ic-bg-cat-'+(item|icCategory).name}} "
 	>
-		<!-- temporarily IGNORe images -->
 		<div
-			ng-if		="	true || !item.image"
+			ng-if		="!item.image"
 			class		= 	"hero fallback white {{ (item | icType).name == 'location' && 'icon-type-location' || (item | icCategory) && 'icon-category-'+(item | icCategory).name}}" 
 		>
 		</div>
 		<div 
-			ng-if		= "false && item.image"
+			ng-if		= "item.image"
 			class		= "hero" 
 			ng-style	= "{'background-image' : 'url('+item.image+')'}" 
 		>
