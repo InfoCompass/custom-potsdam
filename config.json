@@ -4,7 +4,7 @@
                 "frontendLocation":     "https://www.mittendrin.in",
                 "publicItems":          "https://public.mittendrin.in/items",
                 "tilesUrl":             "https://dev.mittendrin.in/wp-json/custom/v1/allTiles",
-                "publicApi":            "https://api.mittendrin.in",
+                "publicApi":            "https://public.mittendrin.in",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
                 "disableLists":         true,
