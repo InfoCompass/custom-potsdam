@@ -3,7 +3,7 @@
                 "xstatsLocation":       "https://stats.mittendrin.in",
                 "frontendLocation":     "https://www.mittendrin.in",
                 "publicItems":          "https://public.mittendrin.in/items",
-                "tilesUrl":             "https://dev.mittendrin.in/wp-json/custom/v1/allTiles",
+                "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
                 "publicApi":            "https://public.mittendrin.in",
                 "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
                 "title":                "Mittendrin in Potsdam",
@@ -31,7 +31,7 @@
                                             "vz_brandenburg"
                                         ],
                 "remotePages":          {
-                                            "url": "https://dev.mittendrin.in/wp-json/custom/v1/allPages",
+                                            "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
                                             "pages":{
                                                 "vz_brandenburg":           198,
                                                 "stuetzpunkt_potsdam":      155,
