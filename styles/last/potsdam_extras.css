@@ -274,3 +274,11 @@ ic-item-property .title {
 .no-header-spacer {
 	height: 60px
 }
+
+.margin-tb {
+	margin: 2rem 0;
+}
+
+.expandible-latlon {
+	position: relative;
+}
