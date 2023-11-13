@@ -55,7 +55,7 @@
       type        = "text"
       ng-if       = "icType == 'string'"
       maxlength     = "{{icProperty.max}}"
-      ng-model    = "icValue"
+      ng-model    = "value.edit"
       ng-model-options  = "{updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 }, allowInvalid}"
       ng-trim       = "false"
       ic-expose-internal-model = "internalModel"
