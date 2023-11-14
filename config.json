@@ -33,11 +33,12 @@
                 "remotePages":          {
                                             "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
                                             "pages":{
+                                                "privacy_policy":           277,
                                                 "vz_brandenburg":           198,
                                                 "stuetzpunkt_potsdam":      155,
                                                 "sponsors":                 134,
                                                 "partners":                 132,
-                                                "privacy_policy":           277,
+                                                "legal":                  131,
                                                 "contact":                  130,
                                                 "accessibility":            129,
                                                 "vz_brandenburg":           128,
