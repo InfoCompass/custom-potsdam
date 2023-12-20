@@ -105,7 +105,7 @@
 			<li 
 				ng-repeat 	= "page in ic.config.pages"
 				class 		= "bg-0 hover" 
-				ng-if 		= "['manual','accessible_language','digitaloffers_potsdam','stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles'].indexOf(page) == -1"
+				ng-if 		= "['manual','accessible_language','digitaloffers_potsdam','stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles', 'test'].indexOf(page) == -1"
 			> 
 				<a ic-touch-me a ng-href="/p/{{page}}">	{{'INTERFACE.%s' | fill : page| translate}}</a>	
 			</li>
