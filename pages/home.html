@@ -7,19 +7,6 @@
  -->
 
 
-<header 
-	class 		= "image-01"
->
-	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
-	<ic-carousel
-		ng-if			= "ic.layout.mode.name != 'XS'"
-		ic-images  		= "['image-01', 'image-02', 'image-03', 'image-04', 'image-05', 'image-06', 'image-07', 'image-08']"
-		ic-auto-turn	= "20000"
-	>
-	</ic-carousel>
-	
-</header>	
-
 <article class = "search">	
 	
 	<ic-search 
@@ -39,7 +26,18 @@
 	</ic-tiles>
 </section>
 
-
+<header 
+	class 		= "image-01"
+>
+	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
+	<ic-carousel
+		ng-if			= "ic.layout.mode.name != 'XS'"
+		ic-images  		= "['image-01', 'image-02', 'image-03', 'image-04', 'image-05', 'image-06', 'image-07', 'image-08']"
+		ic-auto-turn	= "20000"
+	>
+	</ic-carousel>
+	
+</header>	
 
 <article class = "" id = "sponsors">
 
