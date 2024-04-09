@@ -1,6 +1,6 @@
 {
                 "backendLocation":      "https://api.mittendrin.in",
-                "xstatsLocation":       "https://stats.mittendrin.in",
+                "statsLocation":        "https://stats.mittendrin.in",
                 "frontendLocation":     "https://www.mittendrin.in",
                 "publicItems":          "https://public.mittendrin.in/items",
                 "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
