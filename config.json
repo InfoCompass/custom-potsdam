@@ -29,7 +29,8 @@
                                             "sponsors",
                                             "partners",
                                             "vz_brandenburg",
-                                            "test"
+                                            "test",
+                                            "calendar"
                                         ],
                 "remotePages":          {
                                             "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
