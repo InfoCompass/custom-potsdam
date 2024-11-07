@@ -186,7 +186,8 @@
 
 	<!-- hours -->
 	<ic-item-property 
-		ng-if 		= "item.recurring_event"
+		ng-if			= "item.hours[ic.site.currentLanguage] || item.recurring_event && item.recurring_event != '[]' "
+		ic-content		= "item.hours[ic.site.currentLanguage]"
 	>
 		<ic-event-details 
 			ic-recurring-rules		= "item.recurring_event" 
@@ -198,13 +199,13 @@
 		</ic-event-details>	
 		
 	</ic-item-property>
-
+<!-- 
 	<ic-item-property
 		ng-if			= "item.hours[ic.site.currentLanguage]"
 		ic-title 		= "'ITEMS.HOURS' | translate"	
 		ic-content		= "item.hours[ic.site.currentLanguage]"
 	>
-	</ic-item-property>
+	</ic-item-property> -->
 
 
 	<!-- charge -->
