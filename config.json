@@ -76,7 +76,8 @@
                             },
 
     "calendar":             {
-                                "recurringRulesKey":      "recurring_event"
+                                "recurringRulesKey":    "recurring_event",
+                                "exclusionTag":         "exlude_from_calendar" 
                             }, 
 
     "sharing": {

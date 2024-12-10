@@ -534,21 +534,32 @@
 
 	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 	
-	<article ng-if = "(icEdit.tags | icType).name == 'service'">
+	<article 
+		ng-if = "ic.config.calendar.recurringRulesKey"
+	>
 		<div> <!-- spacer --> </div>
 		<div>
 
-			<h4> {{'ITEMS.RECURRING_EVENT' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
-			
-			<!-- <ic-help ic-message = "ITEMS.RECURRING_EVENT_HELP"></ic-help> -->
-			
+			<h4> {{'ITEMS.RECURRING_EVENT' | translate}}</h4>
 
 			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-key					= "recurring_event"
-				ic-type 				= "text"
-				ic-recurring-event		= "true"
+				ic-item						= "icItem"
+				ic-key						= "{{ic.config.calendar.recurringRulesKey}}"
+				ic-type 					= "text"
+				ic-recurring-event			= "true"				
 			></ic-item-property-edit>
+
+			<h4> {{'ITEMS.RECURRING_EXCLUDE_FROM_CALENDAR' | translate}}</h4>
+			<ic-item-property-edit
+				ng-if						= "ic.config.calendar.exclusionTag"				
+				ic-item						= "icItem"
+				ic-key						= "tags"
+				ic-type 					= "array"
+				ic-translation-key			= "EXCLUDE_FROM_CALENDAR"				
+				ic-options					= "[ic.config.calendar.exclusionTag]"
+				ic-option-label				= "'ITEMS.EXCLUDE_FROM_CALENDAR' | translate"
+				ic-allow-multiple-choices	= "true"
+			></ic-item-property-edit>	
 
 		</div>
 	</article>
