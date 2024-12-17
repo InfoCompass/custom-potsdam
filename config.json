@@ -94,5 +94,10 @@
         "properties": ["title", "brief", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
         "tagGroups": ["lor_dst", "target_groups", "options_ri", "options_sp"],
         "link": true          
+    },
+
+    "matomo":{
+        "url":      "https://place-making-matomo.jointech.dev",
+        "siteId":   "2"
     }
 }
