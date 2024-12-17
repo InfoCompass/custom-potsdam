@@ -1,65 +1,65 @@
 {
-                "backendLocation":      "https://api.mittendrin.in",
-                "statsLocation":        "https://stats.mittendrin.in",
-                "frontendLocation":     "https://www.mittendrin.in",
-                "publicItems":          "https://public.mittendrin.in/items",
-                "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
-                "publicApi":            "https://public.mittendrin.in",
-                "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
-                "title":                "Mittendrin in Potsdam",
-                "disableLists":         true,
-                "languages":            ["de", "en", "ru"],
-                "adminLanguages":       ["none"],
-                "activeIconColor":      "#096402",
-                "plainIconColor":       "#666666",
-                "pages":                [
-                                            "tags",
-                                            "tiles",
-                                            "manual",
-                                            "accessible_language",
-                                            "digitaloffers_potsdam",
-                                            "stuetzpunkt_potsdam",
-                                            "about",
-                                            "newsletter",
-                                            "contact",
-                                            "accessibility",
-                                            "privacy_policy", 
-                                            "funding",
-                                            "legal",
-                                            "sponsors",
-                                            "partners",
-                                            "vz_brandenburg",
-                                            "test"
-                                        ],
-                "remotePages":          {
-                                            "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
-                                            "pages":{
-                                                "test":                     349,
-                                                "privacy_policy":           277,
-                                                "vz_brandenburg":           198,
-                                                "stuetzpunkt_potsdam":      155,
-                                                "sponsors":                 134,
-                                                "partners":                 132,
-                                                "legal":                    131,
-                                                "contact":                  130,
-                                                "accessibility":            129,
-                                                "vz_brandenburg":           128,
-                                                "digitaloffers_potsdam":    127,
-                                                "manual":                   126,
-                                                "newsletter":               123,
-                                                "accessible_language":      121,
-                                                "about":                    100
-                                            },
-                                            "map": {
-                                                "id":           "id",
-                                                "translations": "translations"
-                                            }
-                                        },
-                "adminPages":           [
-                                            "options", 
-                                            "icons"
-                                        ],
-                "map":{
+    "backendLocation":      "https://api.mittendrin.in",
+    "statsLocation":        "https://stats.mittendrin.in",
+    "frontendLocation":     "https://www.mittendrin.in",
+    "publicItems":          "https://public.mittendrin.in/items",
+    "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
+    "publicApi":            "https://public.mittendrin.in",
+    "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
+    "title":                "Mittendrin in Potsdam",
+    "disableLists":         true,
+    "languages":            ["de", "en", "ru"],
+    "adminLanguages":       ["none"],
+    "activeIconColor":      "#096402",
+    "plainIconColor":       "#666666",
+    "pages":                [
+                                "tags",
+                                "tiles",
+                                "manual",
+                                "accessible_language",
+                                "digitaloffers_potsdam",
+                                "stuetzpunkt_potsdam",
+                                "about",
+                                "newsletter",
+                                "contact",
+                                "accessibility",
+                                "privacy_policy", 
+                                "funding",
+                                "legal",
+                                "sponsors",
+                                "partners",
+                                "vz_brandenburg",
+                                "test"
+                            ],
+    "remotePages":          {
+                                "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
+                                "pages":{
+                                    "test":                     349,
+                                    "privacy_policy":           277,
+                                    "vz_brandenburg":           198,
+                                    "stuetzpunkt_potsdam":      155,
+                                    "sponsors":                 134,
+                                    "partners":                 132,
+                                    "legal":                    131,
+                                    "contact":                  130,
+                                    "accessibility":            129,
+                                    "vz_brandenburg":           128,
+                                    "digitaloffers_potsdam":    127,
+                                    "manual":                   126,
+                                    "newsletter":               123,
+                                    "accessible_language":      121,
+                                    "about":                    100
+                                },
+                                "map": {
+                                    "id":           "id",
+                                    "translations": "translations"
+                                }
+                            },
+    "adminPages":           [
+                                "options", 
+                                "icons"
+                            ],
+    "map":                  {
                                 "center":               [52.39243237628806, 13.067518250770235],
                                 "zoom":                 13,
                                 "minZoom":              11,
@@ -67,27 +67,37 @@
                                 "maxBounds":            [[52.48466182314789, 12.871064214851666], [52.342680839107075, 13.18490409706043]],
                                 "maxClusterRadius":     60,
 
-                "tiles":        "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
-                "consent":              {
-                                                "server":       "mapbox.com, USA",
-                                                "default":      true,
-                                                "customPrompt": true
-                                        }
+                                "tiles":                "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
+                                "consent":              {
+                                                                "server":       "mapbox.com, USA",
+                                                                "default":      true,
+                                                                "customPrompt": true
+                                                        }
+                            },
 
-        },
-        "sharing": {
-                "twitter": {
-                        "hashtag": "mittendrin-in-potsdam"
-                },
-                "email": true,
-                "facebook"  :   true,
-                "whatsapp"  :   true,
-                "telegram"  :   true
-        },
+    "calendar":             {
+                                "recurringRulesKey":    "recurring_event",
+                                "exclusionTag":         "exlude_from_calendar" 
+                            }, 
 
-        "export":{
-            "properties": ["title", "brief", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
-            "tagGroups": ["lor_dst", "target_groups", "options_ri", "options_sp"],
-            "link": true          
-        }        
+    "sharing": {
+                             "twitter": {
+                                    "hashtag": "mittendrin-in-potsdam"
+                            },
+                            "email":    true,
+                            "facebook": true,
+                            "whatsapp": true,
+                            "telegram": true
+    },
+
+    "export":{
+        "properties": ["title", "brief", "description", "primaryTopic", "address", "zip", "contact", "email", "phone"],
+        "tagGroups": ["lor_dst", "target_groups", "options_ri", "options_sp"],
+        "link": true          
+    },
+
+    "matomo":{
+        "url":      "https://place-making-matomo.jointech.dev",
+        "siteId":   "2"
+    }
 }
