@@ -89,12 +89,37 @@
 				ic-item						= "icItem"
 				ic-type						= "array"
 				ic-translation-key			= "type"
-				ic-options					= "ic.taxonomy.types | mapToKey : 'name' | preventLoop"
+				ic-options					= "['location', 'non_location']"
 				ic-option-label				= "'TYPES.%s' | fill: option | translate"
 				ic-option-icon-class		= "'icon-type-' + option"
 				ic-allow-multiple-choices	= "false"
 				ic-force-choice				= "true"
-				ic-key						= "tags"
+				ic-key						= "tags" 
+				ic-side-effect				= "	
+												(icEdit.tags | lacks : 'non_location' : 'location')
+												&& 
+												ic.utils.toggle( 
+													icEdit.tags, 
+													'non_location', 		
+													true	 
+												); 									
+												ic.utils.toggle( 
+													icEdit.tags, 
+													'service', 		
+													(icEdit.tags | includes : 'non_location' : 'recur') || (icEdit.tags | includes : 'non_location' : 'complex') 
+												); 
+												ic.utils.toggle( 
+													icEdit.tags, 
+													'event', 			
+													(icEdit.tags | includes : 'non_location' : 'once') 
+												);
+												ic.utils.toggle( 
+													icEdit.tags, 
+													ic.config.calendar.exclusionTag, 			
+													(icEdit.tags | includes : 'location') 
+												);
+												
+											  "
 			></ic-item-property-edit>
 		</div>
 	</article>
@@ -372,10 +397,10 @@
 			<h4> {{'ITEMS.CITY' | translate}}</h4>
 
 			<ic-item-property-edit
-				ic-type 					= "string"
-				ic-key						= "city"
-				ic-item						=	"icItem"
-				ic-default-value	=	"Potsdam"
+				ic-type 			= "string"
+				ic-key				= "city"
+				ic-item				= "icItem"
+				ic-default-value	= "Potsdam"
 			></ic-item-property-edit>
 		</div>
 	</article>
@@ -540,18 +565,65 @@
 		<div> <!-- spacer --> </div>
 		<div>
 
-			<h4> {{'ITEMS.RECURRING_EVENT' | translate}}</h4>
+			<h4> {{'ITEMS.%s_TIME_FRAME' | fill : ((icEdit.tags | includes :'location') ? 'location' : 'non_location') | translate}}</h4>
+
+			<ic-item-property-edit								
+				ng-if						= "icEdit.tags | lacks :'location'"
+				class						= "no-sibling-margin short-labels"
+				ic-item						= "icItem"
+				ic-translation-key			= "NON_LOCATION_TIME_SCOPE"
+				ic-type						= "array"
+				ic-options					= "['once', 'recur', 'complex']"
+				ic-keep-order				= "true"
+				ic-option-label				= "'ITEMS.NON_LOCATION_TIME_SCOPE_%s' | fill : option  | translate"
+				ic-allow-multiple-choices	= "false"
+				ic-force-choice				= "true"
+				ic-key						= "tags"
+				ic-side-effect				= "
+												ic.utils.toggle( 
+													icEdit.tags, 
+													'service', 		
+													(icEdit.tags | includes : 'non_location' : 'recur') || (icEdit.tags | includes : 'non_location' : 'complex') 
+												); 
+												ic.utils.toggle( 
+													icEdit.tags, 
+													'event', 			
+													(icEdit.tags | includes : 'non_location' : 'once') 
+												);
+												(icEdit.tags | includes : 'complex') && (icEdit[ic.config.calendar.recurringRulesKey] = undefined);
+											  "
+			></ic-item-property-edit>
+
+			<ic-item-property-edit				
+				ng-if						= "(icEdit.tags | includes :'location')"
+				class						= "no-sibling-margin short-labels"
+				ic-item						= "icItem"
+				ic-translation-key			= "LOCATION_TIME_SCOPE"
+				ic-type						= "array"
+				ic-options					= "['recur', 'complex']"
+				ic-keep-order				= "true"
+				ic-option-label				= "'ITEMS.LOCATION_TIME_SCOPE_%s' | fill : option  | translate"
+				ic-allow-multiple-choices	= "false"
+				ic-force-choice				= "true"
+				ic-key						= "tags"
+				ic-side-effect				= "
+												(icEdit.tags | includes : 'complex') && (icEdit[ic.config.calendar.recurringRulesKey] = undefined);
+											  "
+			></ic-item-property-edit>
 
 			<ic-item-property-edit
+				ng-if						= "(icEdit.tags | includes : 'once') || (icEdit.tags | includes : 'recur') "				
+				class						= "no-sibling-margin"				
 				ic-item						= "icItem"
 				ic-key						= "{{ic.config.calendar.recurringRulesKey}}"
 				ic-type 					= "text"
-				ic-recurring-event			= "true"				
+				ic-recurring-event			= "true"
+				ic-recurring-event-fixed	= "icEdit.tags | includes : 'once'"
 			></ic-item-property-edit>
 
-			<h4> {{'ITEMS.RECUR_EXCLUDE_FROM_CALENDAR' | translate}}</h4>
 			<ic-item-property-edit
-				ng-if						= "ic.config.calendar.exclusionTag"				
+				ng-if						= "ic.config.calendar.exclusionTag && (icEdit.tags | lacks : 'location')"				
+				class						= "no-sibling-margin"				
 				ic-item						= "icItem"
 				ic-key						= "tags"
 				ic-type 					= "array"
@@ -559,21 +631,35 @@
 				ic-options					= "[ic.config.calendar.exclusionTag]"
 				ic-option-label				= "'ITEMS.EXCLUDE_FROM_CALENDAR' | translate"
 				ic-allow-multiple-choices	= "true"
+
 			></ic-item-property-edit>	
 
+
+			<ic-item-property-edit
+				ic-item						= "icItem"
+				class						= "no-sibling-margin"				
+				ic-key						= "hours"
+				ic-type 					= "text"
+				ic-translatable				= "true"
+			></ic-item-property-edit>
 		</div>
+
 	</article>
 
 
-	<!-- opening-hours, costs, ... -->
+
+	<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+
+
+	<!-- costs, ... -->
 	<!-- translatable free text -->
-	<article ng-repeat = "key in ['hours', 'charge', 'venue']">
+	<article ng-repeat = "key in ['charge', 'venue']">
 		<div> <!-- spacer --> </div>
 		<div>
 			<h4> {{'ITEMS.%s' | fill:key | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
-			
+					
 			<ic-help ic-message = "{{'ITEMS.%s_HELP' | fill:key}}"></ic-help>
-			
+		
 
 			<ic-item-property-edit
 				ic-item					= "icItem"
@@ -581,6 +667,8 @@
 				ic-type 				= "text"
 				ic-translatable			= "true"
 			></ic-item-property-edit>
+	
+			
 
 		</div>
 	</article>
