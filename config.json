@@ -3,7 +3,8 @@
     "statsLocation":        "https://stats.mittendrin.in",
     "frontendLocation":     "https://www.mittendrin.in",
     "publicItems":          "https://public.mittendrin.in/items",
-    "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
+    "xtilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
+    "tilesUrl":             "https://place.sanliegen.com/wp-json/custom/v1/allTiles",
     "publicApi":            "https://public.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
     "title":                "Mittendrin in Potsdam",
@@ -32,7 +33,8 @@
                                 "test"
                             ],
     "remotePages":          {
-                                "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
+                                "xurl": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
+                                "url": "https://place.sanliegen.com/wp-json/custom/v1/allPages",
                                 "pages":{
                                     "test":                     349,
                                     "privacy_policy":           277,
