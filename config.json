@@ -3,8 +3,8 @@
     "statsLocation":        "https://stats.mittendrin.in",
     "frontendLocation":     "https://www.mittendrin.in",
     "publicItems":          "https://public.mittendrin.in/items",
-    "xtilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
-    "tilesUrl":             "https://place.sanliegen.com/wp-json/custom/v1/allTiles",
+    "tilesUrl":             "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
+    "xtilesUrl":             "https://place.sanliegen.com/wp-json/custom/v1/allTiles",
     "publicApi":            "https://public.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
     "title":                "Mittendrin in Potsdam",
@@ -33,8 +33,8 @@
                                 "test"
                             ],
     "remotePages":          {
-                                "xurl": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
-                                "url": "https://place.sanliegen.com/wp-json/custom/v1/allPages",
+                                "url": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
+                                "xurl": "https://place.sanliegen.com/wp-json/custom/v1/allPages",
                                 "pages":{
                                     "test":                     349,
                                     "privacy_policy":           277,
@@ -99,7 +99,8 @@
     },
 
     "matomo":{
-        "url":      "https://place-making-matomo.jointech.dev",
+        "urlx":      "https://place-making-matomo.jointech.dev",
+        "url":      "https://matomo.mittendrin.in",
         "siteId":   "2"
     }
 }
