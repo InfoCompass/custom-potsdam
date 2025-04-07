@@ -106,12 +106,12 @@
 												ic.utils.toggle( 
 													icEdit.tags, 
 													'service', 		
-													(icEdit.tags | includes : 'non_location' : 'recur') || (icEdit.tags | includes : 'non_location' : 'complex') 
+													(icEdit.tags | includes : 'non_location' ) && !(icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
 												); 
 												ic.utils.toggle( 
 													icEdit.tags, 
 													'event', 			
-													(icEdit.tags | includes : 'non_location' : 'once') 
+													(icEdit.tags | includes : 'non_location' ) && (icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
 												);
 												ic.utils.toggle( 
 													icEdit.tags, 
@@ -567,58 +567,12 @@
 
 			<h4> {{'ITEMS.%s_TIME_FRAME' | fill : ((icEdit.tags | includes :'location') ? 'location' : 'non_location') | translate}}</h4>
 
-			<ic-item-property-edit								
-				ng-if						= "icEdit.tags | lacks :'location'"
-				class						= "no-sibling-margin short-labels"
-				ic-item						= "icItem"
-				ic-translation-key			= "NON_LOCATION_TIME_SCOPE"
-				ic-type						= "array"
-				ic-options					= "['once', 'recur', 'complex']"
-				ic-keep-order				= "true"
-				ic-option-label				= "'ITEMS.NON_LOCATION_TIME_SCOPE_%s' | fill : option  | translate"
-				ic-allow-multiple-choices	= "false"
-				ic-force-choice				= "true"
-				ic-key						= "tags"
-				ic-side-effect				= "
-												ic.utils.toggle( 
-													icEdit.tags, 
-													'service', 		
-													(icEdit.tags | includes : 'non_location' : 'recur') || (icEdit.tags | includes : 'non_location' : 'complex') 
-												); 
-												ic.utils.toggle( 
-													icEdit.tags, 
-													'event', 			
-													(icEdit.tags | includes : 'non_location' : 'once') 
-												);
-												(icEdit.tags | includes : 'complex') && (icEdit[ic.config.calendar.recurringRulesKey] = undefined);
-											  "
-			></ic-item-property-edit>
-
-			<ic-item-property-edit				
-				ng-if						= "(icEdit.tags | includes :'location')"
-				class						= "no-sibling-margin short-labels"
-				ic-item						= "icItem"
-				ic-translation-key			= "LOCATION_TIME_SCOPE"
-				ic-type						= "array"
-				ic-options					= "['recur', 'complex']"
-				ic-keep-order				= "true"
-				ic-option-label				= "'ITEMS.LOCATION_TIME_SCOPE_%s' | fill : option  | translate"
-				ic-allow-multiple-choices	= "false"
-				ic-force-choice				= "true"
-				ic-key						= "tags"
-				ic-side-effect				= "
-												(icEdit.tags | includes : 'complex') && (icEdit[ic.config.calendar.recurringRulesKey] = undefined);
-											  "
-			></ic-item-property-edit>
-
 			<ic-item-property-edit
-				ng-if						= "(icEdit.tags | includes : 'once') || (icEdit.tags | includes : 'recur') "				
 				class						= "no-sibling-margin"				
 				ic-item						= "icItem"
 				ic-key						= "{{ic.config.calendar.recurringRulesKey}}"
 				ic-type 					= "text"
 				ic-recurring-event			= "true"
-				ic-recurring-event-fixed	= "icEdit.tags | includes : 'once'"
 			></ic-item-property-edit>
 
 			<ic-item-property-edit
