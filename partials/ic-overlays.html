@@ -37,6 +37,12 @@
 
 <ic-lor-filter			ng-class = "{'ic-hide': !ic.overlays.show.lorFilter}" 		class = "bg-0 center">							</ic-lor-filter >
 
+<ic-auto-popup				
+	ng-if 			= "ic.overlays.show.autoPopup" 							
+	class 			= "bg-0 center"
+	ic-focus-me 	= "ic.overlays.show.autoPopup"
+>		
+</ic-auto-popup>
 
 
 <ic-item-proposal-preview 
