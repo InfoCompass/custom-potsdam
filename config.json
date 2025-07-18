@@ -9,8 +9,8 @@
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
     "title":                "Mittendrin in Potsdam",
     "disableLists":         true,
-    "languages":            ["de", "en", "ru"],
-    "adminLanguages":       ["none"],
+    "languages":            ["de", "en"],
+    "adminLanguages":       ["ru", "none"],
     "activeIconColor":      "#096402",
     "plainIconColor":       "#666666",
     "pages":                [
