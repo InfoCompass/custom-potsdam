@@ -17,8 +17,7 @@
                                 "tags",
                                 "tiles",
                                 "manual",
-                                "accessible_language",
-                                "digitaloffers_potsdam",
+                                "accessible_language",                                
                                 "stuetzpunkt_potsdam",
                                 "about",
                                 "newsletter",
@@ -47,11 +46,13 @@
                                     "legal":                    12,
                                     "contact":                  9,
                                     "accessibility":            14,
-                                    "digitaloffers_potsdam":    16,
                                     "manual":                   17,
                                     "newsletter":               18,
                                     "accessible_language":      22,
                                     "about":                    20
+                                },
+                                "skipped":{
+                                    "digitaloffers_potsdam":    16
                                 },
                                 "map": {
                                     "id":           "id",

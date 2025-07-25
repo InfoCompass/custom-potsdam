@@ -423,7 +423,7 @@
 
 
 
-	<div ng-if = "['website', 'twitter', 'facebook', 'whatsapp'] | mapExpression: 'item[x]' : this | some">
+	<div ng-if = "['website', 'facebook', 'whatsapp'] | mapExpression: 'item[x]' : this | some">
 		<div class = "icon icon-section-links bottom right"> <!-- spacer --> </div>
 		<div>
 			<hr class  = "bg-2"/>
@@ -435,7 +435,7 @@
 
 	<ic-item-property
 		class			= "short"
-		ng-repeat		= "key in ['website', 'twitter', 'facebook', 'whatsapp']"
+		ng-repeat		= "key in ['website', 'facebook', 'whatsapp']"
 		ng-if			= "item[key]"
 		ic-title 		= "'ITEMS.%s' | fill : key | translate"
 		ic-content		= "item[key]"
