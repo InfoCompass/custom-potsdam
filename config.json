@@ -30,7 +30,9 @@
                                 "sponsors",
                                 "partners",
                                 "vz_brandenburg",
+                                "matomo",
                                 "test"
+
                             ],
     "remotePages":          {
                                 "xurl": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
