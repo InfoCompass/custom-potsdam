@@ -17,12 +17,12 @@ ic-logo-print {
 
 ic-logo-line{
 	display:						inline-block;
-	background-image:				url(/images/large/logo_line.svg);
+	background-image:				url(/images/large/logo.png);
 	background-repeat:				no-repeat;
-	background-size:				auto 0.7em;
+	background-size:				auto 1em;
 	background-position: 			0 50%;
 	height:							1em;
-	width:							7em;
+	width:							6em;
 }
 
 ic-logo-print {
