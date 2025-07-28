@@ -6,7 +6,7 @@
 ic-logo-full, 
 ic-logo-print {
 	display:						inline-block;
-	background-image:				url(/images/large/logo.png);
+	background-image:				url(/images/large/logo.svg);
 	background-repeat:				no-repeat;
 	background-size:				contain;
 	background-position: 			0 50%;
@@ -17,9 +17,9 @@ ic-logo-print {
 
 ic-logo-line{
 	display:						inline-block;
-	background-image:				url(/images/large/logo.png);
+	background-image:				url(/images/large/logo.svg);
 	background-repeat:				no-repeat;
-	background-size:				auto 1em;
+	background-size:				auto 0.8em;
 	background-position: 			0 50%;
 	height:							1em;
 	width:							6em;
