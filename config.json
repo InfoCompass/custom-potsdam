@@ -63,6 +63,7 @@
                                 "options", 
                                 "icons"
                             ],
+    "mappo":                "https://mappo-potsdam.place-making.org",
     "map":                  {
                                 "center":               [52.39243237628806, 13.067518250770235],
                                 "zoom":                 13,
