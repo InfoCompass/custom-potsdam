@@ -66,8 +66,8 @@
     "mappo":                "https://mappo-potsdam.place-making.org",
     "map":                  {
                                 "center":               [52.39243237628806, 13.067518250770235],
-                                "zoom":                 13,
-                                "minZoom":              11,
+                                "zoom":                 11,
+                                "minZoom":              8,
                                 "maxZoom":              18,
                                 "maxBounds":            [[52.48466182314789, 12.871064214851666], [52.342680839107075, 13.18490409706043]],
                                 "maxClusterRadius":     60,
