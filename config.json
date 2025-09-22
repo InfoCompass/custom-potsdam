@@ -7,7 +7,7 @@
     "tilesUrl":             "https://mittendrin.placemakingberlin.de/wp-json/custom/v1/allTiles",
     "publicApi":            "https://public.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
-    "title":                "Mittendrin in Potsdam",
+    "title":                "Mittendrin in Brandenburg",
     "disableLists":         true,
     "languages":            ["de", "en"],
     "adminLanguages":       ["ru", "none"],
