@@ -69,7 +69,7 @@
                                 "zoom":                 11,
                                 "minZoom":              8,
                                 "maxZoom":              18,
-                                "maxBounds":            [[52.48466182314789, 12.871064214851666], [52.342680839107075, 13.18490409706043]],
+                                "maxBounds":            [[53.6, 11.2], [51.3, 14.9]],
                                 "maxClusterRadius":     60,
 
                                 "tiles":                "https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhvdGVwIiwiYSI6ImNqMGRib2dmYTAwMGEzMnBkNDBuZ2dqMHMifQ.LNUbADugC76iQ91I73xFwg",
@@ -86,9 +86,6 @@
                             }, 
 
     "sharing": {
-                             "twitter": {
-                                    "hashtag": "mittendrin-in-potsdam"
-                            },
                             "email":    true,
                             "facebook": true,
                             "whatsapp": true,
