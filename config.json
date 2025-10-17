@@ -6,6 +6,7 @@
     "xtilesUrl":            "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
     "tilesUrl":             "https://mittendrin.placemakingberlin.de/wp-json/custom/v1/allTiles",
     "publicApi":            "https://public.mittendrin.in",
+    "mappo":                "https://mappo.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
     "title":                "Mittendrin in Brandenburg",
     "disableLists":         true,
@@ -63,7 +64,6 @@
                                 "options", 
                                 "icons"
                             ],
-    "mappo":                "https://mappo-potsdam.place-making.org",
     "map":                  {
                                 "center":               [52.39243237628806, 13.067518250770235],
                                 "zoom":                 11,
