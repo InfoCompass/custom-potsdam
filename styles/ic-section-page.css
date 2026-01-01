@@ -1,0 +1,367 @@
+/*replace ic-page with ic-page or similar */
+
+#section-page > article {
+	position: 						relative;
+	min-height: 					100%;
+	display: 						flex;
+	flex-direction: 				column;
+	align-items: 					stretch;
+}
+
+ic-page {
+	display:						flex;
+	flex: 							1 0 auto;
+	line-height: 					2;	
+	flex-direction: 				column;
+	align-items: 					stretch;
+}
+
+ic-page > nav {
+	display:						flex;
+	flex:							1 0 0;
+	text-transform:					capitalize;
+	align-items:					center;
+	justify-content: 				space-between;
+	padding:						1rem 1.5rem;
+	font-size:						1.2rem;
+}
+
+ic-page .hero {
+	display:						block;
+	padding-top:					62.5%;
+	background-size:				contain;
+}
+
+ic-page .hero + nav {
+	display:						flex;
+	align-items:					flex-end;
+	gap:							1rem;
+} 
+
+ic-page .hero + nav > * {
+	display:						flex;
+	flex:							1 0 0;
+	flex-direction:					column;
+	align-items:					center;
+	justify-content:				flex-end;
+}
+
+ic-page .hero + nav * {
+	display:						block;
+	text-align: 					center;
+	margin:							max-content;
+}
+
+ic-page  header h2 {
+	display: 						block;
+	position:						absolute;
+	font-size:						2.75;
+	margin-top:						0.5rem;
+	margin-left:					-1rem;
+	padding-left:					1em;
+	font-weight:					500;
+	max-width:						50rem;	
+	text-indent:					-1em;
+	z-index:						5;
+	width:							100%;
+}
+
+ic-page  header h2 span {
+	padding:						0.5rem;
+	-webkit-box-decoration-break: 	clone;
+  	-o-box-decoration-break: 		clone;
+  	box-decoration-break:			clone;
+}
+
+ic-page h2 {
+	font-size:						2rem;
+	margin:							2rem 0;
+}
+
+ic-page hr {
+	background-color:				var(--neutral-color);
+}
+
+ic-page article {
+	display:						block;
+	background-color:				var(--primary-background-color);
+	color:							var(--plain-text-color);
+	margin-bottom:					1rem;
+	padding:						0rem 1.5rem;
+}
+
+
+ic-page article > ic-search {
+	margin-bottom:				4rem;
+}
+
+ic-page h3 {
+	font-size: 					1.5em;
+	font-weight: 				600;
+	margin-bottom:				1rem;
+}
+
+
+
+ic-page a.boxed {
+	display:					inline-block;
+	font-size: 					0.875rem;
+	font-weight: 				800;
+	line-height:				2.5em;
+	border-width:				0.15em;
+	border-style:				solid;
+	letter-spacing: 			0.1rem;
+	padding: 					0.5rem 2rem;
+}
+
+ic-page a.boxed + a.boxed,
+ic-page a.padding + a.padding {
+	margin-left:				1rem;
+}
+
+
+ic-page ic-search {
+	display:					block;
+	font-size:					1.25rem;
+	height:						auto;
+}
+
+ic-page ic-search form {
+	display:					flex !important;
+	height:						auto;
+}
+
+ic-page ic-search form input[type="text"],
+ic-page ic-search form input[type="search"] {
+	flex:						1 0 auto;
+	line-height:				2rem;
+	height:						3rem;
+	padding-top:				0.5rem;
+	padding-bottom:				0.5rem;
+	padding-right:				1rem;
+	padding-left:				1rem;
+	box-sizing:					border-box;
+	border:						1px solid #444;
+	margin-right:				1rem;
+	width:						auto;
+
+}
+
+ic-page ic-search form button {
+	position:					relative;
+	flex:						0 0 auto;
+	box-sizing:					border-box;
+	font-size:					inherit;	
+	padding-left:				1rem;
+	padding-right:				1rem;
+	line-height:				3rem;
+	height:						3rem;
+	width:						auto;
+	text-align:					left;
+}
+
+
+
+
+ic-page .types {
+	display:					flex;
+	padding:					1rem 0;
+	margin:						0.5rem auto;
+}
+
+ic-page .types > * {
+	flex:						1 0 auto;
+	text-align:					left;
+	line-height:				1.5em;
+	padding-left:				2rem !important;
+	margin:						0.5rem 0;
+}
+
+
+
+
+
+ic-page .third-party-logo{
+	width:						15rem;
+	height:						10rem;
+	background-size:			contain;
+	background-repeat:			no-repeat;
+}
+
+
+
+ic-page ic-category {
+	margin-top:					4rem;
+	margin-left:				auto;
+	margin-right:				auto;
+}
+
+
+ic-footer {
+	display:					block;
+	background-color:			#fff;
+	color:						#666;
+	padding: 					2rem;
+	text-align: 				center;
+}
+
+
+ic-footer a {
+	display:					inline;
+	border:						none;
+	border-radius:				0;
+	margin-right:				1rem;
+	font-weight: 400;
+	padding: 					0.5rem;
+}
+
+
+
+ic-page .images {
+	display:					flex;
+	flex-wrap: 					wrap;
+	padding:					1rem 0;
+	justify-content:			space-between;
+	align-items: 				center;
+}
+
+ic-page .images.center {
+	justify-content:			center;
+}
+
+ic-page .images > * {
+	width:						30rem;
+	max-width:					100%;
+
+	height:						30rem;
+	max-width:					100%;
+
+	background-repeat:			no-repeat;
+	background-size:			contain;
+	background-position:		50% 50%;
+}
+
+
+.XS ic-page .images.spread {
+	justify-content: 			space-around;
+}
+
+ic-page .images.spread {
+	margin-top: 				-0.5rem;
+	margin-bottom: 				-0.5rem;
+}
+
+ic-page .images.spread > * {
+	width: 						45%;
+	min-width: 					18rem;
+	max-width: 					100%;
+	height: 					unset;
+	max-height: 				unset;
+	margin-top: 				0.5rem;
+	margin-bottom: 				0.5rem;
+}
+
+ic-page .images.spread > .portrait {
+	width: 						37.279220614%;
+}
+
+ic-page .images.spread > .landscape {
+	width: 						52.720779386%;
+}
+
+ic-page p > .image {
+	display: 					inline-block;
+	height: 					6rem;
+	width: 						6rem;
+}
+
+ic-page p > .image.portrait {
+	height: 					12rem;
+	width: 						8.485281374rem;
+}
+
+ic-page p > .image.landscape {
+	height: 					8.485281374rem;
+	width: 						12rem;
+}
+
+
+/* update due to markdown addition*/
+ic-page h1 {
+	color:						var(--dark-text-color);
+	font-size: 					2.75em;
+	font-weight: 				normal;
+	margin-bottom:				1rem;
+	margin-top:					0rem;
+}
+
+
+ic-page h2 {
+	color:						var(--dark-text-color);
+	font-size: 					1.35em;
+	font-weight: 				600;
+	margin-bottom:				0.75rem;
+}
+
+ic-page p{
+	font-size: 					1.25rem;
+	margin-top:					1rem;
+	margin-bottom:				1rem;
+	line-height: 				2;
+}
+
+ic-page p > img {
+	display:					inline-block;
+	height:						10rem;
+	width:						20rem;
+	max-width:					100%;
+	object-fit:					contain;
+}
+
+ic-page p > img + img {
+	margin-left:				1rem;
+}
+
+
+ic-page > a,
+ic-page p a,
+ic-page ul a {
+	color:						var(--active-color, var(--primary-color));
+/*	padding-left: 				0.5rem;*/
+/*	padding-right: 				0.5rem;*/
+	text-decoration: 			underline;
+}
+
+ic-page em > a {
+	display:					inline-block;
+	padding:					1rem;
+	border:						0.15rem solid var(--active-color, var(--primary-color));
+	margin:						0 0.5rem;
+	font-style:					normal;
+}
+
+ic-page p em:first-child > a {
+	margin-left:				0;
+}
+
+ic-page ul {
+	box-sizing: 				border-box;
+	list-style: 				disc outside;	
+	padding-left:				4rem;
+	font-size: 					1.25rem;	
+}
+
+ic-page ul li {
+	margin:						0.25em 0;
+}
+
+ic-page ol {
+	box-sizing: 				border-box;	
+	padding-left: 				4rem;
+	font-size: 					1.25rem;	
+}
+
+ic-page ol li::marker {
+	font-family: 				inherit;
+	font-size: 					1.25rem;
+}

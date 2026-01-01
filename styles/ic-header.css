@@ -3,8 +3,6 @@
 ic-header {
 	display:						block;
 	box-sizing: 					border-box;
-	padding:						1rem;
-	background-color:				var(--primary-color);	
 }
 
 ic-header a,
@@ -17,20 +15,28 @@ ic-header button {
 ic-header .upper-row {
 	display:						flex;
 	justify-content:				space-between;
-	font-size:						1.5rem;
+	font-size:						1.125rem;
+	padding:						1rem;
+	overflow:						hidden;
 }
 
 ic-header .upper-row > * {
 	display:						flex;
 	align-items:					center;
+	gap:							min( max(1rem, 5%), 2rem);
 }
 
+ic-header .upper-row ic-logo-full {
+	font-size:						4em;
+	margin:							-0.5em 0;
+}
 
 ic-header .upper-row .start {
 	flex:							1 0 0;
 	display:						flex;
 	justify-content:				flex-start;
 }
+
 
 ic-header .upper-row .center {
 	flex:							0 0 auto;
@@ -47,18 +53,22 @@ ic-header .upper-row .end {
 
 ic-header .lower-row {
 	display:						flex;
-	margin-top:						1rem;
-	margin-left:					auto;
-	margin-right:					auto;
-
+	padding:						0.5rem;
 	justify-content:				space-between;
-
-	min-width:						60%;
-	width:							max-content;
-	max-width:						100%;
-
 	gap:							1rem;
 }
+
+ic-header .lower-row > * {
+	flex:							0.1 0 auto;
+	display:						block;
+}
+
+ic-header .lower-row:before,
+ic-header .lower-row:after  {
+	content:						'';
+	flex:							1 1 10%;
+}
+
 
 
 

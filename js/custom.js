@@ -19,6 +19,32 @@ angular.module('icDirectives')
 	}
 ])
 
+angular.module("icServices")
+.config([
+
+	'icSiteProvider',
+
+	function(icSiteProvider){
+
+		icSiteProvider
+		.registerSectionUpdate('map', {
+			
+			show: (ic, originalShow) => {
+
+				const numberOfActiveSection = Object.values(ic.site.activeSections).filter(x => x).length
+
+				if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
+				if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
+				
+				console.log({originalShow}, originalShow(ic))
+
+				return originalShow(ic)	
+			}
+
+		})
+	}
+])
+
 
 angular.module('icFilters')
 

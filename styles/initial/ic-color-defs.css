@@ -1,13 +1,15 @@
 :root{
-	--primary-color:				#BAFFB4;
-	--secondary-color:				var(--primary-color);
+	--primary-color:				#7FFEE0;
+	--primary-contrast:				#000;
+	--secondary-color:				#5e200e;
+	--secondary-contrast:			#000;
 
-	--dark-text-color:				#222;	
+	--dark-text-color:				#000;	
+	--plain-text-color:				#000;
 	--light-text-color:				#fff;
-	--plain-text-color:				#666;
 
-	--primary-background-color:		#FFFFFF;
-	--secondary-background-color:	#e6e6e6;
+	--primary-background-color:		#fff;
+	--secondary-background-color:	#fff;
 
 	--neutral-color:				#949494;
 	--error-color:					red;

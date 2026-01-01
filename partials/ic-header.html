@@ -1,27 +1,18 @@
 <!-- upper row -->
 
-<div class="upper-row">
+<div class="upper-row bg-0">
+
 
 	<div class = "start">
-		<button 
-			ng-click 	= "ic.overlays.open('menu')"
-			class 		= "icon icon-interface-menu large"
-			title		= "{{'INTERFACE.MAIN_MENU' | translate}}"
-		>		
-		</button>
-		<a 
-			ng-href		= "/p/extended_search"
-			class 		= "icon icon-interface-search large"
-			title 		= "{{'INTERFACE.SEARCH' | translate}}"
-		>		
-		</a>
+		<ic-logo-full role ="image"></ic-logo-full>
+		
 	</div>
 
-	<div class = "center">
+	<!-- <div class = "center">
 		<ic-logo-line class = "large">
 		</ic-logo-line>
 	</div>
-
+ -->
 	<div class = "end">
 		<button
 			class		= "icon large icon-interface-languages"
@@ -37,45 +28,47 @@
 			title		= "{{'INTERFACE.FAVOURITES' | translate}}"		
 		>
 		</a>
+
+		<button 
+			ng-click 	= "ic.overlays.open('menu')"
+			class 		= "icon icon-interface-menu large"
+			title		= "{{'INTERFACE.MAIN_MENU' | translate}}"
+		>		
+		</button>
 	</div>
 
 	
 </div>
 
-<div class="lower-row">
+<div class="lower-row bg-3">
 
 		<a 
 			class		= "icon large icon-interface-help"
 			ng-href		= "/"
-			title		= "{{'INTERFACE.HOME' | translate}}"		
 		>		
 		</a>
 
 
 		<a 
 			ng-href		= "/p/explore"
-			title		= "{{'INTERFACE.EXPLORE' | translate}}"		
 		>		
 			{{'INTERFACE.EXPLORE' | translate}}
 		</a>
 
 		<a 
 			ng-href		= "/p/engage"
-			title		= "{{'INTERFACE.ENGAGE' | translate}}"		
 		>		
 			{{'INTERFACE.ENGAGE' | translate}}
 		</a>
 
 		<a 
 			ng-href		= "/p/enter"
-			title		= "{{'INTERFACE.ENTER' | translate}}"		
 		>		
 			{{'INTERFACE.ENTER' | translate}}
 		</a>
 
 		<a 
 			ng-href		= "/p/partners"
-			title		= "{{'INTERFACE.PARTNERS' | translate}}"		
 		>		
 			{{'INTERFACE.PARTNERS' | translate}}
 		</a>

@@ -1,0 +1,16 @@
+<article
+	ic-settle-scrollbar		= "true"
+	ic-scroll-source 		= "page"
+>
+
+	<ic-page
+		ng-if					= "ic.site.visibleSections.page" 
+		ng-include 				= "'pages/'+ic.site.page+'.html'"
+		id						= "page-{{ic.site.page}}"	
+		ic-scroll-top  			= "ic.site.page"
+	></ic-page>
+
+	<ic-footer></ic-footer>
+
+</article>
+
