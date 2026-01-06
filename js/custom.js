@@ -36,8 +36,6 @@ angular.module("icServices")
 				if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
 				if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
 				
-				console.log({originalShow}, originalShow(ic))
-
 				return originalShow(ic)	
 			}
 
