@@ -1,0 +1,64 @@
+
+/* ic-search */
+
+ic-search {
+	display:						inline-flex;
+	height:							2em;
+	align-items: 					center;
+	flex-wrap: 						nowrap;
+	margin:							1rem 0;
+}
+
+ic-search > * {
+	flex: 							1 0 auto;
+	display: 						inline-flex !important;
+}
+
+ic-search label {
+	cursor: 						pointer;
+}
+
+ic-search:focus-within label {
+	display: 						none !important;	
+} 
+
+ic-search:not(:focus-within) label + form {
+	flex: 							0 0 0;
+	position: 						absolute;
+	z-index: 						-1;
+	opacity: 						0;
+}
+
+ic-search form {
+	box-sizing:						border-box;
+	flex: 							1 1 auto;
+	position:						relative;
+	height:							1.75em;
+	align-items: 					center;
+}
+
+
+ic-search form input[type=text],
+ic-search form input[type=search] {
+	display:						block;
+	box-sizing:						border-box;	
+	box-shadow:						0 0 1px var(--neutral-color);
+	border-radius:					0.625em;
+	padding:						0 0.5em;
+	margin:							0;
+	font-size:						1.5em;
+	line-height:					2em;
+	background:						var(--primary-background-color);
+	color: 							var(--dark-text-color);	
+}
+
+ic-search form button {
+	position: 						absolute;
+	display:						inline-block;	
+	right: 							0;
+	width:							2em;
+	background-color:				transparent;
+	z-index: 						999999;
+}
+
+

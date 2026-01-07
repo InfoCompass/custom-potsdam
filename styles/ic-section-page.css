@@ -71,10 +71,6 @@ ic-page  header h2 span {
   	box-decoration-break:			clone;
 }
 
-ic-page h2 {
-	font-size:						2rem;
-	margin:							2rem 0;
-}
 
 ic-page hr {
 	background-color:				var(--neutral-color);
@@ -97,13 +93,6 @@ ic-page article > ic-search {
 	margin-bottom:				4rem;
 }
 
-ic-page h3 {
-	font-size: 					1.5em;
-	font-weight: 				600;
-	margin-bottom:				1rem;
-}
-
-
 
 ic-page a.boxed {
 	display:					inline-block;
@@ -122,47 +111,6 @@ ic-page a.padding + a.padding {
 }
 
 
-ic-page ic-search {
-	display:					block;
-	font-size:					1.25rem;
-	height:						auto;
-}
-
-ic-page ic-search form {
-	display:					flex !important;
-	height:						auto;
-}
-
-ic-page ic-search form input[type="text"],
-ic-page ic-search form input[type="search"] {
-	flex:						1 0 auto;
-	line-height:				2rem;
-	height:						3rem;
-	padding-top:				0.5rem;
-	padding-bottom:				0.5rem;
-	padding-right:				1rem;
-	padding-left:				1rem;
-	box-sizing:					border-box;
-	border:						1px solid #444;
-	margin-right:				1rem;
-	width:						auto;
-
-}
-
-ic-page ic-search form button {
-	position:					relative;
-	flex:						0 0 auto;
-	box-sizing:					border-box;
-	font-size:					inherit;	
-	padding-left:				1rem;
-	padding-right:				1rem;
-	line-height:				3rem;
-	height:						3rem;
-	width:						auto;
-	text-align:					left;
-}
-
-
 
 
 ic-page .types {
@@ -178,9 +126,6 @@ ic-page .types > * {
 	padding-left:				2rem !important;
 	margin:						0.5rem 0;
 }
-
-
-
 
 
 ic-page .third-party-logo{
@@ -300,17 +245,26 @@ ic-page h1 {
 
 ic-page h2 {
 	color:						var(--dark-text-color);
-	font-size: 					1.35em;
+	font-size: 					1.4em;
 	font-weight: 				600;
 	margin-bottom:				0.75rem;
 }
+
+ic-page h3 {
+	color:						var(--dark-text-color);	
+	font-size: 					1.3em;
+	font-weight: 				600;
+	margin-bottom:				1rem;
+}
+
 
 ic-page p{
 	font-size: 					1.25rem;
 	margin-top:					1rem;
 	margin-bottom:				1rem;
-	line-height: 				2;
+	line-height: 				2;	
 }
+
 
 ic-page p > img {
 	display:					inline-block;
