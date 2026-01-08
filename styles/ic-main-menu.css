@@ -1,0 +1,129 @@
+ic-overlays ic-main-menu {
+	background-color:			var(--primary-background-color);
+	width:						auto;
+	height:						auto !important;
+	min-height:					0;
+	padding:					0;
+}
+ic-overlays ic-main-menu:after {
+	display:					none !important;
+}
+
+ic-overlays ic-main-menu > button.close {
+	position:					absolute;
+	top:						1rem;
+	right:						1rem;
+	font-size:					2rem;
+	padding:					0;
+	width:						auto;	
+}
+
+ic-overlays ic-main-menu > ul {
+	display:					block;
+	columns:					3 auto;
+	column-gap:					2rem;
+	z-index:					0;
+	width:						auto;
+	margin:						0;
+	padding:					4rem 4rem 3rem 3rem	
+}
+
+ic-overlays ic-main-menu > ul > li {
+	display:					block;
+	font-weight:				bold;
+	break-inside:				avoid;
+}
+
+ic-overlays ic-main-menu > ul > li > *:not(ul) {
+	display:					block;
+	line-height:				2rem;
+	padding:					0 0.5rem
+}
+
+ic-overlays ic-main-menu > ul > li + li {
+	margfin-top:				1rem;
+}
+
+ic-overlays ic-main-menu > ul > li > ul > li{
+	font-weight:				normal;
+}
+
+ic-overlays ic-main-menu > ul > li > ul > li > * {
+	display:					flex !important;
+	justify-content:			space-between;
+	align-items:				center;
+	box-sizing:					border-box;
+	width:						100%;
+	padding:					0 0.5rem;
+	line-height:				2em;
+}
+
+/*ic-overlays ic-main-menu .bg-0.hover:focus,
+ic-overlays ic-main-menu .bg-0.hover:hover {
+	background:					inherit !important;
+	color:						inherit !important;
+}*/
+
+/*ic-overlays ic-main-menu li {
+	padding:					0;
+}
+
+ic-overlays ic-main-menu > ul > li:nth-child(1){
+	padding-top:				2rem;
+}
+
+
+ic-overlays ic-main-menu > ul > li:nth-child(4){
+	padding-bottom:				1rem;
+}
+
+
+ic-overlays ic-main-menu > ul > li:nth-child(5){
+	padding-top	:				1rem;
+}
+
+
+ic-overlays ic-main-menu a, 
+ic-overlays ic-main-menu button {
+	display:					block !important;
+	box-sizing: 				border-box;
+	width: 						100%;
+	padding:					0 2rem;
+	line-height:				3rem;
+	text-align: 				left;
+}
+
+ic-overlays ic-main-menu ul li {
+	display:					block;
+}
+
+ic-overlays ic-main-menu > ul > li > a {
+	font-weight: 				bold;
+}
+
+ic-overlays ic-main-menu ul > li > ul {
+	padding:					1rem 0;
+	position:					relative;
+	box-shadow:					none;	
+}
+
+ic-overlays ic-main-menu ul > li > ul > li a:focus,
+ic-overlays ic-main-menu ul > li > ul > li a:hover,
+ic-overlays ic-main-menu ul > li > ul > li button:focus,
+ic-overlays ic-main-menu ul > li > ul > li button:hover {
+	background-color:			transparent;
+	color:						inherit;
+}
+
+ic-overlays ic-main-menu ul > li > ul > li a, 
+ic-overlays ic-main-menu ul > li > ul > li button {
+	display:					block;
+}
+
+ic-overlays ic-main-menu ul > li > ul > li:not(:first-child) a:before, 
+ic-overlays ic-main-menu ul > li > ul > li:not(:first-child) button:before{
+	content:					'';
+	display:					block;
+	height:						0px;
+	border-top:					1px solid rgba(0,0,0,.3);
+}*/
