@@ -5,40 +5,13 @@
 	ic-popup-message	= "'CONTENT.POPUP_RENEWAL' | translate | markdown"
 ></div>
 
-
-<nav class = "home-menu large padding">
-	<a 
-		ng-href		= "/p/extended_search"
-		class 		= "icon icon-interface-search left"
-		title 		= "{{'INTERFACE.SEARCH' | translate}}"
-	>		
-		{{'INTERFACE.SEARCH' | translate}}	
-	</a>
-
-	<a
-		ng-href ="/list"
-		class 		= "icon icon-interface-filter left"
-		title 		= "{{'INTERFACE.FILTER' | translate}}"
-	>				
-		{{ 'INTERFACE.FILTER' 	| translate}}
-	</a>
-	<a 	
-		ng-href ="/calendar"
-		class 		= "icon icon-interface-calendar left"
-		title 		= "{{'INTERFACE.CALENDAR' | translate}}"
-	>			
-		{{ 'INTERFACE.CALENDAR' | translate}}
-	</a>
-
-</nav>
-
 <article>	
-	<h1> Meine digitale Pinwand (TODO!) </h1>
+	<h1> {{'INTERFACE.HOME_HEADING' | translate}} </h1>
 	<div role = "image" class = "image-hero hero"></div>
 	<nav class = "sub">
 		<div>
-			<div>
-				Text-A
+			<div class ="details">
+				{{'INTERFACE.EXPLORE_DETAILS' | translate}}
 			</div>
 			<a 
 				class 	= "bg-3 round padding"
@@ -49,8 +22,8 @@
 		</div>
 
 		<div>
-			<div>
-				Text-B
+			<div class ="details">
+				{{'INTERFACE.ENGAGE_DETAILS' | translate}}
 			</div>
 			<a 
 				class 	= "bg-3 round padding"
@@ -61,8 +34,8 @@
 		</div>
 
 		<div>
-			<div>
-				Text-C
+			<div class ="details">
+				{{'INTERFACE.SUPPORT_DETAILS' | translate}}
 			</div>
 			<a 
 				class 	= "bg-3 round padding"

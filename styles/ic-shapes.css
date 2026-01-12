@@ -34,8 +34,12 @@
 }
 
 .large {
-	font-size:					1.75em !important;
+	font-size:					1.5em !important;
 }
+.x-large{
+	font-size:					2em !important;
+}
+
 .mini {
 	font-size:					0.75em !important;
 }

@@ -17,26 +17,34 @@
 
 		<a 
 			ng-href		= "/p/extended_search"
-			class 		= "icon icon-interface-search left"
 			title 		= "{{'INTERFACE.SEARCH' | translate}}"
-		>		
+		>	
+			<span class = "icon icon-interface-search large"></span>	
 			{{'INTERFACE.SEARCH' | translate}}	
 		</a>
 
 		<a 	
 			ng-href 	="/calendar"
-			class 		= "icon icon-interface-calendar left"
 			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
 		>			
+			<span class = "icon icon-interface-calendar large"></span>	
 			{{ 'INTERFACE.CALENDAR' | translate}}
 		</a>
 
 		<a 
-			class		= "icon icon-interface-favourites left"
 			ng-href		= "/p/tiles/u/favourite"
 			title		= "{{'INTERFACE.FAVOURITES' | translate}}"		
 		>
+			<span class = "icon icon-interface-favourites"></span>	
 			{{'INTERFACE.FAVOURITES' | translate}}
+		</a>
+
+		<a 
+			ng-href		= "/p/acessibility"
+			title		= "{{'INTERFACE.ACCESSIBILITY' | translate}}"		
+		>
+			<span class = "icon icon-interface-accessibility large"></span>	
+			{{'INTERFACE.ACCESSIBILITY' | translate}}
 		</a>
 
 		<button
@@ -61,7 +69,7 @@
 
 		<button 
 			ng-click 	= "ic.overlays.open('mainMenu')"
-			class 		= "icon icon-interface-menu large"
+			class 		= "icon icon-interface-menu x-large"
 			title		= "{{'INTERFACE.MAIN_MENU' | translate}}"
 		>		
 		</button>
@@ -73,11 +81,10 @@
 <div class="lower-row bg-3 padding">
 
 		<a 
-			class		= "icon large icon-interface-help"
+			class		= "icon large icon-interface-home"
 			ng-href		= "/"
 		>		
 		</a>
-
 
 		<a 
 			ng-href		= "/p/explore"
@@ -92,9 +99,9 @@
 		</a>
 
 		<a 
-			ng-href		= "/p/enter"
+			ng-href		= "/item/new"
 		>		
-			{{'INTERFACE.ENTER' | translate}}
+			{{'INTERFACE.SUGGEST_NEW_ITEM' | translate}}
 		</a>
 
 		<a 
@@ -103,18 +110,5 @@
 			{{'INTERFACE.PARTNERS' | translate}}
 		</a>
 
-		<a 
-			ng-href		= "/p/help"
-			title		= "{{'INTERFACE.HELP' | translate}}"		
-		>		
-			{{'INTERFACE.HELP' | translate}}
-		</a>
-
-		<a 
-			ng-click	= "ic-overlays.opem('visual-aids')"
-			title		= "{{'INTERFACE.VISUAL_AIDS' | translate}}"		
-		>		
-			{{'INTERFACE.VISUAL_AIDS' | translate}}
-		</a>
 
 </div>

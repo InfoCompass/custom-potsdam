@@ -2,7 +2,7 @@
 /* ic-search */
 
 ic-search {
-	display:						inline-flex;
+	display:						flex;
 	height:							2em;
 	align-items: 					center;
 	flex-wrap: 						nowrap;

@@ -6,7 +6,7 @@ ic-page .tiles > * > small,
 	font-family:				Fira Sans, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,
+h1,
 ic-page p,
 ic-page a.boxed,
 ic-page .tiles > *,
@@ -14,6 +14,10 @@ ic-page p,
 ic-page a.boxed
 {
 	font-family: 				Fira Sans, sans-serif;
+}
+
+h2,h3,h4,h5,h6 {
+	font-family:				Biryani, sans-serif;
 }
 
 

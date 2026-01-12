@@ -13,6 +13,7 @@ ic-page {
 	flex: 							1 0 auto;
 	flex-direction: 				column;
 	align-items: 					stretch;
+	padding-top:					1rem;
 }
 
 ic-page > nav {
@@ -26,8 +27,11 @@ ic-page > nav {
 
 ic-page .hero {
 	display:						block;
-	padding-top:					62.5%;
+	padding-top:					50%;	
 	background-size:				contain;
+	background-repeat:				no-repeat;
+	background-position:			50% 50%;
+	margin-bottom:					1rem;
 }
 
 ic-page .hero + nav {
@@ -45,6 +49,7 @@ ic-page .hero + nav > * {
 	text-align: 					center;
 	margin:							max-content;
 }
+
 
 ic-page .hero + nav > * > a {
 	margin-top:						0.5rem;
@@ -236,29 +241,31 @@ ic-page p > .image.landscape {
 /* update due to markdown addition*/
 ic-page h1 {
 	color:						var(--dark-text-color);
-	font-size: 					2.75em;
-	font-weight: 				normal;
+	font-size: 					2.25em;
+	font-weight: 				400;
 	margin-bottom:				1rem;
-	margin-top:					0.5rem;
+	margin-top:					2rem;
 }
 
 
 ic-page h2 {
 	color:						var(--dark-text-color);
-	font-size: 					1.4em;
+	font-size: 					1.125em;
 	font-weight: 				600;
+	margin-top:					3rem;
 	margin-bottom:				0.75rem;
 }
 
 ic-page h3 {
 	color:						var(--dark-text-color);	
-	font-size: 					1.3em;
+	font-size: 					1.1em;
 	font-weight: 				600;
+	margin-top:					1rem;	
 	margin-bottom:				1rem;
 }
 
 
-ic-page p{
+ic-page p {
 	font-size: 					1.25rem;
 	margin-top:					1rem;
 	margin-bottom:				1rem;

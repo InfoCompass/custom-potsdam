@@ -26,8 +26,8 @@ ic-header .upper-row > * {
 }
 
 ic-header .upper-row ic-logo-full {
-	font-size:						4em;
-	margin:							0;
+	font-size:						5rem;
+	margin:							-0.5rem;
 }
 
 ic-header .upper-row .start {
