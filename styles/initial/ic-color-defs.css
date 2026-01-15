@@ -27,3 +27,8 @@
 	--plain-text-color:				#222;
 
 }
+
+.bg-5 {
+	background-color:				#ffd2bf;
+	color:							var(--dark-text-color);
+}
