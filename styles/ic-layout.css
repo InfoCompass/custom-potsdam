@@ -47,6 +47,7 @@ ic-main-content > *,
 	overflow-x:					hidden;
 	flex-grow:					1;
 	height:						100%;
+	background-color:			var(--primary-background-color)!important;
 }
 
 ic-main-content 	> *:after,
@@ -75,32 +76,6 @@ ic-main-content 	> * > * ,
 	-webkit-overflow-scrolling: touch;
 	max-height:					100%;
 }
-/*
-ic-main-content		> *:nth-child(1), 
-[ic-main-content] 	> *:nth-child(1){
-	z-index:					10;
-}
-
-
-ic-main-content		> *:nth-child(2),
-[ic-main-content]	> *:nth-child(2) {
-	z-index:					9;
-}
-
-ic-main-content 	> *:nth-child(3),
-[ic-main-content]	> *:nth-child(3) {
-	z-index:					8;
-}
-
-ic-main-content 	> *:nth-child(4),
-[ic-main-content] 	> *:nth-child(4) {
-	z-index:					7;
-}
-
-ic-main-content 	> *:nth-child(5),
-[ic-main-content]	> *:nth-child(5) {
-	z-index:					6;
-}*/
 
 #section-filter{
 	flex:						1 1 auto;

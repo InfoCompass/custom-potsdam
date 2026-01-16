@@ -1,0 +1,61 @@
+textarea, 
+input, 
+button, 
+select { 
+	font-family: 		inherit; 
+	font-size: 			inherit; 
+}
+
+input, 
+button, 
+select,
+button:active,
+button:hover,
+button:focus,
+select:active,
+select:hover,
+select:focus {
+	display:			inline-block;
+	border:				none;	
+	border-style:		none;
+	color: 				unset;
+	-webkit-appearance: none;
+}
+
+label {
+	display:			flex;
+	align-items: 		center;
+	cursor:				pointer;
+}
+
+select::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding:			0;
+    border:				0;
+}
+
+
+select,
+button,
+a.ic-button {
+	cursor:				pointer;
+	background-color:	var(--primary-background-color, #fff);
+	border-radius:		0;
+	padding:			0;
+	margin:				0;
+}
+
+select {
+	appearance: 		none;
+	padding: 			0.5rem;
+}
+
+.emph {
+	background-color:	var(--primary-accent);
+}
+
+.activated {
+	background-color:	var(--secondary-accent);
+}
+
+

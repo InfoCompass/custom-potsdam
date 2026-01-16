@@ -1,7 +1,7 @@
 :root{
 	--primary-color:				#7FFEE0;
 	--primary-contrast:				#000;
-	--secondary-color:				#5e200e;
+	--secondary-color:				#ff4b00;
 	--secondary-contrast:			#000;
 
 	--dark-text-color:				#000;	
@@ -9,13 +9,17 @@
 	--light-text-color:				#fff;
 
 	--primary-background-color:		#fff;
-	--secondary-background-color:	#fff;
+	--secondary-background-color:	#eee;
 
 	--neutral-color:				#949494;
 	--error-color:					red;
 
-	--active-color:					#ffa580;
-	
+
+	--primary-accent:				var(--primary-color);
+	--secondary-accent:				#ffa580;
+
+	--active-color:					var(--secondary-color);
+
 }
 
 

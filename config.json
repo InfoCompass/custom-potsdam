@@ -12,7 +12,7 @@
     "disableLists":         true,
     "languages":            ["de", "en"],
     "adminLanguages":       ["ru", "none"],
-    "activeIconColor":      "#7FFEE0",
+    "activeIconColor":      "#ff4b00",
     "plainIconColor":       "#666666",
     "pages":                [
                                 "tags",
@@ -62,7 +62,8 @@
                             },
     "adminPages":           [
                                 "options", 
-                                "icons"
+                                "icons",                                
+                                "buttons"
                             ],
     "map":                  {
                                 "center":               [52.39243237628806, 13.067518250770235],
