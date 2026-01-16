@@ -49,33 +49,31 @@
 
 
 <article>
-	<div ng-bind-html = "('CONTENT.HOME' | translate | markdown)">
+	<h2>Neuste Angebote und Veranstaltungen</h2>
+
+	<div class ="ic-item-tiles">
+		<ic-item-tile ic-item = "{ tags: ['encounters'] }"></ic-item-tile>
+		<ic-item-tile ic-item = "{ tags: ['exercise'] } "></ic-item-tile>
+		<ic-item-tile ic-item = "{ tags: ['support'] } "></ic-item-tile>
+		<ic-item-tile ic-item = "{ tags: ['education'] } "></ic-item-tile>		
 	</div>
+
+</article>
+
+<article>
+	<h2>Was ist mittendrin.in und wer steckt dahinter?</h2>
+
+	<p>
+		Auf mittendrin.in finden Sie Einrichtungen und Angebote für ältere Menschen im Landes Brandenburg. Sie haben die Möglichkeiten, über die Felder ‚Suche‘ und ‚Alle Einträge‘ nach Einträgen zu suchen oder über ‚Karte‘ und ‚Themen‘ zu stöbern. Alle Angebote sind nichtkommerziell und werden vor der Veröffentlichung geprüft. Der Eintrag ist kostenfrei.
+	</p>
 </article>
 
 
-<section>
-	<ic-tiles class = "tiles">
-	</ic-tiles>
-</section>
-
-<header 
-	class 		= "image-01"
->
-	<!-- <h2> <span class = "bg-0" ng-bind-html = "('INTERFACE.CLAIM' | translate)"></span></h2> -->
-	<ic-carousel
-		ng-if			= "ic.layout.mode.name != 'XS'"
-		ic-images  		= "['image-01', 'image-02', 'image-03', 'image-04', 'image-05', 'image-06', 'image-07', 'image-08']"
-		ic-auto-turn	= "20000"
-	>
-	</ic-carousel>
-	
-</header>	
 
 <article class = "" id = "sponsors">
 
 	<div>
-		<h4 class = "">{{'INTERFACE.PROJECT_OF' | translate}}</h4>
+		<h3 class = "">{{'INTERFACE.PROJECT_OF' | translate}}</h3>
 
 		<div class = "logos">
 			<a 
@@ -89,7 +87,7 @@
 	</div>
 
 	<div>
-		<h4 class = "">{{'INTERFACE.SPONSORED_BY' | translate}}</h4>
+		<h3 class = "">{{'INTERFACE.SPONSORED_BY' | translate}}</h3>
 
 		<div class = "logos">
 			<a 
@@ -104,36 +102,6 @@
 
 	</div>
 
-	<!-- <div>
-		<div class="no-header-spacer"></div>
 
-		<div class = "logos">
-			<a 
-				class 		= "image-lh-potsdam"
-				href		= "https://www.potsdam.de/de" 
-				aria-label	= "{{'ALT.LOGO_LHPOTSDAM' | translate}}"
-				title		= "{{'ALT.LOGO_LHPOTSDAM' | translate}}"
-			>
-				
-			</a>
-		</div>
-
-	</div>
-
-	<div>
-		<div class="no-header-spacer"></div>
-
-		<div class = "logos">
-			<a 
-				class 		= "image-land-brandenburg"
-				href		= "https://www.brandenburg.de/cms/detail.php/bb1.c.473964.de" 
-				aria-label	= "{{'ALT.LOGO_LANDBRANDENBURG' | translate}}"
-				title		= "{{'ALT.LOGO_LANDBRANDENBURG' | translate}}"
-			>
-				
-			</a>				
-		</div>
-
-	</div> -->
 </article>
 

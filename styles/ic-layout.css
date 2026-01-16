@@ -155,10 +155,10 @@ ic-main-content 	> * > * ,
 
 
 #section-page {
-	width:						50rem;
+	width:						41rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
-	max-width:					50rem;
+	max-width:					41rem;
 
 }
 
