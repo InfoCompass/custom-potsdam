@@ -1,0 +1,151 @@
+.bg-t {
+	background-color:			transparent;
+}
+
+
+.bg-neutral {
+	background-color:			var(--neutral-color);
+	color:						var(--light-text-color);
+}
+
+
+.bg-0,
+.bg-0:hover,
+.bg-0:focus {
+	background-color:			var(--primary-background-color);
+	color:						var(--dark-text-color);
+}
+
+.bg-0.hover:focus,
+.bg-0.hover:hover {
+	background-color:			var(--primary-color);
+	color:						var(--light-text-color) !important;
+}
+
+
+.border-0 {
+	box-shadow:					0 0 0 1px var(--primary-background-color) inset;
+}
+
+
+
+
+.bg-1,
+.bg-1:hover,
+.bg-1:focus {
+	background-color:			var(--secondary-background-color);
+	color:						var(--plain-text-color);
+}
+
+.bg-1.hover:focus,
+.bg-1.hover:hover{
+	background-color:			var(--primary-background-color);
+}
+
+
+
+.border-1 {
+	box-shadow:					0 0 0 1px var(--secondary-background-color) inset;
+}
+
+
+
+
+.bg-2,
+.bg-2:hover,
+.bg-2:focus {
+	background-color:			var(--neutral-color);
+	color:						var(--dark-text-color);
+}
+
+.bg-2.hover:focus,
+.bg-2.hover:hover{
+	/*background-color:			#aaa*/
+}
+
+
+
+
+.border-2 {
+	box-shadow:					0 0 0 1px var(--neutral-color) inset;
+}
+
+
+
+
+
+.bg-3,
+.bg-3:hover,
+.bg-3:focus {
+	background-color:			var(--primary-color);
+	color:						var(--primary-contrast, var(--light-text-color));
+}
+
+.bg-3.hover:focus,
+.bg-3.hover:hover{
+	background-color:			var(--primary-background-color);
+	color:						var(--primary-color);
+}
+
+
+.border-3 {
+	box-shadow:					0 0 0 1px var(--active-color, var(--primary-color)) inset;
+}
+
+
+
+.highlight-links a {
+	color:						var(--primary-color)!important;
+}
+
+
+
+.col-0 {
+	color:						var(--dark-text-color) !important;
+}
+
+.col-1 {
+	color:						var(--plain-text-color) !important;
+}
+
+.col-2 {
+	color:						var(--light-text-color) !important;
+}
+
+.col-3 {
+	color:						var(--primary-color) !important;
+}
+
+
+
+
+.shade-light {
+	background-color:			rgba(0,0,0,0.1);
+	color:						var(--plain-text-color);
+}
+
+
+.shade-dark {
+	background-color:			rgba(0,0,0,0.5);
+	color:						var(--light-text-color);
+}
+
+.active,
+.active:hover {
+	color:						var(--active-color, var(--primary-color));
+}
+
+.drop-shadow {
+	box-shadow:					0 0 0.15em rgba(0,0,0,0.7);
+}
+
+[disabled],
+.disabled {
+	opacity:					0.5;
+	cursor:						auto;
+}
+
+
+.ic-bg-cat-unknown {
+	background:					var(--neutral-color);
+}

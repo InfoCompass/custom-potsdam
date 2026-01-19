@@ -189,6 +189,7 @@ ic-page .images.spread > * {
 	max-height: 				unset;
 	margin-top: 				0.5rem;
 	margin-bottom: 				0.5rem;
+	min-height:					100%;
 }
 
 ic-page .images.spread > .portrait {
@@ -244,7 +245,7 @@ ic-page h3 {
 
 
 ic-page p {
-	font-size: 					1.25rem;
+	font-size: 					1rem;
 	margin-top:					1rem;
 	margin-bottom:				1rem;
 	line-height: 				2;	
@@ -321,7 +322,6 @@ ic-footer {
 	color:						#000;
 	padding: 					2rem;
 	padding-bottom:				4rem;
-	margin-top:					10rem;
 	text-align: 				left;
 	columns:					3 auto;
 	column-gap:					0.25rem;

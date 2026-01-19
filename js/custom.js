@@ -56,7 +56,13 @@ angular.module('icFilters')
 		return function(item){
 			var tags = item && item.tags || item
 
-			if(!Array.isArray(tags)) return dummy
+			if(!tags) return dummy
+
+			 tags =	Array.isArray(tags)
+					?	tags
+					:	[tags]
+
+			if(tags.length === 0) return dummy		
 
 			return icTaxonomy.getCategory(item && item.primaryTopic || tags) || dummy
 		}

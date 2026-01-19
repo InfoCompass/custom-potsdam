@@ -18,7 +18,7 @@
 	--primary-accent:				var(--primary-color);
 	--secondary-accent:				#ffa580;
 
-	--active-color:					var(--secondary-color);
+	--active-color:					#007458;
 
 }
 
@@ -35,4 +35,10 @@
 .bg-5 {
 	background-color:				#ffd2bf;
 	color:							var(--dark-text-color);
+}
+
+
+/*TODO: REMOVE ME!!*/
+.bg-3.white {
+	background-color:				var(--active-color) !important;
 }

@@ -20,6 +20,7 @@ select:focus {
 	border-style:		none;
 	color: 				unset;
 	-webkit-appearance: none;
+	margin:				0;
 }
 
 label {
@@ -38,16 +39,16 @@ button::-moz-focus-inner {
 select,
 button,
 a.ic-button {
+	display:			inline-block;
 	cursor:				pointer;
 	background-color:	var(--primary-background-color, #fff);
-	border-radius:		0;
-	padding:			0;
-	margin:				0;
+	border-radius:		0;	
 }
 
 select {
 	appearance: 		none;
-	padding: 			0.5rem;
+	padding-top:		0.25rem;
+	padding: 			0.25rem 0.5;
 }
 
 .emph {
