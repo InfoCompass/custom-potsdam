@@ -1,0 +1,43 @@
+<article
+	ic-settle-scrollbar					= "true"
+	ic-scroll-snap-anchor 				= "header"
+	ic-scroll-repeat-limit-container 	= "true"
+	class								= "padding"
+>
+
+	<div 
+		ng-if = "!ic.site.visibleSections.filter"
+		class = "bg-0 padding active flex"
+	>
+		<button
+			class 		= "block margin-right flex-grow bg-3 padding tac"
+			ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
+			ic-touch-me 
+		>
+			{{'INTERFACE.FILTER' | translate}}
+		</button>
+
+		<button 
+			class 		= "block margin-left flex-grow bg-3 padding tac"
+			ng-click 	= "ic.site.expandMap = true"
+			ic-touch-me 
+		>
+			{{'INTERFACE.MAP' | translate}}
+		</button>
+		
+	</div>
+
+	<ic-taxonomy-filter-tag-list 
+		class = "bg-0 padding"
+	>
+	</ic-taxonomy-filter-tag-list>
+
+	<ic-sorting 
+		class = "padding bg-0"
+	>
+	</ic-sorting>
+
+	<ic-search-result-list>
+	</ic-search-result-list>
+
+</article>

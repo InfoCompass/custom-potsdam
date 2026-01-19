@@ -19,8 +19,7 @@ select:focus {
 	border:				none;	
 	border-style:		none;
 	color: 				unset;
-	-webkit-appearance: none;
-	margin:				0;
+	-webkit-appearance: none;	
 }
 
 label {
