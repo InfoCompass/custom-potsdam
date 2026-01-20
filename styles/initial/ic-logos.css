@@ -6,23 +6,26 @@
 ic-logo-full, 
 ic-logo-print {
 	display:						inline-block;
+	box-sizing:						border-box;
 	background-image:				url(/images/large/logo.svg);
 	background-repeat:				no-repeat;
-	background-size:				contain;
-	background-position: 			0 50%;
-	height:							1em;
-	width:							3.5em;
+	background-size:				90% auto;
+	background-position: 			35% 45%;
+	background-color:				#fff;
+	height:							7.5em;
+	width:							23em;
 }
 
 
 ic-logo-line{
 	display:						inline-block;
-	background-image:				url(/images/large/logo.svg);
+	background-image:				url(/images/large/logo_line.svg);
 	background-repeat:				no-repeat;
 	background-size:				auto 0.8em;
-	background-position: 			0 50%;
+	background-position: 			0.5em 50%;
+	background-color:				#fff;
 	height:							1em;
-	width:							6em;
+	width:							7.6666667em;
 }
 
 ic-logo-print {

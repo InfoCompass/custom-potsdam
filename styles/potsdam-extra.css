@@ -1,0 +1,16 @@
+ic-header .logo ic-logo-full{
+	font-size:					1rem !important;
+	margin-top:					-3rem !important;
+	margin-left:				-2rem !important;
+}
+
+
+ic-header .tools ic-logo-line {
+	font-size:					3rem;
+	margin-left:				-1rem;
+}
+
+.XS ic-main-menu ic-logo-line {
+	margin-left:				-2rem;
+	background-size:			auto 0.7em;
+}
