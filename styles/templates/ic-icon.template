@@ -1,0 +1,4 @@
+.bg-3 .icon{{-name[0]}}{{-name[1]}}.white{{.name[3]}}, 
+.icon{{-name[0]}}{{-name[1]}}{{.name[2]}}{{.name[3]}} {
+	background-image: 	url("data:image/svg+xml,{{svg}}");
+}
