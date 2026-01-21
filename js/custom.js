@@ -27,11 +27,31 @@ angular.module("icServices")
 	function(icSiteProvider){
 
 		icSiteProvider
+		.registerSection({
+			name:			'filter-tags',
+			template:		'partials/ic-section-filter-tags.html',
+			active:			function(ic){									
+
+								return ic.filterConfig.isActive
+
+							},
+			show:			function(ic){
+								
+
+								return true
+							},
+
+		})
 		.registerSectionUpdate('map', {
 			
 			show: (ic, originalShow) => {
 
-				const numberOfActiveSection = Object.values(ic.site.activeSections).filter(x => x).length
+				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
+												.filter( ([section, active ]) => section != 'filter-tags')
+												.filter( ([section, active ]) => active)
+												.length
+
+
 
 				if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
 				if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
