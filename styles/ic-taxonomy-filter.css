@@ -33,7 +33,7 @@ ic-taxonomy-filter section button {
 	box-sizing:					border-box;
 	align-items:				center !important;
 	justify-content:			space-between;
-	min-height:					2rem;	
+	min-height:					2.5rem !important;	
 	padding-left:				0.5rem;
 	padding-right:				0.5rem;
 	padding-top:				0.25rem;
