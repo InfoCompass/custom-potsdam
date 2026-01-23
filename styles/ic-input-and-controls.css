@@ -48,12 +48,8 @@ a.ic-button {
 	cursor:				pointer;
 	background-color:	var(--primary-background-color, #fff);
 	border-radius:		0;	
-	
-	
-	padding-top:		0;
-	padding-bottom:		0;
-	padding-left:		0;
-	padding-right:		0;	
+		
+	padding:			var(--vertical-padding) var(--horizontal-padding);
 }
 
 select.removable,
