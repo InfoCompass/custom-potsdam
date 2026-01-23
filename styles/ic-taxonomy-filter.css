@@ -19,7 +19,7 @@ ic-taxonomy-filter section {
 	flex-direction:				column;
 	border-radius:				0.5rem;
 	overflow:					hidden;
-	padding:					1rem;
+	padding:					var(--vertical-padding) var(--horizontal-padding);
 	gap:						0.5rem;
 	background-color:			var(--primary-background-color);
 }
@@ -33,9 +33,11 @@ ic-taxonomy-filter section button {
 	box-sizing:					border-box;
 	align-items:				center !important;
 	justify-content:			space-between;
-	height:						2.5rem;
+	min-height:					2rem;	
 	padding-left:				0.5rem;
 	padding-right:				0.5rem;
+	padding-top:				0.25rem;
+	padding-bottom:				0.25rem;
 	background-position:		0.5rem 50% !important;
 	background-color:			transparent;
 	overflow-wrap: 				anywhere;
@@ -69,6 +71,7 @@ ic-taxonomy-filter section button ~ div {
 	display:					flex;
 	flex-direction:				column;
 	align-items:				stretch;
+	gap:						0.5rem;
 }
 
 
