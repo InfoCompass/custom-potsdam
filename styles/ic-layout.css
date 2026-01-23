@@ -25,11 +25,17 @@ ic-main-content,
 [ic-main-content] {
 	flex-grow:					1;
 	display:					grid;
-	grid-template-columns:		repeat(10, minmax(min-content,max-content));
+	grid-template-columns:		repeat(10, auto);
 	overflow:					hidden !important;
 	height:						100%;
 	width:						100%;
 	z-index: 					1;
+}
+
+.show-map ic-main-content,
+.show-map [ic-main-content] {
+	grid-template-columns:		repeat(10, min-content);
+	grid-template-rows: 		auto auto;
 }
 
 .XS ic-main-content,
@@ -39,12 +45,14 @@ ic-main-content,
 
 ic-main-content > *,
 [ic-main-content] > * {
+	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
-	box-sizing:					border-box;
 	overflow-x:					hidden;
 	background-color:			var(--primary-background-color)!important;	
 }
+
+
 
 ic-main-content 	> *:after,
 [ic-main-content] 	> *:after {
@@ -119,8 +127,31 @@ ic-main-content 	> * > * ,
 #section-filter-tags {
 	grid-column:				1 / -1;	
 	grid-row:					1 / span 1;
+
+	padding-top:				var(--vertical-padding);
+	padding-bottom:				var(--vertical-padding);
+	padding-left:				var(--horizontal-padding);
+	padding-right:				var(--horizontal-padding);
+
+	animation:					enter 500ms;
+	transform-origin: 			left;
+
 }
 
+
+@keyframes enter {
+	0% {
+		transform:				scale(0.8);
+	}
+
+	60%{
+		transform:				scale(1.05);
+	}
+
+	100%{
+		transform:				scale(1.0);
+	}
+}
 
 
 
@@ -128,8 +159,8 @@ ic-main-content 	> * > * ,
 
 #section-filter{
 	flex:						1 1 auto;
-	min-width:					18rem;
-	max-width:					20rem;
+	min-width:					20rem;
+	max-width:					24rem;
 	order:						1;
 	z-index:					49; /* = 50-order */
 }

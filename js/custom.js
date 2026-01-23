@@ -32,7 +32,7 @@ angular.module("icServices")
 			template:		'partials/ic-section-filter-tags.html',
 			active:			function(ic){									
 
-								return ic.filterConfig.isActive
+								return ic.filterConfig.isActive()
 
 							},
 			show:			function(ic){

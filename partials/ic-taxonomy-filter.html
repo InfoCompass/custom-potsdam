@@ -1,29 +1,21 @@
 <section 
-	class = "types bg-0" 
+	class = "types" 
 	ng-if = "ic.taxonomy.types && ic.taxonomy.types.length > 0"
 >
-
-	<button
-		class 		= "icon icon-interface-radio"
-		ng-class	= "{'bg-3 white checked':ic.filterConfig.typeCleared()}"
-		ng-click	= "ic.filterConfig.clearType()" 
-		ic-touch-me	= "true"
-	>
-		<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
-	</button>
 
 	<button
 		ng-repeat 	= "type in ic.taxonomy.types"
 		class 		= "icon icon-type-{{::type.name}}"
 		ic-button	= "{active:ic.filterConfig.typeActive(type.name), disabled: !ic.itemStorage.currentStats.altMatches[type.name]}"
-		ng-class	= "{'bg-3 white':active, disabled: disabled}"
+		ng-class	= "{'checked':active, disabled: disabled}"
+		ng-disabled	= "disabled"
 		ng-click	= "!disabled && ic.filterConfig.toggleType(type.name, undefined, true)"
 		ic-touch-me	= "!disabled"
+		title		= "{{'INTERFACE.TOGGLE_TYPE_FILTER_%s' | fill: !!active | translate}}: {{'TYPES.%s' | fill : type.name |translate}}"
 	>
 		<div>{{'TYPES.%s' | fill : type.name |translate}} </div>
 		<span 
 			class 		= "bubble shade-light"
-			ng-class	= "{'col-2': active, 'col-1': !active}"
 			ng-if 		= "!disabled"
 		>
 			<span>
@@ -52,7 +44,7 @@
 	ng-if		= "!['lists', 'lor_dst', 'lor_pgr', 'lor_bzr', 'options_ri', 'options_sp', 'extra', 'default_languages'].includes(key)"
 >
 	<button
-		class 		= "bg-0 padding tal"
+		class 		= ""
 		ng-click	= "ic.overlays.toggle('taxonomyOverlay_'+key)"
 		ic-touch-me	= "true" 
 	>

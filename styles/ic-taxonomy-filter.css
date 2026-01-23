@@ -1,0 +1,149 @@
+ic-taxonomy-filter {
+	background-color:			var(--primary-color);
+	padding-top:				var(--vertical-padding);
+	padding-bottom:				var(--vertical-padding);
+	padding-left:				var(--horizontal-padding);
+	padding-right:				var(--horizontal-padding);
+
+	display:					flex;
+	gap:						1rem;
+	flex-direction:				column;
+
+
+}
+
+ic-taxonomy-filter section {
+	display: 					flex !important;
+	flex:						0 0 auto;
+	align-items:				stretch;
+	flex-direction:				column;
+	border-radius:				0.5rem;
+	overflow:					hidden;
+	padding:					1rem;
+	gap:						0.5rem;
+	background-color:			var(--primary-background-color);
+}
+
+ic-taxonomy-filter ic-taxonomy-filter-categories {
+	display:					contents;
+}
+
+ic-taxonomy-filter section button {
+	display:					flex !important;
+	box-sizing:					border-box;
+	align-items:				center !important;
+	justify-content:			space-between;
+	height:						2.5rem;
+	padding-left:				0.5rem;
+	padding-right:				0.5rem;
+	background-position:		0.5rem 50% !important;
+	background-color:			transparent;
+	overflow-wrap: 				anywhere;
+	margin: 					0;
+	text-align:					left;
+	border-radius:				0.5rem;
+}
+
+ic-taxonomy-filter section button.icon{
+	padding-left:				2.5rem !important;
+}
+
+ic-taxonomy-filter section button.checked {
+	background-color:			#d9d9d9;
+	color:						var(--primary-text-color);
+}
+
+ic-taxonomy-filter section button.section-toggle {
+	margin:						0;
+	font-weight:				600;
+	font-size:					1rem;
+	padding-left:				1rem!important;
+	padding-right:				2.5rem!important;
+	background-position:		calc(100% - 0.5rem) 50% !important;
+	margin:						0 -0.5rem;	
+	background-color:			transparent !important;
+	border-radius:				0;
+}
+
+ic-taxonomy-filter section button ~ div {
+	display:					flex;
+	flex-direction:				column;
+	align-items:				stretch;
+}
+
+
+
+
+ic-taxonomy-filter-categories {
+	display: 					flex;
+	flex-direction:				column;
+}
+
+
+ic-taxonomy-filter .category {
+	border-radius:				0.5rem;
+	overflow:					hidden;
+
+}
+
+ic-taxonomy-filter .category.open{
+	background:					#d9d9d9;
+}
+
+
+
+ic-taxonomy-filter section .sub-categories {
+	display:					flex;
+	padding:					1rem;
+	border-radius:				0.5rem;
+	overflow:					hidden;
+	gap:						0.5rem;
+	flex-wrap:					wrap;
+	flex-direction:				row;
+}
+
+ic-taxonomy-filter .category:not(.open) .sub-categories {
+	display:					none;
+}
+
+ic-taxonomy-filter section .sub-categories > button {
+	flex:						0 1 auto;
+	background-color:			var(--primary-background-color);
+	border-radius:				5rem;
+	width:						auto;
+	padding-left:				1rem;
+	padding-right:				0.5rem;
+	height:						auto;
+	padding-top:				0.5rem;
+	padding-bottom:				0.5rem;
+}
+
+ic-taxonomy-filter section .sub-categories > button.default {
+	padding-right:				1rem;
+}
+
+ic-taxonomy-filter section .sub-categories > button.checked {
+	background-color:			var(--primary-accent);
+}
+
+
+
+
+/*
+ic-taxonomy-filter .sub-categories {
+	position:					relative;	
+	padding-left:				1rem;
+	z-index:					10;
+}
+
+ic-taxonomy-filter .sub-categories:before {
+	content:					'';
+	position:					absolute;
+	top:						0;
+	left:						0;
+	right:						0;
+	bottom:						0;
+	z-index:					-1;
+	background-color:			var(--primary-color);	
+	opacity:					0.25;
+}
