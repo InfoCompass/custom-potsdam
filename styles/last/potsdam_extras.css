@@ -125,7 +125,7 @@ ic-page header > .image {
 }
 
 ic-page .tiles>:focus .background,ic-page .tiles>:hover .background {
-    background-color: #075002!important;
+    background-color: #005c46!important;
     opacity: 1!important
 }
 
