@@ -1,36 +1,36 @@
 :root{
-	--primary-color:					#7FFEE0;
+	--primary-color:					#80ffe0;
 	--primary-contrast:					#000;
 	--secondary-color:					#ff4b00;
 	--secondary-contrast:				#000;
 
 
 
-	--primary-text-color:				#000;
-	--primary-text-color-contrast:		#fff;
-
+	--primary-text-color:				#424242;
 	--secondary-text-color:				#666;
-	--secondary-text-color-contrast:	#ccc;
-
 
 	--dark-text-color:					var(--primary-text-color);			/* legacy */
 	--plain-text-color:					var(--secondary-text-color);		/* legacy */
 	--light-text-color:					var(--primary-text-color-contrast);	/* legacy */
 
 
-	--primary-background-color:		#fff;
-	--secondary-background-color:	#eee;
+	--primary-background-color:			#fff;
+	--primary-background-contrast:		var(--primary-text-color);
+	--secondary-background-color:		#888;
+	--secondary-background-contrast:	var(--primary-text-color);;
+	--emphasized-background-color:		#BFFFF0;
+	--emphasized-background-contrast:	var(--primary-text-color);
 
-	--neutral-color:				#949494;
-	--error-color:					red;
+	--neutral-color:					#949494; /*lagacy*/
+	--error-color:						red;
 
 
-	--primary-accent:				var(--primary-color);
-	--primary-accent-contrast:		var(--primary-contrast);
-	--secondary-accent:				#ffa580;
-	--secondary-accent-contrast:	var(--primary-text-color);
+	--primary-accent-color:				var(--primary-color);
+	--primary-accent-contrast:			var(--primary-contrast);
+	--secondary-accent-color:			#ffa580;
+	--secondary-accent-contrast:		var(--primary-text-color);
 
-	--active-color:					#007458; /*legacy*/
+	--active-color:						#007458; /*legacy*/
 
 }
 

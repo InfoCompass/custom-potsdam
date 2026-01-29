@@ -1,5 +1,5 @@
 ic-taxonomy-filter {
-	background-color:			var(--primary-color);
+	background-color:			var(--emphasized-background-color);
 	padding-top:				var(--vertical-padding);
 	padding-bottom:				var(--vertical-padding);
 	padding-left:				var(--horizontal-padding);
@@ -9,7 +9,8 @@ ic-taxonomy-filter {
 	gap:						1rem;
 	flex-direction:				column;
 
-
+	min-height:					100%;
+	padding-bottom:				5rem !important;
 }
 
 ic-taxonomy-filter section {
@@ -17,7 +18,6 @@ ic-taxonomy-filter section {
 	flex:						0 0 auto;
 	align-items:				stretch;
 	flex-direction:				column;
-	border-radius:				0.5rem;
 	overflow:					hidden;
 	padding:					var(--vertical-padding) var(--horizontal-padding);
 	gap:						0.5rem;
@@ -25,7 +25,7 @@ ic-taxonomy-filter section {
 }
 
 ic-taxonomy-filter ic-taxonomy-filter-categories {
-	display:					contents;
+	display:					block;
 }
 
 ic-taxonomy-filter section button {
@@ -35,15 +35,23 @@ ic-taxonomy-filter section button {
 	justify-content:			space-between;
 	min-height:					2.5rem !important;	
 	padding-left:				0.5rem;
-	padding-right:				0.5rem;
+	padding-right:				0rem;
 	padding-top:				0.25rem;
 	padding-bottom:				0.25rem;
 	background-position:		0.5rem 50% !important;
 	background-color:			transparent;
 	overflow-wrap: 				anywhere;
 	margin: 					0;
-	text-align:					left;
-	border-radius:				0.5rem;
+	text-align:					left;	
+	color:						var(--primary-text-color);
+}
+
+ic-taxonomy-filter section button:hover {
+	color:						var(--primary-text-color);
+}
+
+ic-taxonomy-filter section > button{
+	font-weight:				600;
 }
 
 ic-taxonomy-filter section button.icon{
@@ -51,13 +59,10 @@ ic-taxonomy-filter section button.icon{
 }
 
 ic-taxonomy-filter section button.checked {
-	background-color:			#d9d9d9;
-	color:						var(--primary-text-color);
 }
 
 ic-taxonomy-filter section button.section-toggle {
-	margin:						0;
-	font-weight:				600;
+	margin:						0;	
 	font-size:					1rem;
 	padding-left:				1rem!important;
 	padding-right:				2.5rem!important;
@@ -84,13 +89,19 @@ ic-taxonomy-filter-categories {
 
 
 ic-taxonomy-filter .category {
-	border-radius:				0.5rem;
 	overflow:					hidden;
 
 }
 
 ic-taxonomy-filter .category.open{
-	background:					#d9d9d9;
+	border-top:					1px solid var(--secondary-background-color);
+	border-bottom:				1px solid var(--secondary-background-color);
+
+	margin-top:					-1px;
+	margin-bottom:				1rem;
+}
+ic-taxonomy-filter .category.open > button {
+	font-weight:				500;
 }
 
 
@@ -102,7 +113,9 @@ ic-taxonomy-filter section .sub-categories {
 	overflow:					hidden;
 	gap:						0.5rem;
 	flex-wrap:					wrap;
-	flex-direction:				row;
+	flex-direction:				column;
+	align-items:				stretch;
+	padding:					0;
 }
 
 ic-taxonomy-filter .category:not(.open) .sub-categories {
@@ -112,17 +125,13 @@ ic-taxonomy-filter .category:not(.open) .sub-categories {
 ic-taxonomy-filter section .sub-categories > button {
 	flex:						0 1 auto;
 	background-color:			var(--primary-background-color);
-	border-radius:				5rem;
 	width:						auto;
-	padding-left:				1rem;
-	padding-right:				0.5rem;
 	height:						auto;
-	padding-top:				0.5rem;
-	padding-bottom:				0.5rem;
+	justify-content:			space-between;
 }
 
-ic-taxonomy-filter section .sub-categories > button.default {
-	padding-right:				1rem;
+ic-taxonomy-filter section .sub-categories > button > .bubble {
+	flex:						0 0 auto;
 }
 
 ic-taxonomy-filter section .sub-categories > button.checked {
@@ -130,23 +139,3 @@ ic-taxonomy-filter section .sub-categories > button.checked {
 }
 
 
-
-
-/*
-ic-taxonomy-filter .sub-categories {
-	position:					relative;	
-	padding-left:				1rem;
-	z-index:					10;
-}
-
-ic-taxonomy-filter .sub-categories:before {
-	content:					'';
-	position:					absolute;
-	top:						0;
-	left:						0;
-	right:						0;
-	bottom:						0;
-	z-index:					-1;
-	background-color:			var(--primary-color);	
-	opacity:					0.25;
-}

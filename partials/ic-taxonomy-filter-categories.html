@@ -41,9 +41,8 @@
 			>
 				<div>{{'CATEGORIES.%s' | fill : category.name | translate}}</div>
 				<span 
-					class 		= "bubble"
-					ng-class	= "{'shade-dark': active, 'shade-light': !active}"
-					ng-if 		= "!disabled"
+					class 		= "bubble shade-dark"
+					ng-if 		= "!disabled && !ic.filterConfig.categoryActive(category.name)"
 				>
 					<span>
 						{{ic.itemStorage.currentStats.altMatches[category.name]}}
@@ -55,6 +54,10 @@
 						{{ic.itemStorage.currentStats.totals[category.name]}}
 					</span>
 				</span>
+				<span 
+					class = "icon icon-interface-down"
+					ng-if = "ic.filterConfig.categoryActive(category.name)"
+				></span>
 			</button>
 
 
@@ -65,17 +68,30 @@
 				ng-if = "showSubCategories && category.tags && category.tags.length > 0"
 			>
 				<button
-					class		= "toggle default"				
+					class		= "toggle default icon icon-interface-radio left"				
 					ic-button	= "{active:!ic.filterConfig.categoryActive(category.tags)}"					
 					ng-class	= "{'checked':active}"						
 					ng-click	= "!active && ic.filterConfig.clearCategory(category.tags)"
 				>
 					<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
+					<span 
+						class 		= "bubble shade-dark"
+					>
+						<span>
+							{{ic.itemStorage.currentStats.altMatches[category.name]}}
+						</span>
+						<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
+							/
+						</span>
+						<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
+							{{ic.itemStorage.currentStats.totals[category.name]}}
+						</span>
+					</span>
 				</button>
 
 				<button	
 					ng-repeat 	= "tag in category.tags"
-					class		= "toggle"					
+					class		= "toggle icon icon-interface-radio left"					
 					ic-button	= "{active:ic.filterConfig.categoryActive(tag), disabled: !ic.itemStorage.currentStats.altMatches[tag]}"
 					ng-class	= "{'checked':active, disabled: disabled}"
 					ng-click	= "!disabled && ic.filterConfig.toggleCategory(tag, undefined, true, category.tags)"

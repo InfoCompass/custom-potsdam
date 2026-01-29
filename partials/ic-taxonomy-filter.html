@@ -4,31 +4,56 @@
 >
 
 	<button
-		ng-repeat 	= "type in ic.taxonomy.types"
-		class 		= "icon icon-type-{{::type.name}}"
-		ic-button	= "{active:ic.filterConfig.typeActive(type.name), disabled: !ic.itemStorage.currentStats.altMatches[type.name]}"
-		ng-class	= "{'checked':active, disabled: disabled}"
-		ng-disabled	= "disabled"
-		ng-click	= "!disabled && ic.filterConfig.toggleType(type.name, undefined, true)"
-		ic-touch-me	= "!disabled"
-		title		= "{{'INTERFACE.TOGGLE_TYPE_FILTER_%s' | fill: !!active | translate}}: {{'TYPES.%s' | fill : type.name |translate}}"
+		class 		= "icon section-toggle"
+		ng-class	= "{'icon-interface-down open': expanded, 'icon-interface-right': !expanded}"
+		ng-click	= "expanded = !expanded"
+		ic-touch-me	= "true" 
 	>
-		<div>{{'TYPES.%s' | fill : type.name |translate}} </div>
-		<span 
-			class 		= "bubble shade-light"
-			ng-if 		= "!disabled"
-		>
-			<span>
-				{{ic.itemStorage.currentStats.altMatches[type.name]}}
-			</span>
-			<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
-				/
-			</span>
-			<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
-				{{ic.itemStorage.currentStats.totals[type.name]}}
-			</span>
-		</span>
+		{{'ITEMS.TYPE' | translate}}
 	</button>
+
+	<div 
+		class 		= ""
+		ng-if		= "expanded"		
+	>
+
+		<button
+			class 		= "icon icon-interface-radio"
+			ng-class	= "{'checked':ic.filterConfig.typeCleared()}"
+			ng-click	= "ic.filterConfig.clearType()" 
+			ic-touch-me	= "true"
+		>
+			<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
+		</button>
+
+		<button
+			ng-repeat 	= "type in ic.taxonomy.types"
+			class 		= "icon icon-type-{{::type.name}}"
+			ic-button	= "{active:ic.filterConfig.typeActive(type.name), disabled: !ic.itemStorage.currentStats.altMatches[type.name]}"
+			ng-class	= "{'checked':active, disabled: disabled}"
+			ng-disabled	= "disabled"
+			ng-click	= "!disabled && ic.filterConfig.toggleType(type.name, undefined, true)"
+			ic-touch-me	= "!disabled"
+			title		= "{{'INTERFACE.TOGGLE_TYPE_FILTER_%s' | fill: !!active | translate}}: {{'TYPES.%s' | fill : type.name |translate}}"
+		>
+			<div>{{'TYPES.%s' | fill : type.name |translate}} </div>
+			<span 
+				class 		= "bubble shade-light"
+				ng-if 		= "!disabled"
+			>
+				<span>
+					{{ic.itemStorage.currentStats.altMatches[type.name]}}
+				</span>
+				<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
+					/
+				</span>
+				<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
+					{{ic.itemStorage.currentStats.totals[type.name]}}
+				</span>
+			</span>
+		</button>
+
+	</div>
 
 </section>
 

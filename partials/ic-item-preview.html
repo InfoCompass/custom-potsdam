@@ -1,0 +1,56 @@
+<ic-item-badge 
+	ic-item = "icItem"
+></ic-item-badge>
+
+<div 
+	class 		= "content"
+	title 		= "{{icItem | icFullTitle }}"
+
+>		
+
+		<div class ="title">
+			<span 
+				class	= "remote"
+				ng-if	= "icItem.remoteItem"
+			>
+				{{'INTERFACE.REMOTE_ITEM_TAG' | translate }}
+			</span>
+
+			<span 
+				class	= "round mini white icon icon-interface-proposals bg-3 fright"
+				ng-if	= "ic.user.can('edit_items') && icItem.proposals.length > 0"
+				title	= "{{'INTERFACE.PROPOSALS' | translate }}"
+			></span>
+
+			{{icItem | icFullTitle}}	
+
+		</div>
+
+
+		<div class = "brief">			
+			
+			<span class = "date heavy" ng-if = "icItem.startDate">
+				{{icItem.startDate | icDate}}
+		 		{{icItem.endDate ? " – "+ (icItem.endDate | icDate) : ''}}
+		 	</span> 
+
+		 	<span class = "lang-{{ic.site.currentLanguage}}">
+				{{icItem.brief[ic.site.currentLanguage] | clearTranslator}}
+			</span>
+
+
+		</div>
+
+		<div class = "location icon icon-type-location left">
+			<span> {{ (icItem | project : 'address') }} </span>
+			<span> {{ (icItem | project : 'zip') }} {{ (icItem | project : 'city') }}</span>
+		</div>
+
+</div>
+
+<div 
+	ng-if	= "icItem.brief[ic.site.currentLanguage] | autoTranslator"
+	class 	= "auto-translation-indicator plain icon-interface-translate_robot"
+	title	= "{{'INTERFACE.AUTO_TRANSLATED_BY' | translate}} {{icItem.brief[ic.site.currentLanguage] | autoTranslator}}"
+>
+</div>

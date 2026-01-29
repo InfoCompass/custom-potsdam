@@ -1,0 +1,24 @@
+
+<div class = "sections">
+	<section
+		ng-repeat 		= "section in ic.site.config.sections"
+		ng-show			= "ic.site.visibleSections[section.name]"
+		id				= "section-{{section.name}}"
+		class			= "bg-1"
+		ng-include 		= "section.template" 
+		ic-tab-group	= "section.tabgroup"
+		ng-if			= "section.name != 'map'"
+	>
+	</section>
+</div>
+
+<section
+	ng-repeat 		= "section in ic.site.config.sections | filter : {name: 'map'}"
+	ng-show			= "ic.site.visibleSections[section.name]"
+	id				= "section-{{section.name}}"
+	class			= "bg-1"
+	ng-include 		= "section.template" 
+	ic-tab-group	= "section.tabgroup"
+>
+</section>
+	

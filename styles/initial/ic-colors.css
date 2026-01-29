@@ -34,7 +34,7 @@
 .bg-1:hover,
 .bg-1:focus {
 	background-color:			var(--secondary-background-color);
-	color:						var(--plain-text-color);
+	color:						var(--primary-text-color);
 }
 
 .bg-1.hover:focus,
@@ -121,13 +121,13 @@
 
 .shade-light {
 	background-color:			rgba(0,0,0,0.1);
-	color:						var(--plain-text-color);
+	color:						var(--primary-text-color);
 }
 
 
 .shade-dark {
 	background-color:			rgba(0,0,0,0.5);
-	color:						var(--light-text-color);
+	color:						#fff;
 }
 
 .active,

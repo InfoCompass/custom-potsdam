@@ -1,4 +1,8 @@
 
+:root {
+	--top-shadow:				0 0 0.5rem rgba(0,0,0,0.5);
+}
+
 html {
 	height:						100%;
 	overflow:					hidden;
@@ -9,33 +13,55 @@ body {
 	flex-direction:				column;
 	margin:						0;
 	height:						100%;
+	justify-content:			stretch;
 	overflow:					hidden;
+
 }
 
 ic-header {
 	display:					block;
 	flex:						none;
-	width:						100%;
-	box-shadow:					0 0 0.3rem rgba(0,0,0,0.5);
+	width:						100%;	
+	z-index:					10;	
+	z-index:					10;
 }
 
 
 
 ic-main-content,
 [ic-main-content] {
+	position:					relative;
 	flex-grow:					1;
-	display:					grid;
-	grid-template-columns:		repeat(10, auto);
+	display:					flex;
 	overflow:					hidden !important;
-	height:						100%;
 	width:						100%;
-	z-index: 					1;
+	z-index: 					1;	
 }
 
-.show-map ic-main-content,
-.show-map [ic-main-content] {
-	grid-template-columns:		repeat(10, min-content);
-	grid-template-rows: 		auto auto;
+ic-main-content		.sections,
+[ic-main-content]	.sections {
+	flex:						0 1 auto;
+	display:					grid;
+	grid-template-rows:			auto auto;
+	grid-template-columns:		repeat(auto-fit, auto);
+	height:						100%;	
+}
+
+ic-main-content		.sections > * ,
+[ic-main-content]	.sections > * {
+	grid-row:					-1/span 1;
+}
+
+ic-main-content 	.sections:before,
+[ic-main-content]	.sections:before{
+	content:					'';
+	position:					absolute;
+	top:						-1rem;
+	left:						0;
+	right:						0;
+	height:						1rem;
+	box-shadow:					var(--top-shadow);
+	z-index:					99;
 }
 
 .XS ic-main-content,
@@ -43,57 +69,42 @@ ic-main-content,
 	padding-left:				0;
 }
 
-ic-main-content > *,
-[ic-main-content] > * {
+ic-main-content 	.sections > *,
+[ic-main-content]	.sections > * {
 	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
 	overflow-x:					hidden;
-	background-color:			var(--primary-background-color)!important;	
+	background-color:			var(--primary-background-color)!important;
+	scrollbar-color:			var(--emphasized-background-contrast) rgba(0,0,0,0);
 }
 
 
-
-ic-main-content 	> *:after,
-[ic-main-content] 	> *:after {
-	content:					'';
-	display:					block;
-	height:						0rem;	
-}
-
-ic-main-content		>  * ,
-[ic-main-content]	>  * {
-	margin-left:				0rem;
-}
-
-
-.XS ic-main-content		>  * ,
-.XS [ic-main-content]	>  * {
+.XS ic-main-content		.sections >  * ,
+.XS [ic-main-content]	.sections >  * {
 	margin-left:				0rem;
 	max-width:					100%;
 }
 
 
-ic-main-content 	> * > * ,
-[ic-main-content]	> * > * {
+/*
+ic-main-content 	.sections > * > * ,
+[ic-main-content]	.sections > * > * {
 	box-sizing: 				border-box;
 	scroll-behavior: 			smooth;
 	-webkit-overflow-scrolling: touch;
 }
-
+*/
 
 
 #section-map{
 	position:					relative;
-	grid-column:				-1 / span 1;
-	grid-row:					1 / span 2;
-	flex:						none;
+	flex:						10 0 auto;
 	padding:					0;
 	overflow:					hidden !important;
 	order:						10;
 	z-index:					40; /* = 50-order */
 	min-width:					min(30rem, 100vw);
-
 }
 
 #section-map:before {
@@ -103,6 +114,7 @@ ic-main-content 	> * > * ,
 	left:						0;
 	right:						0;
 	bottom:						0;
+	height:						100%;
 	pointer-events:				none;
 	box-shadow:					1rem 1rem 1rem -1rem rgba(0,0,0,0.5) inset;
 	z-index:					999999;
@@ -125,9 +137,8 @@ ic-main-content 	> * > * ,
 
 
 #section-filter-tags {
-	grid-column:				1 / -1;	
-	grid-row:					1 / span 1;
-
+	grid-column:				1 / 10;	
+	grid-row:					1;
 	padding-top:				var(--vertical-padding);
 	padding-bottom:				var(--vertical-padding);
 	padding-left:				var(--horizontal-padding);
@@ -136,6 +147,8 @@ ic-main-content 	> * > * ,
 	animation:					enter 500ms;
 	transform-origin: 			left;
 
+	box-shadow:					var(--top-shadow);
+	z-index:					100;
 }
 
 
@@ -158,9 +171,9 @@ ic-main-content 	> * > * ,
 
 
 #section-filter{
-	flex:						1 1 auto;
 	min-width:					20rem;
 	max-width:					24rem;
+	width:						24rem;
 	order:						1;
 	z-index:					49; /* = 50-order */
 }
@@ -171,11 +184,12 @@ ic-main-content 	> * > * ,
 
 
 #section-list {
-	flex:						3 1 auto;
 	min-width:					30rem;
-	max-width:					32rem;
+	max-width:					38rem;
+	width:						38rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
+	background-color:			var(--emphasized-background-color) !important;
 
 }
 
@@ -189,7 +203,6 @@ ic-main-content 	> * > * ,
 
 
 #section-item {
-	flex:						1 1 48rem;
 	order:						7;
 	z-index:					43; /* = 50-order */
 	min-width:					50rem;
