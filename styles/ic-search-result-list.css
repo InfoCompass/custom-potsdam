@@ -1,0 +1,33 @@
+ic-search-result-list {
+	display:					block;
+}
+
+ic-search-result-list header {
+	display:					flex;
+
+}
+
+ic-search-result-list header ic-spinner {
+	font-size:					2rem;
+	flex:						0 0 auto;
+}
+
+
+ic-search-result-list  a {
+	display:					block;
+	border-top-width:			1px;
+	border-bottom-width:		0;
+	border-left-width:			0;
+	border-right-width:			0;
+	border-style:				solid;
+	border-color:				var(--emphasized-background-color);
+}
+
+ic-search-result-list  a:last-child {
+	border-bottom-width:		1px;
+}
+
+ic-search-result-list .more {
+	font-size: 					2em;
+	user-select:				none;
+}
