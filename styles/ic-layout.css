@@ -43,7 +43,7 @@ ic-main-content		.sections,
 	flex:						0 1 auto;
 	display:					grid;
 	grid-template-rows:			auto auto;
-	grid-template-columns:		repeat(auto-fit, auto);
+	grid-template-columns:		repeat(10, auto);
 	height:						100%;	
 }
 
