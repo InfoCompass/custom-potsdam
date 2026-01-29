@@ -282,3 +282,14 @@ ic-item-property .title {
 .expandible-latlon {
 	position: relative;
 }
+
+
+/* space for scrollbar */
+
+ic-item-preview {
+	padding-right:			2rem;
+}
+
+ic-item-preview .auto-translation-indicator {
+	right:							1.25rem;
+}

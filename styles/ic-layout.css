@@ -44,12 +44,12 @@ ic-main-content		.sections,
 	display:					grid;
 	grid-template-rows:			auto auto;
 	grid-template-columns:		repeat(10, auto);
-	height:						100%;	
+	height:						100%;
 }
 
 ic-main-content		.sections > * ,
 [ic-main-content]	.sections > * {
-	grid-row:					-1/span 1;
+	grid-row:					-1/span 1;	
 }
 
 ic-main-content 	.sections:before,
@@ -189,7 +189,6 @@ ic-main-content 	.sections > * > * ,
 	width:						38rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
-	background-color:			var(--emphasized-background-color) !important;
 
 }
 
@@ -208,10 +207,6 @@ ic-main-content 	.sections > * > * ,
 	min-width:					50rem;
 	max-width:					100%;
 }
-
-
-
-
 
 
 
