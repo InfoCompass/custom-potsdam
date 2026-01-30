@@ -12,11 +12,9 @@
 	</button>
 
 	<div 
-		class 		= ""
-		ng-if		= "expanded"		
+		ng-if	= "expanded"
 	>
 		<button
-			ng-if		= "true"
 			class 		= "icon icon-interface-radio"
 			ng-class	= "{'checked':ic.filterConfig.categoryCleared()}"
 			ng-click	= "ic.filterConfig.clearCategory()" 
@@ -32,7 +30,6 @@
 		>
 
 			<button
-				ng-if			= "true"
 				class			= "icon icon-category-{{::category.name}}"
 				ic-button		= "{active:ic.filterConfig.categoryActive(category.name), disabled: !ic.itemStorage.currentStats.altMatches[category.name]}"
 				ng-class		= "{'checked':active, disabled: disabled}"
@@ -64,9 +61,10 @@
 			<!-- subcategories -->
 
 			<div 
-				class = "sub-categories"
-				ng-if = "showSubCategories && category.tags && category.tags.length > 0"
-			>
+				class 		= "sub-categories"
+				ng-if 		= "showSubCategories && category.tags && category.tags.length > 0"
+				ic-extend	= "ic.filterConfig.categoryActive(category.name)"
+			>			
 				<button
 					class		= "toggle default icon icon-interface-radio left"				
 					ic-button	= "{active:!ic.filterConfig.categoryActive(category.tags)}"					

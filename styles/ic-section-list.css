@@ -1,0 +1,7 @@
+ic-sorting {
+	padding:				var(--vertical-padding) var(--horizontal-padding);	
+	display:				flex;
+	justify-content:		space-between;
+	gap:					1rem;
+}
+

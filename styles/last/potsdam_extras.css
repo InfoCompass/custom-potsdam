@@ -287,7 +287,10 @@ ic-item-property .title {
 /* space for scrollbar */
 
 ic-item-preview {
-	padding-right:			2rem;
+	padding-top:				1rem !important;
+	padding-bottom:			1rem !important;
+	padding-left:				1rem !important;
+	padding-right:			2rem !important;
 }
 
 ic-item-preview .auto-translation-indicator {

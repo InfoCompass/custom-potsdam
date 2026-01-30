@@ -1,0 +1,17 @@
+<button
+	ng-click 	= "ic.filterConfig.toggleSortOrder('alphabetical_'+ic.site.currentLanguage)" 
+	class 		= "border rounded"
+	ng-class	= "{activated: ic.site.sortOrder.match('alphabetical_')}"
+	title		= "{{'INTERFACE.SORT_ALPHABETICALLY_%s'| fill : active && ic.site.sortDirectionAlpha == -1 ? 'DESC' : 'ASC' | translate}}"
+>
+	{{'INTERFACE.SORT_LABEL_ALPHABETICALLY_%s'| fill : ic.site.sortOrder.match('alphabetical_') && ic.site.sortDirectionAlpha == -1 ? 'DESC' : 'ASC' | translate}}
+</button>
+
+<button
+	ng-click 	= "ic.filterConfig.toggleSortOrder('last_change')" 
+	class 		= "border rounded icon right"
+	ng-class	= "{activated: ic.site.sortOrder == 'last_change', 'icon-interface-up': ic.site.sortDirection == 1, 'icon-interface-down': ic.site.sortDirection != 1}"	
+	title		= "{{'INTERFACE.SORT_LAST_CHANGE_%s'| fill : (ic.site.sortDirection == 1 ? 'ASC' : 'DESC') | translate}}"
+>
+	{{'INTERFACE.SORT_LABEL_LAST_CHANGE_%s'| fill : (ic.site.sortDirection == 1 ? 'ASC' : 'DESC') | translate}}
+</button>

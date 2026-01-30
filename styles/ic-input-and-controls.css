@@ -8,8 +8,11 @@ select {
 
 
 :root{
-	--button-border-width: 	1px;
-	--button-border-color:	#000;
+	--button-border-width: 			1px;
+	--button-border-color:			#000;
+	--button-horizontal-padding:	1rem;
+	--button-vertical-padding:		0.25rem;
+	--button-border-radius:			2rem;
 }
 
 input, 
@@ -24,7 +27,7 @@ select:focus {
 	display:			inline-block;
 	border:				none;	
 	border-style:		none;
-	color: 				unset;
+	color: 				var(--primary-text-color);
 	-webkit-appearance: none;
 }
 
@@ -49,7 +52,20 @@ a.ic-button {
 	background-color:	var(--primary-background-color, #fff);
 	border-radius:		0;	
 		
-	padding:			var(--vertical-padding) var(--horizontal-padding);
+	padding:			var(--button-vertical-padding) var(--button-horizontal-padding);
+}
+
+
+select.border,
+button.border,
+a.ic-button.border {
+	border:				var(--button-border-width) solid var(--button-border-color);
+}
+
+button.activated,
+a.ic-button.activated {
+	color:				var(--secondary-accent-contrast);
+	background-color:	var(--secondary-accent-color);
 }
 
 select.removable,
@@ -80,6 +96,12 @@ button.removable.emph,
 a.ic-button.removable.emph {
 	background-color:	#dcdcdc;
 
+}
+
+select.rounded,
+button.rounded,
+a.ic-button.rounded {
+	border-radius:				var(--button-border-radius) !important;
 }
 
 select {
