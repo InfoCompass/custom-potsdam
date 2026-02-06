@@ -25,9 +25,13 @@
 				class 		= "bubble shade-light"
 				ng-if 		= "!disabled"
 			>
-				<span>
-					{{matchesIgnoringType()}}
-				</span>				
+				<span>{{matchesIgnoringType()}}</span>	
+				<span ng-if = "matchesIgnoringType() != totalsIgnoringType()">
+					/
+				</span>
+				<span ng-if = "matchesIgnoringType() != totalsIgnoringType()">
+					{{totalsIgnoringType()}}
+				</span>			
 			</span>
 		</button>
 
