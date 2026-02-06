@@ -118,15 +118,19 @@
 
 
 
+:root{
+	--light-shade:				rgba(0,0,0,0.1);
+	--heavy-shade:				rgba(0,0,0,0.5);
+}
 
 .shade-light {
-	background-color:			rgba(0,0,0,0.1);
+	background-color:			var(--light-shade);
 	color:						var(--primary-text-color);
 }
 
 
 .shade-dark {
-	background-color:			rgba(0,0,0,0.5);
+	background-color:			var(--heavy-shade);
 	color:						#fff;
 }
 

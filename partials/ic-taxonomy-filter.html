@@ -12,10 +12,7 @@
 		{{'ITEMS.TYPE' | translate}}
 	</button> -->
 
-	<div 
-		class 		= ""
-		ng-if		= "true"		
-	>
+	<div>
 
 		<button
 			class 		= "icon icon-interface-radio"
@@ -24,6 +21,14 @@
 			ic-touch-me	= "true"
 		>
 			<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
+			<span 
+				class 		= "bubble shade-light"
+				ng-if 		= "!disabled"
+			>
+				<span>
+					{{matchesIgnoringType()}}
+				</span>				
+			</span>
 		</button>
 
 		<button
@@ -71,9 +76,22 @@
 	<button
 		class 		= ""
 		ng-click	= "ic.overlays.toggle('taxonomyOverlay_'+key)"
+		ic-button	= "{'active': !ic.filterConfig.unsortedTagCleared(tagGroup)}"
+		ng-class	= "{'checked': active}"
 		ic-touch-me	= "true" 
 	>
 		{{ 'INTERFACE.TAGS_%s' | fill : key| translate}}
+		<div
+			ng-if	= "active"
+			class	= "counter"
+			title	= "{{'INTERFACE.NUMBER_OF_ACTIVE_FILTERS' | translate}}: {{ (tagGroup | filter : ic.filterConfig.unsortedTagActive).length}}"
+		>
+			<span 
+				ng-repeat 	= "tag in tagGroup | filter : ic.filterConfig.unsortedTagActive"	
+				class		= "tick"
+			>
+			</span>
+		</div>
 	</button>
 	
 </section>

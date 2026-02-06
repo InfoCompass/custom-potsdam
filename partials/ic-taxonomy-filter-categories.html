@@ -21,6 +21,9 @@
 			ic-touch-me	= "true"
 		>
 			<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
+			<span class = "bubble shade-light">
+				{{matchesIgnoringCategory()}}
+			</span>
 		</button>
 
 		<div
@@ -38,7 +41,7 @@
 			>
 				<div>{{'CATEGORIES.%s' | fill : category.name | translate}}</div>
 				<span 
-					class 		= "bubble shade-dark"
+					class 		= "bubble shade-light"
 					ng-if 		= "!disabled && !ic.filterConfig.categoryActive(category.name)"
 				>
 					<span>
@@ -73,7 +76,7 @@
 				>
 					<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
 					<span 
-						class 		= "bubble shade-dark"
+						class 		= "bubble shade-light"
 					>
 						<span>
 							{{ic.itemStorage.currentStats.altMatches[category.name]}}

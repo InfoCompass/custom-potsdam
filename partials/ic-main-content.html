@@ -1,13 +1,20 @@
 
 <div class = "sections">
 	<section
+		ng-repeat 		= "section in ic.site.config.sections | filter : {name: 'filter-tags'}"
+		ic-extend		= "ic.site.visibleSections[section.name]"
+		id				= "section-{{section.name}}"
+		ng-include 		= "section.template" 
+		ic-tab-group	= "section.tabgroup"
+	>
+	</section>
+	<section
 		ng-repeat 		= "section in ic.site.config.sections"
 		ng-show			= "ic.site.visibleSections[section.name]"
 		id				= "section-{{section.name}}"
-		class			= "bg-1"
 		ng-include 		= "section.template" 
 		ic-tab-group	= "section.tabgroup"
-		ng-if			= "section.name != 'map'"
+		ng-if			= "['map', 'filter-tags'].indexOf(section.name) == -1"
 	>
 	</section>
 </div>

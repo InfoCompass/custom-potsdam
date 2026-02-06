@@ -14,11 +14,11 @@ ic-taxonomy-filter {
 
 ic-taxonomy-filter section {
 	display: 					block !important;
-	/*padding:					var(--vertical-padding) var(--horizontal-padding);*/
 	gap:						0.5rem;
 	background-color:			var(--primary-background-color);
 	border-radius:				0.5rem;
 	margin-bottom:				1rem;
+	overflow:					hidden;
 }
 
 ic-taxonomy-filter ic-taxonomy-filter-categories {
@@ -62,7 +62,19 @@ ic-taxonomy-filter section button.icon{
 	background-position:		1rem 50%!important;
 }
 
-ic-taxonomy-filter section button.checked {
+ic-taxonomy-filter section button .counter {
+	display:					flex;
+	gap:						0.1rem;
+	gap:						round(up, 0.1rem, 1px);
+}
+
+ic-taxonomy-filter section button .counter .tick {
+	display:					block;
+	width:						0.2rem;
+	width:						round(down, 0.2rem, 1px);
+	height:						1rem;
+	height:						round(down, 1rem, 1px);
+	background-color:			var(--heavy-shade);
 }
 
 ic-taxonomy-filter section button.section-toggle {
