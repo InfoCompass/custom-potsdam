@@ -1,8 +1,5 @@
 
-<div 
-	class = "sections"
-	style = "--number-of-regular-sections: {{ ic.site.numberOfVisibleSections({'skip':['map', 'filter-tags']}) }}"
->
+<div class = "primary-sections">
 
 	<section
 		ng-repeat 		= "section in ic.site.config.sections | filter : {name: 'filter-tags'}"
@@ -12,15 +9,18 @@
 		ic-tab-group	= "section.tabgroup"
 	>
 	</section>
-	<section
-		ng-repeat 		= "section in ic.site.config.sections"
-		ng-show			= "ic.site.visibleSections[section.name]"
-		id				= "section-{{section.name}}"
-		ng-include 		= "section.template" 
-		ic-tab-group	= "section.tabgroup"
-		ng-if			= "['map', 'filter-tags'].indexOf(section.name) == -1"
-	>
-	</section>
+
+	<div class = "regular-sections">
+		<section
+			ng-repeat 		= "section in ic.site.config.sections"
+			ng-show			= "ic.site.visibleSections[section.name]"
+			id				= "section-{{section.name}}"
+			ng-include 		= "section.template" 
+			ic-tab-group	= "section.tabgroup"
+			ng-if			= "['map', 'filter-tags'].indexOf(section.name) == -1"
+		>
+		</section>
+	</div>	
 </div>
 
 <section

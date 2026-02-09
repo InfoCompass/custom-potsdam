@@ -9,6 +9,7 @@ ic-taxonomy-filter {
 	flex-direction:				column;
 	
 	padding-bottom:				5rem !important;
+	max-height:					100%;
 }
 
 ic-taxonomy-filter section {
