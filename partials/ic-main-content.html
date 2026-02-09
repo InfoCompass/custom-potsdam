@@ -1,5 +1,9 @@
 
-<div class = "sections">
+<div 
+	class = "sections"
+	style = "--number-of-regular-sections: {{ ic.site.numberOfVisibleSections({'skip':['map', 'filter-tags']}) }}"
+>
+
 	<section
 		ng-repeat 		= "section in ic.site.config.sections | filter : {name: 'filter-tags'}"
 		ic-extend		= "ic.site.visibleSections[section.name]"

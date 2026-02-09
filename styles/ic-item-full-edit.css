@@ -1,0 +1,107 @@
+ic-item-full-edit {
+	display:					block;
+	box-sizing:					border-box;
+	position:					relative;
+	padding:					5rem 4rem !important;
+}
+
+ic-item-full-edit > section {
+}
+
+ic-item-full-edit > section > * {
+	display:					block;
+}
+
+ic-item-full-edit > section > article {
+	margin:						2rem 0;
+}
+
+
+ic-item-full-edit > section  > * > * {
+	position:					relative;
+	flex:						10 0 0;
+	max-width: 					40rem;
+	min-width:					0;
+}
+
+ic-item-full-edit > section  > * > * .split {
+	display:					flex;
+	flex-wrap:					wrap;
+	margin:						0 -1rem;
+}
+
+ic-item-full-edit > section  > * > * .split > * {
+	position:					relative;
+	flex:						1 0 15rem;
+	margin:						0 1rem;
+}
+
+ic-item-full-edit > section  > * > * .split > *.full {
+	flex:						1 1 100%;
+}
+
+
+ic-item-full-edit > section > *:after {
+	content:					'';
+	flex:						1 0 0;
+}
+
+
+ic-item-full-edit  h3 {
+	margin-top:				1rem;
+	margin-bottom:			1rem;
+	font-weight:			800;
+}
+
+ic-item-full-edit  h4 {
+	margin-top:				0rem;
+	margin-bottom:			0rem;
+	font-weight:			700;
+	line-height:			1.5rem;
+}
+
+ic-item-full-edit h4 + a,
+ic-item-full-edit  h4 + ic-help {
+	position:				absolute;
+	top:					0;
+	right:					0;
+}
+
+
+
+ic-item-full-edit .controls {
+	display:				flex;
+	flex-wrap:				wrap;
+	margin:					-0.5rem;
+}
+
+ic-item-full-edit .controls > * {
+	flex:					1 0 auto;
+	margin:					0.5rem;
+}
+
+ic-item-full-edit footer.screen-only {
+}
+
+
+
+ic-item-full-edit footer button {
+	display:					block;
+	width:						100%;
+	text-align:					left;
+	box-sizing:					border-box;
+	margin:						1rem 0;
+}
+
+ic-item-full-edit footer button > * {
+	display:					block;
+	width:						16em;
+	margin:						auto;
+	line-height:				4rem;
+	white-space: 				nowrap;
+	overflow:					visible;
+}
+
+ic-item-full-edit ic-item-property-edit:not(.no-sibling-margin) + ic-item-property-edit:not(.no-sibling-margin) {
+	margin-top:					2rem;
+}

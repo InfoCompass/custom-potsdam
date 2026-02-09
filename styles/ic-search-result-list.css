@@ -15,19 +15,31 @@ ic-search-result-list header ic-spinner {
 
 ic-search-result-list  a {
 	display:					block;
-	border-top-width:			1px;
-	border-bottom-width:		0;
-	border-left-width:			0;
-	border-right-width:			0;
-	border-style:				solid;
-	border-color:				var(--emphasized-background-color);
 }
 
-ic-search-result-list  a:last-child {
-	border-bottom-width:		1px;
-}
 
 ic-search-result-list .more {
 	font-size: 					2em;
 	user-select:				none;
+}
+
+
+ic-search-result-list ic-item-preview {
+	margin:						1rem !important;
+	border-width:				1px;
+	border-color:				var(--emphasized-background-color);
+	border-style:				solid;
+	border-radius:				0.5rem;
+}
+
+ic-search-result-list ic-item-preview.active-item {
+	background-color:			var(--emphasized-background-color);
+}
+
+ic-search-result-list ic-item-preview.active-item:hover {
+	background-color:			var(--emphasized-background-color) !important;
+}
+
+ic-search-result-list ic-item-preview :before {
+	display:					none !important;	
 }

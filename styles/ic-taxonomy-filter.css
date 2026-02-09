@@ -7,8 +7,7 @@ ic-taxonomy-filter {
 
 	display:					block;
 	flex-direction:				column;
-
-	min-height:					100%;
+	
 	padding-bottom:				5rem !important;
 }
 
@@ -45,7 +44,6 @@ ic-taxonomy-filter section button {
 }
 
 ic-taxonomy-filter section button.checked  {
-
 	background-color:			var(--secondary-accent-color);
 }
 
@@ -84,9 +82,12 @@ ic-taxonomy-filter section button.section-toggle {
 	padding-right:				2.5rem!important;
 	background-position:		calc(100% - 0.5rem) 50% !important;
 	margin:						0;	
-	background-color:			transparent !important;
 	border-radius:				0;
 }
+
+ic-taxonomy-filter section button.section-toggle.open {
+	background-color:			transparent !important;	
+} 
 
 ic-taxonomy-filter section button ~ div {
 	display:					block;

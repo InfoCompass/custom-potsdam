@@ -1,10 +1,10 @@
 <section 
-	ng-if = "ic.taxonomy.categories && ic.taxonomy.categories.length > 0"
-	class = "categories"
+	ng-if 		= "ic.taxonomy.categories && ic.taxonomy.categories.length > 0"
+	class 		= "categories"
 >
 	<button
 		class 		= "icon section-toggle"
-		ng-class	= "{'icon-interface-down open': expanded, 'icon-interface-right': !expanded}"
+		ng-class	= "{'icon-interface-down open': expanded, 'icon-interface-right': !expanded, 'checked':!ic.filterConfig.categoryCleared()}"
 		ng-click	= "expanded = !expanded"
 		ic-touch-me	= "true" 
 	>
@@ -12,7 +12,7 @@
 	</button>
 
 	<div 
-		ng-if	= "expanded"
+		ng-show	= "expanded"
 	>
 		<button
 			class 		= "icon icon-interface-radio"

@@ -3,14 +3,6 @@
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
-
 
 
 	exports.categories = [
