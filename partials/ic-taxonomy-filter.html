@@ -25,13 +25,7 @@
 				class 		= "bubble shade-light"
 				ng-if 		= "!disabled"
 			>
-				<span>{{matchesIgnoringType()}}</span>	
-				<span ng-if = "matchesIgnoringType() != totalsIgnoringType()">
-					/
-				</span>
-				<span ng-if = "matchesIgnoringType() != totalsIgnoringType()">
-					{{totalsIgnoringType()}}
-				</span>			
+				{{matchesIgnoringType()}}
 			</span>
 		</button>
 
@@ -50,15 +44,7 @@
 				class 		= "bubble shade-light"
 				ng-if 		= "!disabled"
 			>
-				<span>
-					{{ic.itemStorage.currentStats.altMatches[type.name]}}
-				</span>
-				<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
-					/
-				</span>
-				<span ng-if = "ic.itemStorage.currentStats.altMatches[type.name] != ic.itemStorage.currentStats.totals[type.name]">
-					{{ic.itemStorage.currentStats.totals[type.name]}}
-				</span>
+				{{ic.itemStorage.currentStats.altMatches[type.name]}}
 			</span>
 		</button>
 

@@ -50,8 +50,8 @@ a.ic-button {
 	display:			inline-block;
 	cursor:				pointer;
 	background-color:	var(--primary-background-color, #fff);
-	border-radius:		0;	
-		
+	border-radius:		var(--button-border-radius);	
+
 	padding:			var(--button-vertical-padding) var(--button-horizontal-padding);
 }
 
@@ -60,6 +60,8 @@ select.border,
 button.border,
 a.ic-button.border {
 	border:				var(--button-border-width) solid var(--button-border-color);
+	border-width:		1px;
+	border-width:		round(down, 0.1rem, 1px);
 }
 
 button.activated,
@@ -67,6 +69,13 @@ a.ic-button.activated {
 	color:				var(--secondary-accent-contrast);
 	background-color:	var(--secondary-accent-color);
 }
+
+button.prio,
+a.ic-button.prio {
+	color:				var(--emphasized-background-contrast);
+	background-color:	var(--emphasized-background-color);
+}
+
 
 select.removable,
 button.removable,

@@ -1,6 +1,6 @@
 
 :root {
-	--top-shadow:				0 0 0.5rem rgba(0,0,0,0.5);
+	--top-shadow:				0 0 0.5rem 1px rgba(0,0,0,0.5);
 }
 
 html {
@@ -63,6 +63,11 @@ ic-main-content		.primary-sections .regular-sections,
 ic-main-content		.primary-sections .regular-sections > *,
 [ic-main-content]	.primary-sections .regular-sections > *{
 	flex:						1 1 auto;
+	box-sizing:					border-box;
+	position:					relative;
+	overflow-x:					hidden;
+	background-color:			var(--primary-background-color)!important;
+	scrollbar-color:			var(--primary-background-contrast) rgba(0,0,0,0);
 }
 
 
@@ -168,9 +173,6 @@ ic-main-content 	.sections > * > * ,
 
 
 #section-filter-tags {
-	grid-column:				1 / span var(--number-of-regular-sections);	
-	grid-row:					1;
-
 	box-shadow:					var(--top-shadow);
 	z-index:					100;
 	transition:					height 400ms ease-in-out;

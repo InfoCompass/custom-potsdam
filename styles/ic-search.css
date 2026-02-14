@@ -44,7 +44,7 @@ ic-search form input[type=search] {
 	box-sizing:						border-box;	
 	box-shadow:						0 0 1px var(--neutral-color);
 	border-radius:					0.625em;
-	padding:						0em 2rem 0em 1rem;
+	padding:						0em 1rem 0em 1rem !important;
 	margin:							0;
 	font-size:						1.5em;
 	line-height:					2em;
@@ -54,7 +54,7 @@ ic-search form input[type=search] {
 
 ic-search form button {
 	position: 						absolute;
-	display:						inline-block;	
+	display:						none !important;	
 	right: 							0;
 	width:							2em;
 	background-color:				transparent;

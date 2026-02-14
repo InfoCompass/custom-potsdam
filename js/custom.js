@@ -46,7 +46,9 @@ angular.module("icServices")
 			
 			show: (ic, originalShow) => {
 
-				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
+				return true
+
+/*				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
 												.filter( ([section, active ]) => section != 'filter-tags')
 												.filter( ([section, active ]) => active)
 												.length
@@ -56,7 +58,7 @@ angular.module("icServices")
 				if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
 				if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
 				
-				return originalShow(ic)	
+				return originalShow(ic)	*/
 			}
 
 		})

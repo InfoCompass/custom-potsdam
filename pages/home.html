@@ -51,11 +51,14 @@
 <article>
 	<h2>Neuste Angebote und Veranstaltungen</h2>
 
-	<div class = "ic-item-tiles">
-		<ic-item-tile ic-item = "{ tags: ['encounters'] }"></ic-item-tile>
-		<ic-item-tile ic-item = "{ tags: ['exercise'] } "></ic-item-tile>
-		<ic-item-tile ic-item = "{ tags: ['support'] } "></ic-item-tile>
-		<ic-item-tile ic-item = "{ tags: ['education'] } "></ic-item-tile>		
+	<div 
+		class 	= "ic-item-tiles"
+	>
+		<ic-item-tile
+			ng-repeat 	= "item in ic.itemStorage.data | orderBy: 'lastEditDate' : true | limitTo : 4"
+			ic-item		= "item"
+		>
+		</ic-item-tile>
 	</div>
 
 	<div class ="tar">
@@ -63,7 +66,7 @@
 			class 	= "ic-button padding rounded border-2"
 			href	= "/list"
 		>	
-			Alle Einträge anzeigen
+			{{ 'INTERFACE.FULL_LIST' | translate }}
 		</a>
 	</div>
 

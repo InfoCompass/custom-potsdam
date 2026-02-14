@@ -2,41 +2,65 @@ ic-item-full-edit {
 	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
-	padding:					5rem 4rem !important;
+	padding:					5rem 0rem !important;
 }
 
 ic-item-full-edit > section {
+	padding-left:				4rem;
+	margin-right:				5rem;
 }
 
-ic-item-full-edit > section > * {
-	display:					block;
-}
-
-ic-item-full-edit > section > article {
-	margin:						2rem 0;
-}
-
-
-ic-item-full-edit > section  > * > * {
+ic-item-full-edit section,
+ic-item-full-edit article {
 	position:					relative;
-	flex:						10 0 0;
-	max-width: 					40rem;
-	min-width:					0;
 }
 
-ic-item-full-edit > section  > * > * .split {
+ic-item-full-edit > section.properties {
+
+	border-top-width:			2px;
+	border-bottom-width: 		2px;
+	border-right-width: 		0;
+	border-left-width:			0;
+
+	border-top-width:			round(down, 0.2rem, 1px);
+	border-bottom-width: 		round(down, 0.2rem, 1px);
+
+	border-style:				solid;
+	border-color:				var(--primary-color);
+
+	margin-top:					1rem;
+	margin-bottom:				1rem;
+}
+ic-item-full-edit > section.properties + section.properties {
+	border-top-width:			0;
+	margin-top:					-1rem;
+}
+
+ic-item-full-edit > section.properties > [ic-extend] {
+	padding-bottom:				0rem;
+	transition-property:		height, padding-bottom;
+}
+
+ic-item-full-edit > section.properties > [ic-extend].extended {
+	padding-bottom:				1rem;
+	transition-property:		height, padding-bottom;
+}
+ 
+ic-item-full-edit > section  .split {
 	display:					flex;
 	flex-wrap:					wrap;
-	margin:						0 -1rem;
+	margin:						0;
+	gap:						1rem;
+	justify-content:			space-around;
+	margin:						1rem 0;
 }
 
-ic-item-full-edit > section  > * > * .split > * {
+ic-item-full-edit > section  .split > * {
 	position:					relative;
-	flex:						1 0 15rem;
-	margin:						0 1rem;
+	flex:						1 1 15rem;
 }
 
-ic-item-full-edit > section  > * > * .split > *.full {
+ic-item-full-edit > section  .split > *.full {
 	flex:						1 1 100%;
 }
 
@@ -47,10 +71,16 @@ ic-item-full-edit > section > *:after {
 }
 
 
+ic-item-full-edit .options button {
+	border-radius:				0 !important;
+}
+
 ic-item-full-edit  h3 {
+	box-sizing:				border-box;
 	margin-top:				1rem;
 	margin-bottom:			1rem;
 	font-weight:			800;
+	width:					100%;
 }
 
 ic-item-full-edit  h4 {
@@ -72,7 +102,8 @@ ic-item-full-edit  h4 + ic-help {
 ic-item-full-edit .controls {
 	display:				flex;
 	flex-wrap:				wrap;
-	margin:					-0.5rem;
+	margin:					0rem;
+	padding:				1rem;
 }
 
 ic-item-full-edit .controls > * {
@@ -104,4 +135,10 @@ ic-item-full-edit footer button > * {
 
 ic-item-full-edit ic-item-property-edit:not(.no-sibling-margin) + ic-item-property-edit:not(.no-sibling-margin) {
 	margin-top:					2rem;
+}
+
+
+/* recurring date is meant to overflow the item property edit box, not in this version though: */
+ic-item-full-edit .preview-box {
+	margin:						0 !important;
 }

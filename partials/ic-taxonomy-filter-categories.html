@@ -41,15 +41,8 @@
 					class 		= "bubble shade-light"
 					ng-if 		= "!disabled && !ic.filterConfig.categoryActive(category.name)"
 				>
-					<span>
-						{{ic.itemStorage.currentStats.altMatches[category.name]}}
-					</span>
-					<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
-						/
-					</span>
-					<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
-						{{ic.itemStorage.currentStats.totals[category.name]}}
-					</span>
+					
+					{{ic.itemStorage.currentStats.altMatches[category.name]}}
 				</span>
 				<span 
 					class = "icon icon-interface-down"
@@ -75,15 +68,7 @@
 					<span 
 						class 		= "bubble shade-light"
 					>
-						<span>
-							{{ic.itemStorage.currentStats.altMatches[category.name]}}
-						</span>
-						<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
-							/
-						</span>
-						<span ng-if = "ic.itemStorage.currentStats.altMatches[category.name] != ic.itemStorage.currentStats.totals[category.name]">
-							{{ic.itemStorage.currentStats.totals[category.name]}}
-						</span>
+						{{ic.itemStorage.currentStats.altMatches[category.name]}}
 					</span>
 				</button>
 
@@ -100,16 +85,7 @@
 						ng-if 		= "!disabled"
 						class 		= "bubble shade-dark"
 					>
-						<span>
-							{{ic.itemStorage.currentStats.altMatches[tag]}}
-						</span>
-						<span ng-if = "ic.itemStorage.currentStats.altMatches[tag] != ic.itemStorage.currentStats.totals[tag]">
-							/
-						</span>
-						<span ng-if = "ic.itemStorage.currentStats.altMatches[tag] != ic.itemStorage.currentStats.totals[tag]">
-							{{ic.itemStorage.currentStats.totals[tag]}}
-						</span>
-
+						{{ic.itemStorage.currentStats.altMatches[tag]}}
 					</span>
 
 				</button>
