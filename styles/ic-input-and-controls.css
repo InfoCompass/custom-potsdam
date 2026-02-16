@@ -9,9 +9,10 @@ select {
 
 :root{
 	--button-border-width: 			1px;
+	--button-border-width: 			round(down, 0.1rem, 1px);
 	--button-border-color:			#000;
 	--button-horizontal-padding:	1rem;
-	--button-vertical-padding:		0.25rem;
+	--button-vertical-padding:		0.5rem;
 	--button-border-radius:			2rem;
 }
 
@@ -24,66 +25,112 @@ button:focus,
 select:active,
 select:hover,
 select:focus {
-	display:			inline-block;
-	border:				none;	
-	border-style:		none;
-	color: 				var(--primary-text-color);
-	-webkit-appearance: none;
+	display:					inline-block;
+	border-style:				none;
+	color: 						var(--primary-text-color);
+	-webkit-appearance: 		none;
 }
 
 label {
-	display:			flex;
-	align-items: 		center;
-	cursor:				pointer;
+	display:					flex;
+	align-items: 				center;
+	cursor:						pointer;
 }
 
 select::-moz-focus-inner,
 button::-moz-focus-inner {
-    padding:			0;
-    border:				0;
+    padding:					0;
+    border:						0;
 }
 
 
 select,
 button,
 a.ic-button {
-	display:			inline-block;
-	cursor:				pointer;
-	background-color:	var(--primary-background-color, #fff);
-	border-radius:		var(--button-border-radius);	
+	display:					inline-block;
+	cursor:						pointer;
+	background-color:			var(--primary-background-color, #fff);
+	border-radius:				var(--button-border-radius);	
+	border-width:				var(--button-border-width);
+	border-color:				var(--button-border-color);
+	border-style:				none;
+	padding:					var(--button-vertical-padding) var(--button-horizontal-padding);
+}
 
-	padding:			var(--button-vertical-padding) var(--button-horizontal-padding);
+select.icon.right,
+button.icon.right,
+a.ic-button.icon.right {
+	padding-right:				2rem;
+	background-position:		calc(100% - 0.5rem)
+}
+
+select.icon.left,
+button.icon.left,
+a.ic-button.icon.left {
+	padding-left: 				2rem;
+	background-position:		0.5rem;
 }
 
 
 select.border,
 button.border,
 a.ic-button.border {
-	border:				var(--button-border-width) solid var(--button-border-color);
-	border-width:		1px;
-	border-width:		round(down, 0.1rem, 1px);
+	border-style:				solid
 }
 
+select.activated,
 button.activated,
 a.ic-button.activated {
-	color:				var(--secondary-accent-contrast);
-	background-color:	var(--secondary-accent-color);
+	color:						var(--secondary-accent-contrast);
+	background-color:			var(--secondary-accent-color);
 }
 
 button.prio,
 a.ic-button.prio {
-	color:				var(--emphasized-background-contrast);
-	background-color:	var(--emphasized-background-color);
+	color:						var(--primary-accent-contrast);
+	background-color:			var(--primary-accent-color);
 }
+
+button.prio:hover,
+a.ic-button.prio:hover {
+	color:						var(--emphasized-background-contrast);
+	background-color:			var(--emphasized-background-color);
+}
+
+button.prio:disabled,
+a.ic-button.prio:disabled {
+	color:						var(--secondary-background-contrast);
+	background-color:			var(--secondary-background-color);
+	border-style:				solid;
+	opacity:					0.5;
+}
+
 
 
 select.removable,
 button.removable,
 a.ic-button.removable {
-	background-color:	#f5f5f5;
-	box-shadow:			none !important;
-	color:				var(--primary-text-color);
-	animation:			removable-enter 500ms;
+	color:						var(--secondary-background-contrast)  !important;
+	background-color:			var(--secondary-background-color) !important;
+	animation:					removable-enter 500ms;
+}
+
+select.removable:hover,
+button.removable:hover,
+a.ic-button.removable:hover {
+	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.95) ) !important;
+}
+
+select.removable.all,
+button.removable.all,
+a.ic-button.removable.all {
+	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.85) ) !important;
+}
+
+select.removable.all:hover,
+button.removable.all:hover,
+a.ic-button.removable.all:hover {
+	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.80) ) !important;
 }
 
 @keyframes removable-enter {
@@ -100,12 +147,7 @@ a.ic-button.removable {
 	}
 }
 
-select.removable.emph,
-button.removable.emph,
-a.ic-button.removable.emph {
-	background-color:	#dcdcdc;
 
-}
 
 select.rounded,
 button.rounded,
@@ -114,9 +156,7 @@ a.ic-button.rounded {
 }
 
 select {
-	appearance: 		none;
-	padding-top:		0.25rem;
-	padding: 			0.25rem 0.5;
+	appearance: 		none;	
 }
 
 .emph {

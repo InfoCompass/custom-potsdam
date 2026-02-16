@@ -2,11 +2,11 @@ ic-item-full-edit {
 	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
-	padding:					5rem 0rem !important;
+	padding:					5rem 0rem !important;	
 }
 
 ic-item-full-edit > section {
-	padding-left:				4rem;
+	margin-left:				4rem;
 	margin-right:				5rem;
 }
 
@@ -17,13 +17,13 @@ ic-item-full-edit article {
 
 ic-item-full-edit > section.properties {
 
-	border-top-width:			2px;
-	border-bottom-width: 		2px;
+	border-top-width:			1px;
+	border-bottom-width: 		1px;
 	border-right-width: 		0;
 	border-left-width:			0;
 
-	border-top-width:			round(down, 0.2rem, 1px);
-	border-bottom-width: 		round(down, 0.2rem, 1px);
+	border-top-width:			round(down, 0.1rem, 1px);
+	border-bottom-width: 		round(down, 0.1rem, 1px);
 
 	border-style:				solid;
 	border-color:				var(--primary-color);

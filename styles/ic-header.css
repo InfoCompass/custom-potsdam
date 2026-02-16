@@ -48,7 +48,10 @@ ic-header .upper-row .end {
 	justify-content:				flex-end;
 }
 
-
+ic-header .upper-row .end a .icon {
+	font-size:						1.5em;
+	margin-right:					0.3333em;
+}
 
 
 

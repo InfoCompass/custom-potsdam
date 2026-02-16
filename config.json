@@ -12,7 +12,7 @@
     "disableLists":         true,
     "languages":            ["de", "en"],
     "adminLanguages":       ["ru", "none"],
-    "activeIconColor":      "#007458",
+    "activeIconColor":      "#000",
     "plainIconColor":       "#666666",
     "pages":                [
                                 "tags",

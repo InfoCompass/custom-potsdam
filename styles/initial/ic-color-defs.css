@@ -27,8 +27,8 @@
 
 	--primary-accent-color:				var(--primary-color);
 	--primary-accent-contrast:			var(--primary-contrast);
-	--secondary-accent-color:			#ffd2bf;
-	--secondary-accent-contrast:		var(--primary-text-color);
+	--secondary-accent-color:			var(--emphasized-background-color);/*#ffd2bf;*/
+	--secondary-accent-contrast:		var(--emphasized-background-contrast);
 
 	--active-color:						#007458; /*legacy*/
 

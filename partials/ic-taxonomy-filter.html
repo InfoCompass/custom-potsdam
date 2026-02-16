@@ -15,7 +15,7 @@
 	<div>
 
 		<button
-			class 		= "icon icon-interface-radio"
+			class 		= "icon icon-interface-radio all"
 			ng-class	= "{'checked':ic.filterConfig.typeCleared()}"
 			ng-click	= "ic.filterConfig.clearType()" 
 			ic-touch-me	= "true"
@@ -67,20 +67,21 @@
 		class 		= ""
 		ng-click	= "ic.overlays.toggle('taxonomyOverlay_'+key)"
 		ic-button	= "{'active': !ic.filterConfig.unsortedTagCleared(tagGroup)}"
-		ng-class	= "{'checked': active}"
 		ic-touch-me	= "true" 
 	>
 		{{ 'INTERFACE.TAGS_%s' | fill : key| translate}}
 		<div
-			ng-if	= "active"
-			class	= "counter"
-			title	= "{{'INTERFACE.NUMBER_OF_ACTIVE_FILTERS' | translate}}: {{ (tagGroup | filter : ic.filterConfig.unsortedTagActive).length}}"
+			ng-if		= "active "
+			class		= "counter icon icon-interface-filter"
+			title		= "{{'INTERFACE.NUMBER_OF_ACTIVE_FILTERS' | translate}}: {{ (tagGroup | filter : ic.filterConfig.unsortedTagActive).length}}"
 		>
+<!-- 			
 			<span 
 				ng-repeat 	= "tag in tagGroup | filter : ic.filterConfig.unsortedTagActive"	
 				class		= "tick"
 			>
 			</span>
+-->
 		</div>
 	</button>
 	

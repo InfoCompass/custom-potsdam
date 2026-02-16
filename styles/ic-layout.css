@@ -40,10 +40,11 @@ ic-main-content,
 
 ic-main-content		.primary-sections,
 [ic-main-content]	.primary-sections {
-	flex:						1 0 0;
+	flex:						1 1 auto;
 	display:					flex;
 	position:					relative;
 	flex-direction:				column;
+	max-width:					100%;
 }
 
 ic-main-content		.primary-sections > *,
@@ -69,68 +70,6 @@ ic-main-content		.primary-sections .regular-sections > *,
 	background-color:			var(--primary-background-color)!important;
 	scrollbar-color:			var(--primary-background-contrast) rgba(0,0,0,0);
 }
-
-
-
-/*
-ic-main-content		.sections,
-[ic-main-content]	.sections {
-	box-sizing:					border-box;
-	flex:						1 1 min-content;
-	display:					grid;
-	grid-template-rows:			min-content auto;
-	grid-template-columns:		repeat(var(--number-of-regular-sections), auto);
-	height:						100%;
-}
-
-ic-main-content		.sections > * ,
-[ic-main-content]	.sections > * {
-	grid-row:					2/span 1;	
-}
-
-ic-main-content 	.sections:before,
-[ic-main-content]	.sections:before{
-	content:					'';
-	position:					absolute;
-	top:						-1rem;
-	left:						0;
-	right:						0;
-	height:						1rem;
-	box-shadow:					var(--top-shadow);
-	z-index:					99;
-}
-
-.XS ic-main-content,
-.XS [ic-main-content] {
-	padding-left:				0;
-}
-
-ic-main-content 	.sections > *,
-[ic-main-content]	.sections > * {
-	display:					block;
-	box-sizing:					border-box;
-	position:					relative;
-	overflow-x:					hidden;
-	background-color:			var(--primary-background-color)!important;
-	scrollbar-color:			var(--primary-background-contrast) rgba(0,0,0,0);
-}
-
-
-.XS ic-main-content		.sections >  * ,
-.XS [ic-main-content]	.sections >  * {
-	margin-left:				0rem;
-	max-width:					100%;
-}
-*/
-
-/*
-ic-main-content 	.sections > * > * ,
-[ic-main-content]	.sections > * > * {
-	box-sizing: 				border-box;
-	scroll-behavior: 			smooth;
-	-webkit-overflow-scrolling: touch;
-}
-*/
 
 
 #section-map{
@@ -173,6 +112,7 @@ ic-main-content 	.sections > * > * ,
 
 
 #section-filter-tags {
+	flex:						0 0 auto;
 	box-shadow:					var(--top-shadow);
 	z-index:					100;
 	transition:					height 400ms ease-in-out;
@@ -190,7 +130,7 @@ ic-main-content 	.sections > * > * ,
 
 
 #section-filter{
-	min-width:					20rem;
+	min-width:					24rem;
 	max-width:					24rem;
 	order:						1;
 	z-index:					49; /* = 50-order */
@@ -203,9 +143,15 @@ ic-main-content 	.sections > * > * ,
 
 #section-list {
 	min-width:					30rem;
+	width:						48rem;
+	max-width:					48rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
 
+}
+
+#section-list > * > * {
+	padding-right:				1.5rem !important;
 }
 
 .S #section-list {
@@ -218,6 +164,9 @@ ic-main-content 	.sections > * > * ,
 
 
 #section-item {
+	min-width:					24rem;
+	width:						30rem;
+	max-width:					40rem;
 	order:						7;
 	z-index:					43; /* = 50-order */
 	min-width:					50rem;

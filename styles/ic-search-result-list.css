@@ -26,6 +26,7 @@ ic-search-result-list .more {
 
 ic-search-result-list ic-item-preview {
 	margin:						1rem !important;
+	margin-right:				0rem !important;
 	border-width:				1px;
 	border-color:				var(--emphasized-background-color);
 	border-style:				solid;
@@ -33,13 +34,13 @@ ic-search-result-list ic-item-preview {
 }
 
 ic-search-result-list ic-item-preview.active-item {
-	background-color:			var(--emphasized-background-color);
+	background-color:			var(--secondary-background-color);
 }
 
 ic-search-result-list ic-item-preview.active-item:hover {
-	background-color:			var(--emphasized-background-color) !important;
+	background-color:			var(--secondary-background-color) !important;
 }
 
-ic-search-result-list ic-item-preview :before {
+ic-search-result-list ic-item-preview:before {
 	display:					none !important;	
 }

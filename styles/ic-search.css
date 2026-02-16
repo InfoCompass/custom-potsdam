@@ -42,14 +42,10 @@ ic-search form input[type=text],
 ic-search form input[type=search] {
 	display:						block;
 	box-sizing:						border-box;	
-	box-shadow:						0 0 1px var(--neutral-color);
-	border-radius:					0.625em;
-	padding:						0em 1rem 0em 1rem !important;
+	padding:						0em 1rem 0em 2rem;
 	margin:							0;
 	font-size:						1.5em;
 	line-height:					2em;
-	background:						var(--primary-background-color);
-	color: 							var(--dark-text-color);	
 }
 
 ic-search form button {
@@ -59,6 +55,12 @@ ic-search form button {
 	width:							2em;
 	background-color:				transparent;
 	z-index: 						999999;
+}
+
+
+ic-extended-search .results a {
+	padding-left:					2rem;
+	padding-right:					2rem;
 }
 
 
