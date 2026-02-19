@@ -27,7 +27,7 @@ ic-search-result-list .more {
 ic-search-result-list ic-item-preview {
 	margin:						1rem !important;
 	margin-right:				0rem !important;
-	border-width:				1px;
+	border-width:				2px;
 	border-color:				var(--emphasized-background-color);
 	border-style:				solid;
 	border-radius:				0.5rem;

@@ -7,10 +7,10 @@
 
 	<div 
 		ng-if = "!ic.site.visibleSections.filter"
-		class = "bg-0 padding active flex"
+		class = "padding flex"
 	>
 		<button
-			class 		= "block margin-right flex-grow bg-3 padding tac"
+			class 		= "block margin-right border tac"
 			ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
 			ic-touch-me 
 		>
@@ -18,7 +18,7 @@
 		</button>
 
 		<button 
-			class 		= "block margin-left flex-grow bg-3 padding tac"
+			class 		= "block margin-left border tac"
 			ng-click 	= "ic.site.expandMap = true"
 			ic-touch-me 
 		>

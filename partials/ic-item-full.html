@@ -450,7 +450,6 @@
 
 		<h4 class = "screen-only">{{'ITEMS.TAGS_FOOTER_NOTE' | translate}}</h4>
 
-
 		<article 
 			class = "screen-only"
 			ng-if = "item.tags.length > 0"
@@ -460,23 +459,20 @@
 
 	</section>
 
-	<div class ="screen-only">
-		<div> <!-- spacer --> </div>
-		<div>
-			<h4 class = "screen-only">{{'INTERFACE.QR_CODE' | translate}}</h4>
-			<div class = "qrcode">
-				<qrcode 
-					version					=	"4" 
-					error-correction-level	=	"M" 
-					size					=	"200" 
-					data					=	"{{item | icItemLink}}"
-					ng-if					=	"item"
-					ng-click				=	"ic.overlays.open('qrcode')"
-				>
-				</qrcode>
-			</div>
+	<section class ="screen-only">
+		<h4 class = "screen-only">{{'INTERFACE.QR_CODE' | translate}}</h4>
+		<div class = "qrcode">
+			<qrcode 
+				version					=	"4" 
+				error-correction-level	=	"M" 
+				size					=	"200" 
+				data					=	"{{item | icItemLink}}"
+				ng-if					=	"item"
+				ng-click				=	"ic.overlays.open('qrcode')"
+			>
+			</qrcode>
 		</div>
-	</div>
+	</section>
 
 
 	<article 

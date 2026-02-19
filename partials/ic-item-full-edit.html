@@ -509,7 +509,6 @@
 		class		= "icon right"
 		ng-class	= "{'icon-interface-right': extend != 'misc', 'icon-interface-down': extend == 'misc'}"
 		ng-click	= "extend = extend == 'misc' ? undefined : 'misc'"
-		ng-init		= "extendMisc = false"
 	>
 		{{'INTERFACE.ITEM_EDIT_SECTION_MISC' | translate}}
 	</h3>
@@ -608,9 +607,7 @@
 			></ic-item-property-edit>
 		</article>
 
-		<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-
+		<div ng-if = "ic.user.can('edit_items')"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
 
 		<article ng-if = "ic.user.can('edit_items')" >
 			<h4> {{'ITEMS.RESUBMISSION_DATE' | translate}}</h4>
@@ -647,17 +644,27 @@
 </section>
 
 
+<!-- note -->
+<section class = "properties">
 
-<section>
-	<h4> {{'ITEMS.EDITING_NOTE' | translate}}</h4>
+	<h3
+		aria-role 	= "button"
+		class		= "icon right"
+		ng-class	= "{'icon-interface-right': extend != 'note', 'icon-interface-down': extend == 'note'}"
+		ng-click	= "extend = extend == 'note' ? undefined : 'note'"
+	>
+		{{'ITEMS.EDITING_NOTE' | translate}}
+	</h3>
 
-	<ic-help ic-message = "ITEMS.EDITING_NOTE_HELP"></ic-help>
+	<div ic-extend ="extend == 'note'">		
 
-	<ic-item-property-edit
-		ic-item						= "icItem"
-		ic-type						= "text"
-		ic-key						= "editingNote"
-	></ic-item-property-edit>
+		<ic-item-property-edit
+			ic-item						= "icItem"
+			ic-type						= "text"
+			ic-key						= "editingNote"
+		></ic-item-property-edit>
+	</div>
+
 </section>
 
 

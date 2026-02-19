@@ -1,0 +1,108 @@
+<div class = "buttons">
+	<button 
+		ng-if		= "true || ic.user.can('edit_items')"
+		ng-disabled	= "!!icItem.remoteItem"
+		ng-click 	= "ic.site.editItem = true" 		
+		title		= 	"{{ic.user.can('edit_items')? 'INTERFACE.EDIT' : 'INTERFACE.EDIT_SUGGESTION' | translate}} {{icItem.remoteItem ? 'INTERFACE.REMOTE_ITEM_CANNOT_EDIT' : '' | translate}}"						
+		ic-touch-me
+	>
+
+		<span>
+			<span class ="icon icon-interface-edit"></span>
+			{{'INTERFACE.EDIT' | translate}}
+		</span>
+
+	</button>
+
+
+	<button 
+		ng-click 	= "ic.overlays.toggle('sharingMenu')" 
+		title		= "{{'INTERFACE.SHARE' | translate}}"
+		ic-touch-me
+	>
+		<span>
+			<span class 	= "icon icon-interface-share"></span>
+			{{'INTERFACE.SHARE' | translate}}
+		</span>
+	</button>
+
+		
+	<button 
+		ng-click	= "ic.site.print()"
+		title		= "{{'INTERFACE.PRINT' | translate}}"
+		ic-touch-me
+	> 
+		<span>
+			<span class ="icon icon-interface-print"></span>
+			{{'INTERFACE.PRINT' | translate}}
+		</span>
+
+	</button>
+
+	<button 
+		title		= "{{'INTERFACE.FAVOURITE_%s' | fill : ic.favourites.contains(icItem) ? 'remove': 'add' | translate}}"
+		ng-click 	= "ic.favourites.toggleItem(icItem)" 
+		ic-touch-me
+	> 
+
+		<span>
+			<span 
+        class     ="icon icon-interface-favourites_add"
+        ng-class  = "{'icon-interface-favourites_remove': ic.favourites.contains(icItem), 'icon-interface-favourites_add': !ic.favourites.contains(icItem)}"
+      >
+			</span>
+			{{'INTERFACE.FAVOURITE_%s' | fill : ic.favourites.contains(icItem) ? 'remove': 'add' | translate}}
+		</span>
+	</button>
+
+	<button
+		ng-click	=	"editCopy()"
+		title		= 	"{{'INTERFACE.EDIT_COPY_SUGGESTION' | translate}}"
+		ic-touch-me
+	>
+		<span>
+			<span 
+				class 		="icon icon-interface-edit_copy"
+			>
+			</span>
+			{{'INTERFACE.EDIT_COPY_SUGGESTION' | translate}}
+		</span>
+	</button>
+<!-- 
+	<a
+		class 		= 	"ic-button"
+		ng-href		=	"/p/tiles/u/favourite"
+		title		= 	"{{'INTERFACE.FAVOURITES' | translate}}"
+		ic-touch-me
+	> 
+		<span>
+			<span class = "icon icon-interface-favourites"
+			>
+			</span>
+			{{'INTERFACE.FAVOURITES' | translate}}
+		</span>
+	</a>
+	 -->
+</div>
+
+<article 
+	ng-if = "references.length > 0"
+	class = "item-list"
+>
+	<div>
+		<h4>
+			<span class ="icon icon-property-location_ref left"></span>
+			{{'ITEMS.LINKED_ITEMS' | translate}}
+		</h4>
+	</div>
+
+	<a
+		ng-repeat 	= "linked_item in references | sortByKey : 'state' : 'archived' : false"
+		ng-href 	= "{{ {activeItem: (linked_item.id | icItem) } | icLink }}"
+		class		= "bg-0 block"
+	>		
+		<ic-item-preview 
+			ic-item		= "linked_item"
+		></ic-item-preview>
+	</a>
+</div>

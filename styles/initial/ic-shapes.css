@@ -119,5 +119,6 @@ hr {
 	width:					auto;
 	border:					0;
 	border-top:				1px solid transparent !important;
-	margin:					0.5rem -1px;
+	margin:					2px 0;
+	margin:					round(up, 0.1rem, 1px);
 }

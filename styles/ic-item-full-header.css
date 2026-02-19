@@ -1,0 +1,150 @@
+
+ic-item-full-header {
+	display:					block;
+	position:					absolute;
+	box-sizing:					border-box;
+	top:						0rem;
+	left:						0rem;
+	right:						0rem;
+	margin-top:					1rem;
+	margin-bottom:				1rem;
+	margin-left:				1rem;
+	margin-right:				1rem;
+	z-index:					2000;
+	height:						0;
+}
+
+
+ic-item-full-header .tools {
+	position:					absolute;
+	display:					flex;
+	font-size:					1rem;
+	top:						1rem;
+	right:						0.5rem;
+	opacity:					1;
+	z-index:					99999;
+	transition:					top 350ms linear;
+}
+
+
+.XS ic-item-full-header .tools {
+	top: 						-0.25rem;
+}
+
+ic-item-full-header .tools > * {
+	position:					absolute !important;	
+	z-index:					7777777;
+	transition-property: 		transform, right;
+	transition-duration: 		350ms;
+	transition-timing-function: ease-in-out;
+	right:						0;
+}
+
+ic-item-full-header .tools > *.switch {
+	position:					static !important;
+	right:						0 !important;
+	z-index:					9999999 !important;
+	pointer-events:				none !important;
+	opacity:					0 !important;
+	transform:					rotate(120deg) !important;
+}
+
+ic-item-full-header.ic-scroll-top .tools > *.switch {
+	position:					static !important;
+	pointer-events:				all !important;
+	opacity:					1 !important;
+	transform:					rotate(0deg)!important;
+}
+
+
+ic-item-full-header.ic-scroll-top .tools > *.switch.active {
+	transform:					rotate(-180deg) !important;	
+} 
+
+ic-item-full-header.ic-scroll-top .tools > *:nth-last-child(n+1){
+	transform:					translateX(-120%);
+}
+
+ic-item-full-header .tools > *:nth-last-child(2) {
+	right:						0%;
+}
+
+ic-item-full-header .tools > *:nth-last-child(3) {
+	right:						125%;
+}
+
+ic-item-full-header .tools > *:nth-last-child(4) {
+	right:						250%;
+}
+
+ic-item-full-header .tools > *:nth-last-child(5) {
+	right:						375%;
+}
+
+ic-item-full-header .tools > *:nth-last-child(6) {
+	right:						500%;
+}
+
+ic-item-full-header .tools > *:nth-last-child(7) {
+	right:						625%;
+}
+
+
+ic-item-full-header.ic-scroll-top .tools:not(.extended) > * {
+	right:						0;	
+	opacity:					0;
+	transform:					none;
+}
+
+
+
+ic-item-full-header nav {
+	position:					absolute;
+	top:						0rem;
+	left:						0;
+	display:					flex;
+	flex-direction:				column;
+	transition:					all 200ms ease-in-out;
+	gap:						0.25rem;
+}
+
+
+ic-item-full-header.ic-scroll-top nav {
+	top:						-1rem;
+}
+
+ic-item-full-header nav button {
+	border-radius:				100%;
+	background-color:			revert;	
+}
+
+ic-item-full-header nav .up,
+ic-item-full-header nav .down {
+	opacity:					0;
+	pointer-events:				none;
+	margin-top:					-1.5em;	
+	overflow:					hidden;
+	transition:					all 200ms ease-in-out;
+	padding:					0 !important;
+}
+
+ic-item-full-header:not(.ic-scroll-bottom) 	nav .up {
+	opacity:					0.5 !important;
+}
+
+ic-item-full-header:not(.ic-scroll-top) 	nav .down {
+	opacity:					0.5 !important;
+}
+
+ic-item-full-header.ic-scroll-none nav .up,
+ic-item-full-header.ic-scroll-none nav .down {
+	display:					none;
+}
+
+ic-item-full-header.ic-scroll-top 		nav .up,
+ic-item-full-header.ic-scroll-bottom 	nav .down {
+	opacity:					1;
+	margin-top:					0em;
+	min-height:					1.5em;
+	pointer-events:				auto;
+}

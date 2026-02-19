@@ -68,7 +68,7 @@ ic-main-content		.primary-sections .regular-sections > *,
 	position:					relative;
 	overflow-x:					hidden;
 	background-color:			var(--primary-background-color)!important;
-	scrollbar-color:			var(--primary-background-contrast) rgba(0,0,0,0);
+	scrollbar-color:			rgba(0,0,0,0.4) rgba(0,0,0,0);
 }
 
 
@@ -121,8 +121,8 @@ ic-main-content		.primary-sections .regular-sections > *,
 
 
 #section-filter-tags > * {
-	padding-top:				var(--vertical-padding);
-	padding-bottom:				var(--vertical-padding);
+	padding-top:				calc(var(--vertical-padding) * 0.5);
+	padding-bottom:				calc(var(--vertical-padding) * 0.5);
 	padding-left:				var(--horizontal-padding);
 	padding-right:				var(--horizontal-padding);
 }
@@ -143,8 +143,8 @@ ic-main-content		.primary-sections .regular-sections > *,
 
 #section-list {
 	min-width:					30rem;
-	width:						48rem;
-	max-width:					48rem;
+	width:						38rem;
+	max-width:					46rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
 

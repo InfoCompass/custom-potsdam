@@ -12,7 +12,7 @@ select {
 	--button-border-width: 			round(down, 0.1rem, 1px);
 	--button-border-color:			#000;
 	--button-horizontal-padding:	1rem;
-	--button-vertical-padding:		0.5rem;
+	--button-vertical-padding:		0.25rem;
 	--button-border-radius:			2rem;
 }
 
@@ -81,14 +81,14 @@ a.ic-button.border {
 select.activated,
 button.activated,
 a.ic-button.activated {
-	color:						var(--secondary-accent-contrast);
-	background-color:			var(--secondary-accent-color);
+	color:						var(--emphasized-background-contrast);
+	background-color:			var(--emphasized-background-color);
 }
 
 button.prio,
 a.ic-button.prio {
-	color:						var(--primary-accent-contrast);
-	background-color:			var(--primary-accent-color);
+	color:						var(--emphasized-background-contrast);
+	background-color:			var(--emphasized-background-color);
 }
 
 button.prio:hover,
@@ -113,6 +113,8 @@ a.ic-button.removable {
 	color:						var(--secondary-background-contrast)  !important;
 	background-color:			var(--secondary-background-color) !important;
 	animation:					removable-enter 500ms;
+	padding-top:				0.125em;
+	padding-bottom:				0.125em;
 }
 
 select.removable:hover,

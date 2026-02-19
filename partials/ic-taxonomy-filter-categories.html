@@ -4,7 +4,7 @@
 >
 	<button
 		class 		= "icon section-toggle"
-		ng-class	= "{'icon-interface-down open': expanded, 'icon-interface-right': !expanded, 'checked':!ic.filterConfig.categoryCleared()}"
+		ng-class	= "{'icon-interface-down open': expanded && ic.filterConfig.categoryCleared(), 'icon-interface-right': !expanded && ic.filterConfig.categoryCleared()}"
 		ng-click	= "expanded = !expanded"
 		ic-touch-me	= "true" 
 	>
@@ -12,7 +12,7 @@
 	</button>
 
 	<div 
-		ng-show	= "expanded"
+		ng-show	= "expanded || !ic.filterConfig.categoryCleared()"
 	>
 		<button
 			class 		= "icon icon-interface-radio all"
@@ -25,7 +25,7 @@
 
 		<div
 			class 		= "category" 
-			ng-class	= "{ open: ic.filterConfig.categoryActive(category.name)}"
+			ng-class	= "{ open: ic.filterConfig.categoryActive(category.name) && category.tags && category.tags.length > 0}"
 			ng-repeat 	= "category in ic.taxonomy.categories"
 		>
 
@@ -39,14 +39,14 @@
 				<div>{{'CATEGORIES.%s' | fill : category.name | translate}}</div>
 				<span 
 					class 		= "bubble shade-light"
-					ng-if 		= "!disabled && !ic.filterConfig.categoryActive(category.name)"
+					ng-if 		= "!disabled && (!ic.filterConfig.categoryActive(category.name) || !category.tags || category.tags.length == 0)"
 				>
 					
 					{{ic.itemStorage.currentStats.altMatches[category.name]}}
 				</span>
 				<span 
 					class = "icon icon-interface-down"
-					ng-if = "ic.filterConfig.categoryActive(category.name)"
+					ng-if = "category.tags && category.tags.length > 0 && ic.filterConfig.categoryActive(category.name)"
 				></span>
 			</button>
 
@@ -66,7 +66,7 @@
 				>
 					<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
 					<span 
-						class 		= "bubble shade-light"
+						class 		= "bubble shade-dark"
 					>
 						{{ic.itemStorage.currentStats.altMatches[category.name]}}
 					</span>
