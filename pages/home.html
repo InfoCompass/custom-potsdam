@@ -54,11 +54,13 @@
 	<div 
 		class 	= "ic-item-tiles"
 	>
-		<ic-item-tile
+		<a
 			ng-repeat 	= "item in ic.itemStorage.data | orderBy: 'lastEditDate' : true | limitTo : 4"
+			ng-href		= "{{ item | icItemLink }}"
 			ic-item		= "item"
+			ic-item-tile
 		>
-		</ic-item-tile>
+		</a>
 	</div>
 
 	<div class ="tar">

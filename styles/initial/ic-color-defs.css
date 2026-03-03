@@ -4,10 +4,9 @@
 	--secondary-color:					#ff4b00;
 	--secondary-contrast:				#000;
 
-
-
 	--primary-text-color:				#424242;
 	--secondary-text-color:				#666;
+	--primary-link-color:				#01654E;
 
 	--dark-text-color:					var(--primary-text-color);			/* legacy */
 	--plain-text-color:					var(--secondary-text-color);		/* legacy */

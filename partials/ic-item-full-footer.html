@@ -3,14 +3,12 @@
 		ng-if		= "true || ic.user.can('edit_items')"
 		ng-disabled	= "!!icItem.remoteItem"
 		ng-click 	= "ic.site.editItem = true" 		
-		title		= 	"{{ic.user.can('edit_items')? 'INTERFACE.EDIT' : 'INTERFACE.EDIT_SUGGESTION' | translate}} {{icItem.remoteItem ? 'INTERFACE.REMOTE_ITEM_CANNOT_EDIT' : '' | translate}}"						
+		title		= 	"{{ic.user.can('edit_items')? 'INTERFACE.EDIT' : 'INTERFACE.EDIT_SUGGESTION' | translate}} {{icItem.remoteItem ? 'INTERFACE.REMOTE_ITEM_CANNOT_EDIT' : '' | translate}}"		
 		ic-touch-me
 	>
 
-		<span>
-			<span class ="icon icon-interface-edit"></span>
-			{{'INTERFACE.EDIT' | translate}}
-		</span>
+		<span class ="icon icon-interface-edit"></span>
+		<span> {{'INTERFACE.EDIT' | translate}}</span>
 
 	</button>
 
@@ -20,10 +18,8 @@
 		title		= "{{'INTERFACE.SHARE' | translate}}"
 		ic-touch-me
 	>
-		<span>
-			<span class 	= "icon icon-interface-share"></span>
-			{{'INTERFACE.SHARE' | translate}}
-		</span>
+		<span class 	= "icon icon-interface-share"></span>
+		<span>{{'INTERFACE.SHARE' | translate}}</span>
 	</button>
 
 		
@@ -32,11 +28,8 @@
 		title		= "{{'INTERFACE.PRINT' | translate}}"
 		ic-touch-me
 	> 
-		<span>
-			<span class ="icon icon-interface-print"></span>
-			{{'INTERFACE.PRINT' | translate}}
-		</span>
-
+		<span class ="icon icon-interface-print"></span>
+		<span>{{'INTERFACE.PRINT' | translate}}</span>
 	</button>
 
 	<button 
@@ -45,12 +38,12 @@
 		ic-touch-me
 	> 
 
+		<span 
+       		class     ="icon icon-interface-favourites_add"
+        	ng-class  = "{'icon-interface-favourites_remove': ic.favourites.contains(icItem), 'icon-interface-favourites_add': !ic.favourites.contains(icItem)}"
+      	>
+		</span>
 		<span>
-			<span 
-        class     ="icon icon-interface-favourites_add"
-        ng-class  = "{'icon-interface-favourites_remove': ic.favourites.contains(icItem), 'icon-interface-favourites_add': !ic.favourites.contains(icItem)}"
-      >
-			</span>
 			{{'INTERFACE.FAVOURITE_%s' | fill : ic.favourites.contains(icItem) ? 'remove': 'add' | translate}}
 		</span>
 	</button>
@@ -60,11 +53,9 @@
 		title		= 	"{{'INTERFACE.EDIT_COPY_SUGGESTION' | translate}}"
 		ic-touch-me
 	>
+		<span class 		="icon icon-interface-edit_copy">
+		</span>
 		<span>
-			<span 
-				class 		="icon icon-interface-edit_copy"
-			>
-			</span>
 			{{'INTERFACE.EDIT_COPY_SUGGESTION' | translate}}
 		</span>
 	</button>
@@ -75,10 +66,10 @@
 		title		= 	"{{'INTERFACE.FAVOURITES' | translate}}"
 		ic-touch-me
 	> 
+		<span class = "icon icon-interface-favourites"
+		>
+		</span>
 		<span>
-			<span class = "icon icon-interface-favourites"
-			>
-			</span>
 			{{'INTERFACE.FAVOURITES' | translate}}
 		</span>
 	</a>

@@ -268,7 +268,7 @@ ic-page p > img + img {
 ic-page > a,
 ic-page p a,
 ic-page ul a {
-	color:						var(--active-color, var(--primary-color));
+	color:						var(--primary-link-color, var(--primary-color));
 /*	padding-left: 				0.5rem;*/
 /*	padding-right: 				0.5rem;*/
 	text-decoration: 			underline;
@@ -317,19 +317,18 @@ ic-page ol li::marker {
 
 
 ic-footer {
-	display:					block;
+	display:					flex;
 	background-color:			var(--emphasized-background-color);
 	color:						var(--emphasized-background-contrast);
 	padding: 					2rem;
 	padding-bottom:				4rem;
 	text-align: 				left;
-	columns:					3 auto;
-	column-gap:					0.25rem;
+	gap:						0.5rem;
 	height:						auto;
 }
 
 ic-footer > * {
-	break-inside:				avoid;
+	flex:						1 1 max-content;
 }
 
 

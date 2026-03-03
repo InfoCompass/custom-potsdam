@@ -25,10 +25,11 @@ button:focus,
 select:active,
 select:hover,
 select:focus {
-	display:					inline-block;
+	display:					inline-flex;
 	border-style:				none;
 	color: 						var(--primary-text-color);
 	-webkit-appearance: 		none;
+	align-items:				center;
 }
 
 label {
@@ -47,7 +48,7 @@ button::-moz-focus-inner {
 select,
 button,
 a.ic-button {
-	display:					inline-block;
+	display:					inline-flex;
 	cursor:						pointer;
 	background-color:			var(--primary-background-color, #fff);
 	border-radius:				var(--button-border-radius);	
@@ -169,4 +170,12 @@ select {
 	background-color:	var(--secondary-accent);
 }
 
-
+ic-toggle {
+	--toggle-border-color:			var(--primary-text-color);
+	--toggle-on-text-color:			#fff;
+	--toggle-off-text-color:		var(--primary-text-color);
+	--toggle-on-indicator-color:	var(--primary-color);
+	--toggle-off-indicator-color:	#fff;
+	--toggle-on-background:			var(--primary-text-color);
+	--toggle-off-background:		transparent;
+}

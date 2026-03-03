@@ -1,0 +1,25 @@
+<article ng-if = "ic.site.filterByUnsortedTag == 'favourite'">
+
+	<h1>{{'INTERFACE.FAVOURITES' | translate}}</h1>
+
+	<p ng-if = "ic.itemStorage.filteredList.length != 0">
+		{{'INTERFACE.FAVOURITES_DESCRIPTION' |translate}}
+	</p>
+
+
+	<p ng-if = "ic.itemStorage.filteredList.length == 0">
+		{{'INTERFACE.NO_ITEMS' |translate}}		
+	</p>
+
+</article>
+
+<article class = "ic-item-tiles">
+		<a
+			ng-repeat		= "item in ic.itemStorage.filteredList | limitTo : 10"
+			ng-href			= "{{ item | icItemLink }}"
+			ic-item-tile
+			ic-item			= "item"
+		>			
+		</a>
+		<button class ="more" ng-if= "noScroll && !noMoreItems" ng-click = "icScrollRepeatLimitIncrease()">...</button>
+</article>
