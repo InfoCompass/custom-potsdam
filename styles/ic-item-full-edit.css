@@ -107,14 +107,17 @@ ic-item-full-edit .controls {
 	flex-wrap:				wrap;
 	margin:					0rem;
 	padding:				1rem 0;
+	gap:					0.5rem;
 }
 
 ic-item-full-edit .controls > * {
 	flex:					1 0 auto;
-	margin:					0.5rem;
+	margin:					0;
+	text-align:				center;
+	justify-content:		center;
 }
 
-ic-item-full-edit footer.screen-only {
+/*ic-item-full-edit footer.screen-only {
 }
 
 
@@ -134,7 +137,7 @@ ic-item-full-edit footer button > * {
 	line-height:				4rem;
 	white-space: 				nowrap;
 	overflow:					visible;
-}
+}*/
 
 ic-item-full-edit ic-item-property-edit:not(.no-sibling-margin) + ic-item-property-edit:not(.no-sibling-margin) {
 	margin-top:					2rem;

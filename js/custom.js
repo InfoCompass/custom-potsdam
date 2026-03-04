@@ -32,11 +32,12 @@ angular.module("icServices")
 			template:		'partials/ic-section-filter-tags.html',
 			active:			function(ic){									
 
+								if(ic.site.page === "extended_search") return false
+
 								return ic.filterConfig.isActive()
 
 							},
-			show:			function(ic){
-								
+			show:			function(ic){								
 
 								return true
 							},

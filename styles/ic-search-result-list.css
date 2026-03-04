@@ -14,6 +14,8 @@ ic-search-result-list header ic-spinner {
 
 
 ic-search-result-list  a {
+	margin:						1rem !important;
+	margin-right:				0rem !important;
 	display:					block;
 }
 
@@ -25,12 +27,14 @@ ic-search-result-list .more {
 
 
 ic-search-result-list ic-item-preview {
-	margin:						1rem !important;
-	margin-right:				0rem !important;
 	border-width:				2px;
 	border-color:				var(--emphasized-background-color);
 	border-style:				solid;
 	border-radius:				0.5rem;
+}
+
+ic-search-result-list ic-item-preview:hover{
+	background-color:			var(--secondary-background-color) !important;
 }
 
 ic-search-result-list ic-item-preview.active-item {

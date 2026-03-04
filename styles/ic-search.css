@@ -56,11 +56,3 @@ ic-search form button {
 	background-color:				transparent;
 	z-index: 						999999;
 }
-
-
-ic-extended-search .results a {
-	padding-left:					2rem;
-	padding-right:					2rem;
-}
-
-

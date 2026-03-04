@@ -29,7 +29,7 @@
 	--secondary-accent-color:			var(--emphasized-background-color);/*#ffd2bf;*/
 	--secondary-accent-contrast:		var(--emphasized-background-contrast);
 
-	--active-color:						#007458; /*legacy*/
+	--active-color:						var(--primary-link-color); /*legacy*/
 
 }
 

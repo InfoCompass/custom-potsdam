@@ -58,6 +58,11 @@ a.ic-button {
 	padding:					var(--button-vertical-padding) var(--button-horizontal-padding);
 }
 
+button.checked,
+a.ic-button.checked {
+	color:						var(--primary-link-color) !important;
+}
+
 select.icon.right,
 button.icon.right,
 a.ic-button.icon.right {
