@@ -32,7 +32,19 @@ angular.module("icServices")
 			template:		'partials/ic-section-filter-tags.html',
 			active:			function(ic){									
 
-								if(ic.site.page === "extended_search") return false
+								if(		
+									ic.site.page === "extended_search"
+								) 
+									return false
+
+								if(		
+										ic.site.page === "tiles" 
+									&&	ic.site.filterByUnsortedTag
+									&& 	ic.site.filterByUnsortedTag.includes('favourite')
+								) 
+									return false
+
+
 
 								return ic.filterConfig.isActive()
 

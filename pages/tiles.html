@@ -13,9 +13,14 @@
 
 </article>
 
-<article class = "ic-item-tiles">
+<article 
+	class 								= "ic-item-tiles"
+	ic-scroll-repeat-limit 				= "ic.itemStorage.filteredList.length"
+	ic-scroll-repeat-limit-as 			= "displayLimit"
+	ic-scroll-repeat-limit-step-size 	= "5"
+>
 		<a
-			ng-repeat		= "item in ic.itemStorage.filteredList | limitTo : 10"
+			ng-repeat		= "item in ic.itemStorage.filteredList | limitTo : displayLimit"
 			ng-href			= "{{ item | icItemLink }}"
 			ic-item-tile
 			ic-item			= "item"

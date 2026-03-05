@@ -16,8 +16,6 @@ ic-taxonomy-filter {
 ic-taxonomy-filter > * {
 	flex:						0 0 auto;
 	width:						auto;
-	margin-left:				0 !important;
-	margin-right:				0 !important;
 	margin-bottom:				1rem;
 	margin-top:					0;
 }
