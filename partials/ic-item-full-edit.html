@@ -500,6 +500,41 @@
 	</div>
 </section>
 
+
+<!-- contact -->
+
+<section class = "properties">
+
+	<h3
+		aria-role 	= "button"
+		class		= "icon right"
+		ng-class	= "{'icon-interface-right': extend != 'contact', 'icon-interface-down': extend == 'contact'}"
+		ng-click	= "extend = extend == 'contact' ? undefined : 'contact'"
+	>
+		{{'INTERFACE.ITEM_EDIT_SECTION_CONTACT' | translate}}
+	</h3>
+
+	<div ic-extend ="extend == 'contact'">
+
+
+		<!-- misc-->
+		<article ng-repeat = "key in ['contact', 'email', 'phone', 'mobile', 'website', 'facebook']">
+			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-type 				= "string"
+				ic-key					= "{{key}}"
+				ic-item					= "icItem"
+			></ic-item-property-edit>
+		</article>
+
+
+	</div>
+	
+</section>
+
+
+
 <!-- misc -->
 <section class = "properties">
 
@@ -537,7 +572,7 @@
 		</article>
 
 
-		<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+		<hr class  = "bg-2"/>
 
 
 		<!-- costs, ... -->
@@ -560,7 +595,7 @@
 
 
 
-		<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+		<hr class  = "bg-2"/>
 
 		<!-- tags/unsorted -->
 		<article 
@@ -570,7 +605,6 @@
 								&&	!['extra', 'mode', 'accessibility', 'state', 'options_ri', 'options_sp'].includes(key)
 							"
 		>
-		<div>
 			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
 
 			<ic-help 
@@ -592,21 +626,7 @@
 
 		</article>
 
-		<div><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-
-		<!-- misc-->
-		<article ng-repeat = "key in ['contact', 'email', 'phone', 'mobile', 'website', 'facebook']">
-			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
-
-			<ic-item-property-edit
-				ic-type 				= "string"
-				ic-key					= "{{key}}"
-				ic-item					= "icItem"
-			></ic-item-property-edit>
-		</article>
-
-		<div ng-if = "ic.user.can('edit_items')"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
+		<hr ng-if = "ic.user.can('edit_items')" class  = "bg-2"/>
 
 		<article ng-if = "ic.user.can('edit_items')" >
 			<h4> {{'ITEMS.RESUBMISSION_DATE' | translate}}</h4>
@@ -637,10 +657,11 @@
 		</article>
 
 
-
 	</div>
-	
 </section>
+
+
+
 
 
 <!-- note -->

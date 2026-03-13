@@ -35,7 +35,7 @@
 		},
 
 		{
-			name:	'exercise',				//Bewegung_und_Gesundheit
+			name:	'exercise',				//Bewegung; War: Bewegung_und_Gesundheit
 			colors:	['#A0C543'],
 			tags:	[
 					'exercise_walk',
@@ -47,6 +47,14 @@
 
 					]
 		},
+
+		{
+			name:	'health',				//Gesundheit_und_Wohlbefinden
+			colors:	['#A0C543'],
+			tags:	[
+					]
+		},
+
 
 		{
 		  name: 'education',
@@ -124,11 +132,11 @@
 		},
 
 
-		{
-			name:	'misc',					//Sonstige_Angebote
-			colors:	['#9CAEC2'],
-			tags: 	[]
-		},
+		// {
+		// 	name:	'misc',					//Sonstige_Angebote
+		// 	colors:	['#9CAEC2'],
+		// 	tags: 	[]
+		// },
 
 	]
 
