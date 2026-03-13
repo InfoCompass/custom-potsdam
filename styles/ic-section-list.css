@@ -1,5 +1,9 @@
-ic-sorting {
-	display:				block;
+#section-list header {
 	padding:				var(--vertical-padding) var(--horizontal-padding);	
+	display:				flex;
+	flex-wrap:				wrap;
+	align-items:			center;
+	justify-content:		space-between;	
 }
+
 

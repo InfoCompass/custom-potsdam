@@ -5,11 +5,9 @@
 	class								= ""
 >
 
-	<div 
-		ng-if = "!ic.site.visibleSections.filter"
-		class = "padding flex"
-	>
+	<header>
 		<button
+			ng-if 		= "!ic.site.visibleSections.filter"
 			class 		= "block margin-right border tac"
 			ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
 			ic-touch-me 
@@ -18,17 +16,22 @@
 		</button>
 
 		<button 
+			ng-if 		= "!ic.site.visibleSections.filter"
 			class 		= "block margin-left border tac"
 			ng-click 	= "ic.site.expandMap = true"
 			ic-touch-me 
 		>
 			{{'INTERFACE.MAP' | translate}}
 		</button>
-		
-	</div>
 
-	<ic-sorting	>
-	</ic-sorting>
+		<div class ="flex-grow"></div>
+		
+		<ic-sorting	>
+		</ic-sorting>
+
+	</header>
+
+	
 
 	<ic-search-result-list>
 	</ic-search-result-list>

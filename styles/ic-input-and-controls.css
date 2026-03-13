@@ -12,7 +12,7 @@ select {
 	--button-border-width: 			round(down, 0.1rem, 1px);
 	--button-border-color:			#000;
 	--button-horizontal-padding:	1rem;
-	--button-vertical-padding:		0.25rem;
+	--button-vertical-padding:		0.375rem;
 	--button-border-radius:			2rem;
 }
 
@@ -26,10 +26,13 @@ select:active,
 select:hover,
 select:focus {
 	display:					inline-flex;
-	border-style:				none;
 	color: 						var(--primary-text-color);
 	-webkit-appearance: 		none;
 	align-items:				center;
+}
+
+input{
+	border-style:				none;
 }
 
 label {
@@ -53,15 +56,12 @@ a.ic-button {
 	background-color:			var(--primary-background-color, #fff);
 	border-radius:				var(--button-border-radius);	
 	border-width:				var(--button-border-width);
-	border-color:				var(--button-border-color);
-	border-style:				none;
+	border-color:				transparent;
+	border-style:				solid;
 	padding:					var(--button-vertical-padding) var(--button-horizontal-padding);
+	line-height:				1.2 !important;
 }
 
-button.checked,
-a.ic-button.checked {
-	color:						var(--primary-link-color) !important;
-}
 
 select.icon.right,
 button.icon.right,
@@ -81,7 +81,7 @@ a.ic-button.icon.left {
 select.border,
 button.border,
 a.ic-button.border {
-	border-style:				solid
+	border-color:				var(--button-border-color);
 }
 
 select.activated,

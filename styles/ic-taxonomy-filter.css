@@ -18,6 +18,8 @@ ic-taxonomy-filter > * {
 	width:						auto;
 	margin-bottom:				1rem;
 	margin-top:					0;
+	margin-left:				0;
+	margin-right:				0;
 }
 
 ic-taxonomy-filter section {
