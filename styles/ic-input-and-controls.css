@@ -12,7 +12,7 @@ select {
 	--button-border-width: 			round(down, 0.1rem, 1px);
 	--button-border-color:			#000;
 	--button-horizontal-padding:	1rem;
-	--button-vertical-padding:		0.375rem;
+	--button-vertical-padding:		0.4rem;
 	--button-border-radius:			2rem;
 }
 
@@ -29,6 +29,7 @@ select:focus {
 	color: 						var(--primary-text-color);
 	-webkit-appearance: 		none;
 	align-items:				center;
+	vertical-align:				middle;
 }
 
 input{
@@ -51,7 +52,7 @@ button::-moz-focus-inner {
 select,
 button,
 a.ic-button {
-	display:					inline-flex;
+	display:					inline-flex !important;
 	cursor:						pointer;
 	background-color:			var(--primary-background-color, #fff);
 	border-radius:				var(--button-border-radius);	
@@ -66,17 +67,34 @@ a.ic-button {
 select.icon.right,
 button.icon.right,
 a.ic-button.icon.right {
-	padding-right:				2rem;
-	background-position:		calc(100% - 0.5rem)
+	padding-right:				2em;
+	background-position:		calc(100% - 0.5em)
 }
 
 select.icon.left,
 button.icon.left,
 a.ic-button.icon.left {
-	padding-left: 				2rem;
-	background-position:		0.5rem;
+	padding-left: 				2em;
+	background-position:		0.5em;
 }
 
+select > .icon,
+button > .icon,
+a.ic-button > .icon {
+	margin:						-0.15em 0; /*line-height is supposed to be 1.2em icon hight is 1.5em*/
+}
+
+select > .icon.left:first-child,
+button > .icon.left:first-child,
+a.ic-button > .icon.left:first-child {
+	margin-left:				-0.5em; /* compensate for button padding */
+}
+
+select > .icon.right:last-child,
+button > .icon.right:last-child,
+a.ic-button > .icon.right:last-child {
+	margin-right:				-0.5em; /* compensate for button padding */
+}
 
 select.border,
 button.border,
