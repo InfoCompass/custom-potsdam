@@ -413,14 +413,26 @@
 	    		</div>
 	    	</div>
 	    </div>
+	</div>
+</section>    
 
+<section class = "properties">
 
+	<h3
+		aria-role 	= "button"
+		class		= "icon right"
+		ng-class	= "{'icon-interface-right': extend != 'when', 'icon-interface-down': extend == 'when'}"
+		ng-click	= "extend = extend == 'when' ? undefined : 'when'"
+	>
+		{{'INTERFACE.ITEM_EDIT_SECTION_WHEN' | translate}}
+	</h3>
+
+	<div ic-extend = "extend == 'when'">
 		<article ng-if = "ic.config.calendar.recurringRulesKey">
 
 			<h4> {{'ITEMS.%s_TIME_FRAME' | fill : ((icEdit.tags | includes :'location') ? 'location' : 'non_location') | translate}}</h4>
 
 			<ic-item-property-edit
-				class						= "no-sibling-margin"				
 				ic-item						= "icItem"
 				ic-key						= "{{ic.config.calendar.recurringRulesKey}}"
 				ic-type 					= "text"
@@ -429,7 +441,6 @@
 
 			<ic-item-property-edit
 				ng-if						= "ic.config.calendar.exclusionTag && (icEdit.tags | lacks : 'location')"				
-				class						= "no-sibling-margin"				
 				ic-item						= "icItem"
 				ic-key						= "tags"
 				ic-type 					= "array"

@@ -128,13 +128,13 @@ ic-item-full-header nav .down {
 	padding:					0 !important;
 }
 
-ic-item-full-header:not(.ic-scroll-bottom) 	nav .up {
+/*ic-item-full-header:not(.ic-scroll-bottom) 	nav .up {
 	opacity:					0.5 !important;
 }
 
 ic-item-full-header:not(.ic-scroll-top) 	nav .down {
 	opacity:					0.5 !important;
-}
+}*/
 
 ic-item-full-header.ic-scroll-none nav .up,
 ic-item-full-header.ic-scroll-none nav .down {

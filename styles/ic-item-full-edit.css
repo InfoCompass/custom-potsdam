@@ -2,7 +2,10 @@ ic-item-full-edit {
 	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
-	padding:					5rem 0rem !important;
+	padding-left:				0rem !important;
+	padding-right:				0rem !important;
+	padding-bottom:				0rem;
+	padding-top:				8rem !important;
 	min-height:					100%;	
 }
 
@@ -143,8 +146,3 @@ ic-item-full-edit ic-item-property-edit:not(.no-sibling-margin) + ic-item-proper
 	margin-top:					2rem;
 }
 
-
-/* recurring date is meant to overflow the item property edit box, not in this version though: */
-ic-item-full-edit .preview-box {
-	margin:						0 !important;
-}
