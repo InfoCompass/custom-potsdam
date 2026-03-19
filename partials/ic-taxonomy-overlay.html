@@ -1,5 +1,5 @@
 <button 
-	class 		= "icon icon-interface-close right large close"
+	class 		= "icon icon-interface-close large close"
 	ng-click	= "ic.overlays.toggle()" 
 >
 </button>
@@ -25,10 +25,9 @@
 >
 	<button
 		ng-if		= "true"
-		class 		= "icon icon-interface-radio"
-		ng-class	= "{'bg-3 white checked':ic.filterConfig.categoryCleared()}"
+		class 		= "icon icon-interface-radio left"
+		ng-class	= "{'round checked activated':ic.filterConfig.categoryCleared()}"
 		ng-click	= "ic.filterConfig.clearCategory()" 
-		ic-touch-me	= "true"
 	>
 		<div>{{'INTERFACE.FILTER_ANY' | translate}}</div>
 	</button>
@@ -36,11 +35,10 @@
 	<button
 		ng-repeat 	= "category in ic.taxonomy.categories | orderBy : ic.utils.evalItems('item.name.substr(0,4) == \'misc\' ? null : (\'CATEGORIES.%s\' | fill : item.name | translate)')"
 		ng-if		= "!filter || ('CATEGORIES.%s' | fill : category.name | translate | match : filter[icExpand])"
-		class		= "icon icon-category-{{::category.name}} bg-0"
+		class		= "icon icon-category-{{::category.name}} left"
 		ic-button	= "{active:ic.filterConfig.categoryActive(category.name), disabled: !ic.itemStorage.currentStats.altMatches[category.name]}"
-		ng-class	= "{'bg-3 white':active, disabled: disabled}"
+		ng-class	= "{disabled: disabled}"
 		ng-click	= "!disabled && ic.filterConfig.toggleCategory(category.name, undefined, true);"
-		ic-touch-me	= "!disabled"
 	>
 
 		<div>{{'CATEGORIES.%s' | fill : category.name | translate}}</div>
@@ -71,21 +69,19 @@
 		ng-repeat	= "(key, tagGroup) in ic.taxonomy.tags"
 	>
 	<button
-		class 		= "icon icon-interface-radio bg-0"
-		ng-class	= "{'bg-3 white checked':ic.filterConfig.unsortedTagCleared(tagGroup)}"
+		class 		= "icon icon-interface-radio left"
+		ng-class	= "{'round checked activated':ic.filterConfig.unsortedTagCleared(tagGroup)}"
 		ng-click	= "ic.filterConfig.clearUnsortedTag(tagGroup)" 
-		ic-touch-me	= "true"
 	>
 		<a>{{'INTERFACE.FILTER_ANY' |translate}}</a>
 	</button>
 	<button
 		ng-repeat 	= "tag in tagGroup | orderBy : ic.utils.evalItems('item.substr(0,4) == \'misc\' ? null :(\'UNSORTED_TAGS.%s\' | fill : item | translate)')"
 		ng-if		= "!filter || ('UNSORTED_TAGS.%s' | fill : tag | translate | match : filter[icExpand])"
-		class		= "icon icon-interface-checkbox"
+		class		= "icon icon-interface-checkbox left"
 		ic-button	= "{active:ic.filterConfig.unsortedTagActive(tag), checked:ic.filterConfig.unsortedTagActive(tag), disabled: !ic.itemStorage.currentStats.subMatches[tag]}"
-		ng-class	= "{active:active, checked:active, disabled: disabled}"
+		ng-class	= "{checked:active, disabled: disabled}"
 		ng-click	= "!disabled && ic.filterConfig.toggleUnsortedTag(tag)"
-		ic-touch-me	= "!disabled"
 	>
 		<div>{{'UNSORTED_TAGS.%s' | fill : tag | translate }}</div>
 		<span 
@@ -106,179 +102,10 @@
 </div>
 
 
-<section 
-		class 		= 	"bg-0 lor selects"
-		ng-if		= 	"icExpand == 'lor'"	
-		ic-watch	= 	"{ 
-							'ic.site.filterByUnsortedTag':	'
-								selected = { 
-												dst : (ic.site.filterByUnsortedTag | icDistrict), 
-												pgr : (ic.site.filterByUnsortedTag | icPrognoseraum), 
-												bzr : (ic.site.filterByUnsortedTag | icBezirksregion)
-											}; 
-								tag 	= 	{	
-												dst: selected.dst.tag, 
-												pgr: selected.pgr.tag, 
-												bzr: selected.bzr.tag
-											};
-							'
-						}"
->
-
-	<button
-		class 		= "icon icon-interface-checkbox left margin-bot"
-		ic-button	= "{active:ic.filterConfig.unsortedTagActive('berlin_wide'), checked:ic.filterConfig.unsortedTagActive('berlin_wide'), disabled: !ic.itemStorage.currentStats.subMatches['berlin_wide']}"
-		ng-class	= "{active:active, checked:active, disabled: disabled}"
-		ng-click	= "!disabled && ic.filterConfig.toggleUnsortedTag('berlin_wide')" 
-		ic-touch-me	= "true"
-	>
-		<a>{{'UNSORTED_TAGS.BERLIN_WIDE' | translate}} </a>
-		<span 
-			class 		= "bubble shade-light col-1"
-			ng-if 		= "!disabled"
-		>
-			<span>
-				{{ic.itemStorage.currentStats.subMatches['berlin_wide']}}
-			</span>
-			<span ng-if = "ic.itemStorage.currentStats.subMatches['berlin_wide'] != ic.itemStorage.currentStats.totals['berlin_wide']">
-				/
-			</span>
-			<span ng-if = "ic.itemStorage.currentStats.subMatches['berlin_wide'] != ic.itemStorage.currentStats.totals['berlin_wide']">
-				{{ic.itemStorage.currentStats.totals['berlin_wide']}}
-			</span>
-		</span>
-	</button>
-
-	<label for ="filter-lor-dst">
-		{{'INTERFACE.LOR_DST' | translate}}
-	</label>
-	<select
-		id			=	"filter-lor-dst"
-		class		=	"icon tac right icon-interface-down"
-		ng-class	=	"{'bg-3 white': selected.dst, 'border-1': !selected.dst}"
-		ng-model	= 	"tag.dst"
-		ng-change	= 	"
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_dst);
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_pgr);
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_bzr);
-
-							selected.dst = (tag.dst|icDistrict);
-
-							selected.dst && ic.filterConfig.toggleUnsortedTag(selected.dst.tag, true);
-
-
-						"	
-
-	>
-
-		<option
-			value		= ""
-			ng-selected = "!tag.dst" 
-		>
-			<a>{{'INTERFACE.FILTER_ANY' |translate}}</a>
-		</option>
-
-		<option
-			ng-repeat 	= "dst in ic.taxonomy.lor | orderBy : ic.utils.evalItems('\'UNSORTED_TAGS.LOR_%s\' | fill : item.name | translate')"			
-			value		= "{{dst.tag}}"
-			ng-disabled	= "!ic.itemStorage.currentStats.totals[dst.tag]"
-			ng-selected	= "tag.dst == dst.tag"
-		>
-			{{'UNSORTED_TAGS.%s' | fill : dst.tag | translate }}
-			
-			({{ic.itemStorage.currentStats.totals[dst.tag] || 0}})			
-		</option>
-
-	</select>
-
-
-
-
-	<label for ="filter-lor-pgr">
-		{{'INTERFACE.LOR_PGR' | translate}}
-	</label>
-	<select
-		id			=	"filter-lor-pgr"
-		class		=	"icon tac right icon-interface-down"
-		ng-class	=	"{'bg-3 white': selected.pgr, 'border-1': !selected.pgr}"
-		ng-model	= 	"tag.pgr"
-		ng-change	= 	"
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_pgr);
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_bzr);
-
-							selected.pgr = (tag.pgr|icPrognoseraum);
-
-							selected.pgr && ic.filterConfig.toggleUnsortedTag(selected.pgr.tag, true);
-						"
-		ng-disabled	=	"!selected.dst"
-	>
-
-		<option
-			value	= ""
-		>
-			<a>{{'INTERFACE.FILTER_ANY' |translate}}</a>
-		</option>
-
-		<option
-			ng-repeat 	= "pgr in selected.dst.pgr | orderBy : ic.utils.evalItems('\'UNSORTED_TAGS.LOR_%s\' | fill : item.name | translate')"
-			value		= "{{pgr.tag}}"
-			ng-disabled	= "!ic.itemStorage.currentStats.totals[pgr.tag]"			
-		>
-			{{'UNSORTED_TAGS.%s' | fill : pgr.tag | translate }}
-			
-			({{ic.itemStorage.currentStats.totals[pgr.tag] || 0}})			
-		</option>
-
-	</select>
-
-
-
-
-
-
-	<label for ="filter-lor-bzr">
-		{{'INTERFACE.LOR_BZR' | translate}}
-	</label>
-	<select
-		id			=	"filter-lor-bzr"
-		class		=	"icon tac right icon-interface-down"
-		ng-class	=	"{'bg-3 white': selected.bzr, 'border-1': !selected.bzr}"
-		ng-model	= 	"tag.bzr"
-		ng-change	= 	"
-							ic.filterConfig.clearUnsortedTag(ic.taxonomy.tags.lor_bzr);
-
-							selected.bzr = (tag.bzr|icBezirksregion);
-
-							selected.bzr && ic.filterConfig.toggleUnsortedTag(selected.bzr.tag, true);
-						"
-		ng-disabled	=	"!selected.pgr"
-
-	>
-
-		<option
-			value	= ""
-		>
-			<a>{{'INTERFACE.FILTER_ANY' |translate}}</a>
-		</option>
-
-		<option
-			ng-repeat 	= "bzr in selected.pgr.bzr | orderBy : ic.utils.evalItems('\'UNSORTED_TAGS.LOR_%s\' | fill : item.name | translate')"			
-			value		= "{{bzr.tag}}"
-			ng-disabled	= "!ic.itemStorage.currentStats.totals[bzr.tag]"			
-		>
-			{{'UNSORTED_TAGS.%s' | fill : bzr.tag | translate }}
-			
-			({{ic.itemStorage.currentStats.totals[bzr.tag] || 0}})			
-		</option>
-
-	</select>
-
-
-</section>
 
 <div class = "actions">
 	<button 
-		class		= "bg-3 padding"
+		class		= "prio"
 		ng-click	= "ic.overlays.toggle()" 
 	>
 		{{'INTERFACE.APPLY_FILTERS' | translate}}

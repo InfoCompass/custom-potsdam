@@ -134,8 +134,8 @@
 	color:						#fff;
 }
 
-.active,
-.active:hover {
+a:not(ic-button).active,
+a:not(ic-button).active:hover {
 	color:						var(--active-color, var(--primary-color));
 }
 

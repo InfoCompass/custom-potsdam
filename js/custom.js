@@ -30,7 +30,7 @@ angular.module("icServices")
 		.registerSection({
 			name:			'filter-tags',
 			template:		'partials/ic-section-filter-tags.html',
-			active:			function(ic){									
+			active:			function(ic){
 
 								if(		
 									ic.site.page === "extended_search"
@@ -43,7 +43,6 @@ angular.module("icServices")
 									&& 	ic.site.filterByUnsortedTag.includes('favourite')
 								) 
 									return false
-
 
 
 								return ic.filterConfig.isActive()

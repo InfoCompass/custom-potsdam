@@ -54,7 +54,7 @@ button,
 a.ic-button {
 	display:					inline-flex !important;
 	cursor:						pointer;
-	background-color:			var(--primary-background-color, #fff);
+	background-color:			transparent; 
 	border-radius:				var(--button-border-radius);	
 	border-width:				var(--button-border-width);
 	border-color:				transparent;
@@ -63,18 +63,17 @@ a.ic-button {
 	line-height:				1.2 !important;
 }
 
-
 select.icon.right,
 button.icon.right,
 a.ic-button.icon.right {
-	padding-right:				2em;
+	padding-right:				2.5em;
 	background-position:		calc(100% - 0.5em)
 }
 
 select.icon.left,
 button.icon.left,
 a.ic-button.icon.left {
-	padding-left: 				2em;
+	padding-left: 				2.5em;
 	background-position:		0.5em;
 }
 

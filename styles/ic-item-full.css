@@ -197,7 +197,7 @@ ic-item-full ic-item-full-footer	.buttons button {
 	text-align:					left;
 	box-sizing:					border-box;
 	white-space: 				nowrap;	
-	border-style:				solid;
+	background-color:			var(--primary-background-color, #fff);
 }
 
 

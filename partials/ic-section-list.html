@@ -8,7 +8,7 @@
 	<header>
 		<button
 			ng-if 		= "!ic.site.visibleSections.filter"
-			class 		= "block margin-right border tac"
+			class 		= "border tac"
 			ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
 			ic-touch-me 
 		>
@@ -17,13 +17,22 @@
 
 		<button 
 			ng-if 		= "!ic.site.visibleSections.filter"
-			class 		= "block margin-left border tac"
+			class 		= "border tac"
 			ng-click 	= "ic.site.expandMap = true"
 			ic-touch-me 
 		>
 			{{'INTERFACE.MAP' | translate}}
 		</button>
 
+		<a 
+			ng-if 		= "ic.site.searchTerm"
+			ng-href		= "/p/extended_search"
+			class 		= "ic-button border tac icon icon-interface-search left"
+			ic-touch-me 
+		>
+			{{'INTERFACE.RETRY_SEARCH' | translate}}
+		</a>
+		
 		<div class ="flex-grow"></div>
 		
 		<ic-sorting	>

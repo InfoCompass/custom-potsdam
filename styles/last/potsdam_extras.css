@@ -29,8 +29,8 @@ ic-header ic-main-menu  {
 
 
 ic-taxonomy-overlay {
-	padding-top:				0;
-	padding-left:				1rem;
+	padding-top:					0;
+	padding-left:					1rem;
 	padding-right:				1rem;
 	padding-bottom:				1rem;
 }
@@ -67,17 +67,12 @@ ic-taxonomy-overlay > div {
 
 ic-taxonomy-overlay ul li, /*alt*/
 ic-taxonomy-overlay > div button {
-	flex:						0 0 20rem;
-	display:					inline-flex !important;
-	align-items:				center;
+	flex:									0 0 20rem;
+	display:							inline-flex !important;
+	align-items:					center;
 	justify-content:			start;
-	padding-left:				3rem;
-	padding-right:				0.5rem;
-	padding-top:				0.5rem;
-	padding-bottom:				0.5rem;
-	background-position:		0.75rem 50% !important;
 	margin-bottom:				0.25rem !important;
-	text-align: 				left;
+	text-align: 					left;
 }
 
 
