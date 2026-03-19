@@ -131,6 +131,7 @@ ic-item-full h4 {
 	font-weight:				600;
 	margin:						0;
 	margin-top:					0rem;
+	margin-bottom:				0.5rem;
 	color:						#222;
 }
 
@@ -229,4 +230,8 @@ ic-item-full .auto-translation-indicator {
 
 ic-item-full ic-item-property .icon.right.top {
 	display:				none;
+}
+
+ic-item-full ic-item-property {
+	margin:					0.5rem 0;
 }
