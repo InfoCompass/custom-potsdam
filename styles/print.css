@@ -1,0 +1,10 @@
+@media print {
+	#section-map,
+	#section-calendar,
+	#section-filter,
+	#section-filter-tags,
+	#section-list,
+	ic-header{
+		display: none !important;
+	}
+}

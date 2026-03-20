@@ -1,0 +1,146 @@
+ic-item-preview[ic-date] {
+	display:				block !important;
+	position:				relative;
+	border-radius:			0.625rem;
+	overflow:				hidden;
+	padding:				0;
+	min-height:				0rem;
+}
+
+.XS ic-item-preview[ic-date] {
+	border-radius:			0;
+}
+
+ic-item-preview[ic-date] .backdrop {
+	display:				flex;
+	padding-left:			2rem;
+	padding-right:			0;
+	padding-top:			1rem;
+	padding-bottom:			1rem;	
+	gap:					1rem;
+}
+
+ic-item-preview[ic-date] .backdrop.no-item {
+	align-items:			center;
+	padding-bottom:			1rem;
+	padding-right:			0rem;
+	gap:					1rem;
+}
+
+ic-item-preview[ic-date] .backdrop.no-item .content {
+	flex-direction:			row;
+	display:				flex;
+	align-items:			center;
+	justify-content:		space-between;
+	gap:					2rem;
+	flex-wrap:				wrap;
+}
+
+ic-item-preview[ic-date] .backdrop.no-item .content > .message {
+	min-width:				13rem;
+	flex:					1 1 0;
+}
+
+ic-item-preview[ic-date] .backdrop.no-item .content > a {
+	flex:					0 0 auto;
+	margin-left:			auto;
+	margin-right:			1rem;
+}
+
+ic-item-preview[ic-date] .backdrop.no-item .category {
+	display:				none !important;
+}
+
+.XS ic-item-preview[ic-date] .backdrop{
+	padding-right:			0;
+	background-image:		none!important;
+}
+
+ic-item-preview[ic-date] .backdrop:before {
+	display:				block;
+	content:				'';
+	z-index:				0 !important;
+	background:				rgba(255,255,255,0.7);
+	position:				absolute;
+	left:					1rem;
+	right:					0;
+	top:					0;
+	bottom:					0;
+}
+
+ic-item-preview[ic-date] .backdrop .front {
+	display:				flex;
+	flex-direction:			column;
+	justify-content:		space-between;
+	align-items:			flex-start;
+}
+
+
+ic-item-preview[ic-date] .backdrop > *{
+	z-index:				1;
+}
+
+ic-item-preview[ic-date] .backdrop .front {
+
+}
+
+ic-item-preview[ic-date] .backdrop .content {
+	flex:					1 0 0;
+	display:				block;
+	background-repeat:		no-repeat;
+	background-position:	top 0rem right 1rem;
+	background-size:		3rem;
+	padding-right:			4rem;
+}
+
+ic-item-preview[ic-date] .backdrop .content .category {
+	font-size:				0.8rem;
+	font-weight:			500;
+	color:					var(--dark-text-color);
+}
+
+ic-item-preview[ic-date] .backdrop .content .title {
+	font-size:				1.2rem;
+	margin:					0.5rem 0;
+	color:					var(--dark-text-color);
+}
+
+ic-item-preview[ic-date] .backdrop .content .brief {
+	font-size:				1rem;
+	font-weight:			normal;	
+	color:					var(--dark-text-color);
+}
+
+
+
+ic-item-preview[ic-date] .stats {
+	display:				flex;
+	margin-top:				1rem;
+	font-size:				1em;
+}
+
+ic-item-preview[ic-date] .stats > * {
+	flex:					1 1 50% !important;
+	position:				relative;
+	padding-left:			3em;
+}
+
+ic-item-preview[ic-date] .stats > * .icon {
+	position:				absolute;
+	top:					0;
+	left:					0;
+	font-size:				2rem;
+}
+
+ic-item-preview[ic-date] .stats .time .times {
+	flex:					0 0 auto;
+	display:				grid;
+	grid-template-columns:	repeat(3, min-content);
+}
+
+ic-item-preview[ic-date] .stats ic-item-location {
+	display:				flex;	
+	flex-wrap:				wrap;
+	margin-top:				0;
+}
+

@@ -1,0 +1,105 @@
+<div
+	ng-if		= "icItem === null"
+	class		= "backdrop no-item"
+>
+	<ic-calendar-sheet ic-date = "icDate"></ic-calendar-sheet>	
+
+	<div class ="content">
+
+		<div class = "message">
+			{{ 'INTERFACE.NO_MATCHING_CALENDAR_ENTRY' | translate }}
+		</div>
+
+		<a 
+			class 	= "ic-button"
+			href 	= "/item/new"
+			ic-touch-me
+		>
+			{{ ic.user.can('edit-items') ? 'INTERFACE.CREATE_NEW_ITEM' : 'INTERFACE.SUGGEST_NEW_ITEM' | translate }}
+		</a>
+
+	</div>
+
+</div>
+
+
+<div 
+	ng-if		= "icItem !== null"
+	class 		= "backdrop {{(item|icCategory) && 'ic-bg-cat-'+(icItem|icCategory).name}}"
+	ng-class	= "{ 'no-item': icItem === null }"
+>	
+
+	<div class ="front">
+		<ic-calendar-sheet ic-date = "icDate"></ic-calendar-sheet>	
+		<span 
+			class	= "round mini icon icon-interface-proposals bg-0 fright"
+			ng-if	= "ic.user.can('edit_items') && icItem.proposals.length > 0"
+			title	= "{{'INTERFACE.PROPOSALS' | translate }}"
+		></span>
+	</div>
+
+	<div 
+		ng-if		= "icItem !== null"
+		class 		= "content  {{'icon-category-'+(icItem | icCategory).name}}"
+		title 		= "{{icItem | icFullTitle }}"
+	>
+			<div 
+				class = "category"
+			>
+				{{'CATEGORIES.%s' | fill : (icItem | icCategory).name | translate}} 
+			</div>
+
+
+			<div class ="title">
+				<span 
+					class	= "remote"
+					ng-if	= "icItem.remoteItem"
+				>
+					{{'INTERFACE.REMOTE_ITEM_TAG' | translate }}
+				</span>
+
+				{{icItem | icFullTitle}}	
+
+			</div>
+
+
+			<div class = "brief">
+				
+				<span class = "date heavy" ng-if = "icItem.startDate">
+					{{icItem.startDate | icDate}}{{icItem.endDate ? "–" + (icItem.endDate | icDate) : ''}}
+			 	</span>
+			 	<span class = "lang-{{ic.site.currentLanguage}}">
+					{{icItem.brief[ic.site.currentLanguage] | clearTranslator}}
+				</span>
+
+
+			</div>
+
+
+			<div 
+				class	= "stats"
+			>
+					
+				<ic-times 
+					ic-time-ranges	= "times"
+					class			= "icon icon-interface-time left"
+				>
+				</ic-times>
+
+				<ic-item-location 
+					class			= "icon icon-interface-location"
+					ic-item			= "icItem"
+					ic-short 		= "true"
+				>
+				</ic-item-location>
+			</div>
+
+	</div>
+
+	<div 
+		ng-if	= "icItem.brief[ic.site.currentLanguage] | autoTranslator"
+		class 	= "auto-translation-indicator plain icon-interface-translate_robot"
+		title	= "{{'INTERFACE.AUTO_TRANSLATED_BY' | translate}} {{icItem.brief[ic.site.currentLanguage] | autoTranslator}}"
+	>
+	</div>
+</div>
