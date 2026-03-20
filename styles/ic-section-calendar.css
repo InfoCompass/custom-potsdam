@@ -1,0 +1,32 @@
+#section-calendar header .controls {
+	display:			flex;
+	flex-wrap:			wrap;
+	justify-content:	flex-end;
+	align-items:		center;
+	gap:				0.5rem;
+}
+
+#section-calendar header .controls > *{
+	flex:				0 0 auto;
+}
+
+#section-calendar header .controls input {
+	 line-height:		initial;
+	 margin:			initial;
+	 background:		initial;
+}
+
+.XS #section-calendar header .controls {
+	flex-direction:		column;
+	align-items:		stretch;
+	padding:			0 1rem;
+}
+
+.XS #section-calendar header .controls button,
+.XS #section-calendar header .controls input {
+	flex:				1 0 40%;
+}
+
+
+
+

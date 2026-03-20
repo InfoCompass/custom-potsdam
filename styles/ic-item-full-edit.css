@@ -43,15 +43,16 @@ ic-item-full-edit > section.properties + section.properties:before {
 }
 
 ic-item-full-edit > section.properties > [ic-extend] {
+	transition-property:		height;
 	padding-bottom:				0rem;
-	transition-property:		height, padding-bottom;
+
 }
 
 ic-item-full-edit > section.properties > [ic-extend].extended {
 	padding-bottom:				1rem;
-	transition-property:		height, padding-bottom;
+
 }
- 
+
 ic-item-full-edit > section  .split {
 	display:					flex;
 	flex-wrap:					wrap;

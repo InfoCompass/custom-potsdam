@@ -51,7 +51,7 @@ button::-moz-focus-inner {
 
 select,
 button,
-a.ic-button {
+.ic-button {
 	display:					inline-flex !important;
 	cursor:						pointer;
 	background-color:			transparent; 
@@ -65,63 +65,63 @@ a.ic-button {
 
 select.icon.right,
 button.icon.right,
-a.ic-button.icon.right {
+.ic-button.icon.right {
 	padding-right:				2.5em;
 	background-position:		calc(100% - 0.5em)
 }
 
 select.icon.left,
 button.icon.left,
-a.ic-button.icon.left {
+.ic-button.icon.left {
 	padding-left: 				2.5em;
 	background-position:		0.5em;
 }
 
 select > .icon,
 button > .icon,
-a.ic-button > .icon {
+.ic-button > .icon {
 	margin:						-0.15em 0; /*line-height is supposed to be 1.2em icon hight is 1.5em*/
 }
 
 select > .icon.left:first-child,
 button > .icon.left:first-child,
-a.ic-button > .icon.left:first-child {
+.ic-button > .icon.left:first-child {
 	margin-left:				-0.5em; /* compensate for button padding */
 }
 
 select > .icon.right:last-child,
 button > .icon.right:last-child,
-a.ic-button > .icon.right:last-child {
+.ic-button > .icon.right:last-child {
 	margin-right:				-0.5em; /* compensate for button padding */
 }
 
 select.border,
 button.border,
-a.ic-button.border {
+.ic-button.border {
 	border-color:				var(--button-border-color);
 }
 
 select.activated,
 button.activated,
-a.ic-button.activated {
+.ic-button.activated {
 	color:						var(--emphasized-background-contrast);
 	background-color:			var(--emphasized-background-color);
 }
 
 button.prio,
-a.ic-button.prio {
+.ic-button.prio {
 	color:						var(--emphasized-background-contrast);
 	background-color:			var(--emphasized-background-color);
 }
 
 button.prio:hover,
-a.ic-button.prio:hover {
+.ic-button.prio:hover {
 	color:						var(--emphasized-background-contrast);
 	background-color:			var(--emphasized-background-color);
 }
 
 button.prio:disabled,
-a.ic-button.prio:disabled {
+.ic-button.prio:disabled {
 	color:						var(--secondary-background-contrast);
 	background-color:			var(--secondary-background-color);
 	border-style:				solid;
@@ -132,7 +132,7 @@ a.ic-button.prio:disabled {
 
 select.removable,
 button.removable,
-a.ic-button.removable {
+.ic-button.removable {
 	color:						var(--secondary-background-contrast)  !important;
 	background-color:			var(--secondary-background-color) !important;
 	animation:					removable-enter 500ms;
@@ -142,19 +142,19 @@ a.ic-button.removable {
 
 select.removable:hover,
 button.removable:hover,
-a.ic-button.removable:hover {
+.ic-button.removable:hover {
 	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.95) ) !important;
 }
 
 select.removable.all,
 button.removable.all,
-a.ic-button.removable.all {
+.ic-button.removable.all {
 	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.85) ) !important;
 }
 
 select.removable.all:hover,
 button.removable.all:hover,
-a.ic-button.removable.all:hover {
+.ic-button.removable.all:hover {
 	background-color:			hsl(from var(--secondary-background-color) h s calc(l * 0.80) ) !important;
 }
 
@@ -176,7 +176,7 @@ a.ic-button.removable.all:hover {
 
 select.rounded,
 button.rounded,
-a.ic-button.rounded {
+.ic-button.rounded {
 	border-radius:				var(--button-border-radius) !important;
 }
 

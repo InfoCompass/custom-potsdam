@@ -160,16 +160,11 @@ ic-main-content		.primary-sections .regular-sections > *,
 
 
 
-
-
-
 #section-item {
 	min-width:					24rem;
-	width:						30rem;
-	max-width:					40rem;
+	width:						48rem;
 	order:						7;
-	z-index:					43; /* = 50-order */
-	min-width:					50rem;
+	z-index:					43; /* = 50-order */	
 	max-width:					100%;
 }
 

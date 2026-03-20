@@ -380,6 +380,7 @@
 				<button
 		    		class 		= "border"
 		     		ng-click 	= "toggleLatLonInput()"
+		     		ng-class	= "{'activated': icEdit.latitude || icEdit.longitude || icItem.latitude || icItem.longitude}"
 		    	>
 		         	{{showLatLonInput == true ? 'ITEMS.HIDE_LATLON_INPUT' : 'ITEMS.SHOW_LATLON_INPUT' | translate}}
 		    	</button>
