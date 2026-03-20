@@ -75,14 +75,9 @@ ic-item-preview .content .brief .date {
 }
 
 
-ic-item-preview .content ic-item-location {
-	display:				flex;
-	font-size:				1rem;
+ic-item-preview .content ic-item-location {	
+	font-size:				0.875rem;
 	margin-top:				1rem;
-	flex-direction:			column;
-	gap:					0 1em;
-	padding-left:			2em;
-	background-position:	0 0;
 }	
 
 
