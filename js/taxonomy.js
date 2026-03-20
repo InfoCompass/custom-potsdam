@@ -43,16 +43,27 @@
 		},
 
 		{
-			name:	'exercise',				//Bewegung_und_Gesundheit
+			name:	'exercise',				//Bewegung; War: Bewegung_und_Gesundheit
 			colors:	['#A0C543'],
 			tags:	[
-					'exercise_walk',
-				    'exercise_sports',
-				    'exercise_dance',
-				    'exercise_memory',
-				    'exercise_prevention',
-				    'exercise_nutrition'
+				    	'exercise_sports',
+				    	'exercise_dance',
+				    	'exercise_memory',
+				    	'exercise_prevention',
+				    ]
+		},
 
+		{
+			name:	'health',				//Gesundheit_und_Wohlbefinden
+			colors:	['#A0C543'],
+			tags:	[
+						'exercise_walk',
+			   			'exercise_nutrition',
+
+				   		'pharmacy',				// Apotheken
+				    	'physician', 			// Ärzte 
+				    	'hair_dresser', 		// Frisöre 
+				    	'foot_care'				// Fußpflege
 					]
 		},
 
