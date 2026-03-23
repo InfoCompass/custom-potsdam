@@ -18,13 +18,17 @@ select {
 
 input, 
 button, 
-select,
 button:active,
 button:hover,
 button:focus,
+select,
 select:active,
 select:hover,
-select:focus {
+select:focus,
+.ic-button,
+.ic-button:active,
+.ic-button:hover,
+.ic-button:focus {
 	display:					inline-flex;
 	color: 						var(--primary-text-color);
 	-webkit-appearance: 		none;
