@@ -2,11 +2,11 @@ ic-item-full-edit {
 	display:					block;
 	box-sizing:					border-box;
 	position:					relative;
-	padding-left:				0rem !important;
-	padding-right:				0rem !important;
 	padding-bottom:				0rem;
 	padding-top:				8rem !important;
 	min-height:					100%;	
+	padding-left:				4rem !important;
+	padding-right:				5rem !important;
 }
 
 ic-item-full-edit.new {
@@ -14,8 +14,6 @@ ic-item-full-edit.new {
 }
 
 ic-item-full-edit > * {
-	margin-left:				4rem;
-	margin-right:				5rem;
 }
 
 ic-item-full-edit section,
