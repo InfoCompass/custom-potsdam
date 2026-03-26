@@ -95,7 +95,7 @@
 
 
 .highlight-links a {
-	color:						var(--primary-color)!important;
+	color:						var(--active-color, var(--primary-color));
 }
 
 

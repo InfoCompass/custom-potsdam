@@ -1,0 +1,74 @@
+
+
+ic-taxonomy-overlay {
+	padding-top:					0;
+	padding-left:					1rem;
+	padding-right:				1rem;
+	padding-bottom:				1rem;
+}
+
+ic-taxonomy-overlay h2 {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	text-align: center;
+	width: auto!important;
+	max-width: 90%;
+}
+
+
+ic-taxonomy-overlay h2 + input {
+	margin:						1rem auto;
+	width:						18rem !important;
+}
+
+
+ic-taxonomy-overlay > div {
+	display:					flex;
+	padding-left:				0 !important;
+	padding-right:				0 !important;
+	padding-top:				0 !important;
+	padding-bottom:				0 !important;
+	margin:						auto;
+	max-width:					45rem;
+	flex-wrap:					wrap;
+	width:						auto !important;
+	justify-content: 			space-between;
+}
+
+
+ic-taxonomy-overlay > div > * {
+	flex:						0 0 20rem;
+	display:					inline-flex !important;
+	align-items:				center;
+	justify-content:			start;
+	margin-bottom:				0.25rem !important;
+	text-align: 				left;
+}
+
+ic-taxonomy-overlay > div:before {
+	content:					'';	
+	flex:						0 0 20rem;	
+}
+
+ic-taxonomy-overlay > div :nth-child(1){
+	order:						-1;
+}
+
+
+ic-taxonomy-overlay > div button div {
+	flex:						1 1 auto;
+	display:					inline-block;
+	vertical-align:				middle;
+}
+
+ic-taxonomy-overlay > div button .bubble {
+	display:					flex;
+	flex:						0 0 auto;
+}
+
+ic-taxonomy-overlay .actions {
+	display: 					block;
+	margin-top: 				2rem;
+	text-align: 				right;
+}

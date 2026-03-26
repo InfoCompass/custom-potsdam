@@ -9,9 +9,13 @@ ic-item-full-edit {
 	min-height:					100%;	
 }
 
+ic-item-full-edit.new {
+	padding-top:				1rem !important;
+}
+
 ic-item-full-edit > * {
-	padding-left:				4rem;
-	padding-right:				5rem;
+	margin-left:				4rem;
+	margin-right:				5rem;
 }
 
 ic-item-full-edit section,
@@ -24,28 +28,33 @@ ic-item-full-edit > section.properties {
 	margin-bottom:				1rem;
 }
 
-ic-item-full-edit > section.properties:before,
-ic-item-full-edit > section.properties:after {
+ic-item-full-edit > section.properties {
 	content:					'';
 	display:					block;
-	border-bottom-width:		0px;
+	border-top-width:			2px;
+	border-bottom-width:		2px;
+	border-width:				round(up, 0.1rem, 1px);
 	border-left-width:			0px;
 	border-right-width:			0px;
-	border-top-width:			1px;
-	border-top-width:			round(down, 0.1rem, 1px);
 	border-style:				solid;
 	border-color:				var(--primary-color);
 }
 
-ic-item-full-edit > section.properties + section.properties:before {
+ic-item-full-edit > section.properties + section.properties {
 	border-top-width:			0;
-	margin-top:					-1rem;
+	margin-top:					-1rem;	
 }
 
 ic-item-full-edit > section.properties > [ic-extend] {
 	transition-property:		height;
 	padding-bottom:				0rem;
+	overflow:					hidden;
 
+	/* to allow some overflow-x: */
+	padding-left:				1rem;
+	padding-right:				1rem;
+	margin-left:				-1rem;
+	margin-right:				-1rem;
 }
 
 ic-item-full-edit > section.properties > [ic-extend].extended {
@@ -57,7 +66,7 @@ ic-item-full-edit > section  .split {
 	display:					flex;
 	flex-wrap:					wrap;
 	margin:						0;
-	gap:						1rem;
+	gap:						1rem 2rem;
 	justify-content:			space-around;
 	margin:						1rem 0;
 }
@@ -84,8 +93,10 @@ ic-item-full-edit .options button {
 
 ic-item-full-edit  h3 {
 	box-sizing:				border-box;
-	margin-top:				1rem;
-	margin-bottom:			1rem;
+	padding-top:			1rem;
+	padding-bottom:			1rem;
+	margin-top:				0;
+	margin-bottom:			0;
 	font-weight:			800;
 	width:					100%;
 }
@@ -147,3 +158,14 @@ ic-item-full-edit ic-item-property-edit:not(.no-sibling-margin) + ic-item-proper
 	margin-top:					2rem;
 }
 
+
+ic-item-full-edit button[ic-scroll-to="top"].no-scroll-available {
+	opacity:					0;
+	pointer-events:				none;
+}
+
+ic-item-full-edit button[ic-scroll-to="top"]{
+	display:					block !important;
+	margin-left:				auto;
+	transition:					opacity 200ms ease-in-out;
+}

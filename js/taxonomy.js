@@ -47,7 +47,7 @@
 
 		{
 			name:	'health',				//Gesundheit_und_Wohlbefinden
-			colors:	['#A0C543'],
+			colors:	['#00ADC3'],
 			tags:	[
 						'exercise_walk',
 			   			'exercise_nutrition',
@@ -125,7 +125,7 @@
 
 		{
 			name:	'care',					//Rund_um_die_Pflege	
-			colors:	['#00ADC3'],
+			colors:	['#7499F1'],
 			tags: 	[
 						'care_facility',
 						'care_consulting',

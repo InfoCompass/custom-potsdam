@@ -173,8 +173,6 @@
 		</h4>
 	
 
-
-
 		<!-- hours -->
 		<ic-item-property 
 			ng-if			= "item.hours[ic.site.currentLanguage] || item.recurring_event && item.recurring_event != '[]' "
@@ -218,16 +216,6 @@
 			ng-if			= "(item.tags | icUnsortedTags : 'target_groups').length"
 			ic-title 		= "'ITEMS.TARGET_GROUPS' | translate"	
 			ic-content		= "(item.tags | icUnsortedTags : 'target_groups' | mapExpression: '\'UNSORTED_TAGS.%s\' | fill: x | translate' : this).join(', ')"
-		>
-		</ic-item-property>
-
-		<!-- languages -->
-
-		<ic-item-property
-			class			= ""
-			ng-if			= "(item.tags | icUnsortedTags : 'languages').length"
-			ic-title 		= "'ITEMS.LANGUAGES' | translate"	
-			ic-content		= "(item.tags | icUnsortedTags : 'languages'  | mapExpression: '\'UNSORTED_TAGS.%s\' | fill: x | translate' : this).join(', ')"
 		>
 		</ic-item-property>
 
@@ -343,7 +331,13 @@
 
 	<!-- accessibility -->
 
-	<section ng-if = "item.accessibility[ic.site.currentLanguage] || (item.tags | section : ic.taxonomy.tags.accessibility).length > 0">
+	<section 
+		ng-if = "
+						item.accessibility[ic.site.currentLanguage] 
+					|| 	(item.tags | section : ic.taxonomy.tags.accessibility).length > 0
+					||	(item.tags | icUnsortedTags : 'languages').length > 0
+				"
+	>
 		<h4>
 			{{'ITEMS.SECTION_ACCESSIBILITY' | translate}}
 		</h4>
@@ -359,6 +353,16 @@
 		<ic-item-property
 			ng-if			= 	"item.accessibility[ic.site.currentLanguage]"
 			ic-content		= 	"item.accessibility[ic.site.currentLanguage]"
+		>
+		</ic-item-property>
+
+		<!-- languages -->
+
+		<ic-item-property
+			class			= ""
+			ng-if			= "(item.tags | icUnsortedTags : 'languages').length"
+			ic-title 		= "'ITEMS.LANGUAGES' | translate"	
+			ic-content		= "(item.tags | icUnsortedTags : 'languages'  | mapExpression: '\'UNSORTED_TAGS.%s\' | fill: x | translate' : this).join(', ')"
 		>
 		</ic-item-property>
 	</section>	

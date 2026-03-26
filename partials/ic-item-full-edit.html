@@ -21,6 +21,7 @@
 	</div>
 </section>
 
+
 <section ng-if = "ic.user.can('edit_items') && icItem.proposals && icItem.proposals.length > 0">
 
 	<div>
@@ -60,7 +61,50 @@
 	</div>
 </section>
 
+<section>
+	<article>
 
+		<h4> {{'ITEMS.TYPE' | translate}}</h4>
+
+		<ic-item-property-edit
+			class						= "long-labels"
+			ic-item						= "icItem"
+			ic-type						= "array"
+			ic-translation-key			= "type"
+			ic-options					= "['location', 'non_location']"
+			ic-option-label				= "'TYPES.%s' | fill: option | translate"
+			ic-option-icon-class		= "'icon-type-' + option"
+			ic-allow-multiple-choices	= "false"
+			ic-force-choice				= "true"
+			ic-key						= "tags" 
+			ic-side-effect				= "	
+											(icEdit.tags | lacks : 'non_location' : 'location')
+											&& 
+											ic.utils.toggle( 
+												icEdit.tags, 
+												'non_location', 		
+												true	 
+											); 									
+											ic.utils.toggle( 
+												icEdit.tags, 
+												'service', 		
+												(icEdit.tags | includes : 'non_location' ) && !(icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
+											); 
+											ic.utils.toggle( 
+												icEdit.tags, 
+												'event', 			
+												(icEdit.tags | includes : 'non_location' ) && (icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
+											);
+											ic.utils.toggle( 
+												icEdit.tags, 
+												ic.config.calendar.exclusionTag, 			
+												(icEdit.tags | includes : 'location') 
+											);
+											
+										  "
+		></ic-item-property-edit>
+	</article>
+</section>
 <!--general-->
 <section 
 	class 	= "properties"
@@ -69,56 +113,15 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'general', 'icon-interface-down': extend == 'general'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'general'}"
 		ng-click	= "extend = extend == 'general' ? undefined : 'general'"
+		title		= "{{extend == 'general' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_GENERAL' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_GENERAL_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
 
 	<div ic-extend = "extend == 'general'">
-		<article>
-
-			<h4> {{'ITEMS.TYPE' | translate}}</h4>
-
-			<ic-item-property-edit
-				class						= "long-labels"
-				ic-item						= "icItem"
-				ic-type						= "array"
-				ic-translation-key			= "type"
-				ic-options					= "['location', 'non_location']"
-				ic-option-label				= "'TYPES.%s' | fill: option | translate"
-				ic-option-icon-class		= "'icon-type-' + option"
-				ic-allow-multiple-choices	= "false"
-				ic-force-choice				= "true"
-				ic-key						= "tags" 
-				ic-side-effect				= "	
-												(icEdit.tags | lacks : 'non_location' : 'location')
-												&& 
-												ic.utils.toggle( 
-													icEdit.tags, 
-													'non_location', 		
-													true	 
-												); 									
-												ic.utils.toggle( 
-													icEdit.tags, 
-													'service', 		
-													(icEdit.tags | includes : 'non_location' ) && !(icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
-												); 
-												ic.utils.toggle( 
-													icEdit.tags, 
-													'event', 			
-													(icEdit.tags | includes : 'non_location' ) && (icEdit[ic.config.calendar.recurringRulesKey]|isOneTime) 
-												);
-												ic.utils.toggle( 
-													icEdit.tags, 
-													ic.config.calendar.exclusionTag, 			
-													(icEdit.tags | includes : 'location') 
-												);
-												
-											  "
-			></ic-item-property-edit>
-		</article>
 
 		<article>
 
@@ -248,16 +251,17 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'implementation', 'icon-interface-down': extend == 'implementation'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'implementation'}"
 		ng-click	= "extend = extend == 'implementation' ? undefined : 'implementation'"
+		title		= "{{extend == 'implementation' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"			
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_IMPLEMENTAION' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_IMPLEMENTAION_%s'| fill: (icEdit|icType).name  | translate}}
 	</h3>
 
 	<div ic-extend = "extend == 'implementation'">
 
-		<article>
+		<article ng-if = "(icEdit|icType).name != 'location'">
 				
 			<h4> {{'ITEMS.MODE' | translate}}</h4>
 
@@ -285,8 +289,8 @@
 				ic-translation-key			= "location_ref"
 				ic-options					= "ic.itemStorage.data | icTags : ['location'] | mapToKey : 'id' | preventLoop"
 				ic-options-filter-limit		= "5"				
-				ic-option-filter-key		= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).address : '' "
-				ic-option-label				= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).address : '' "
+				ic-option-filter-key		= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).zip + ' ' + ic.itemStorage.getItem(option).city + ', ' +ic.itemStorage.getItem(option).address : '' "
+				ic-option-label				= "option ? ic.itemStorage.getItem(option).title + ', ' +ic.itemStorage.getItem(option).zip + ' ' + ic.itemStorage.getItem(option).city : '' "
 				ic-allow-multiple-choices	= "false"
 				ic-force-choice				= "false"
 			></ic-item-property-edit>
@@ -355,9 +359,6 @@
 		</article>
 
 
-
-		<div ng-if = "!icEdit.location_ref"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
 		<div ng-if = "!icEdit.location_ref">
 			<div class = "split">
 				
@@ -421,11 +422,12 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'when', 'icon-interface-down': extend == 'when'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'when'}"
 		ng-click	= "extend = extend == 'when' ? undefined : 'when'"
+		title		= "{{extend == 'when' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_WHEN' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_WHEN_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
 
 	<div ic-extend = "extend == 'when'">
@@ -470,11 +472,12 @@
 <section class = "properties">
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'accessibility', 'icon-interface-down': extend == 'accessibility'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'accessibility'}"
 		ng-click	= "extend = extend == 'accessibility' ? undefined : 'accessibility'"
+		title		= "{{extend == 'accessibility' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_ACCESSIBILITY' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_ACCESSIBILITY_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
 
 	<div ic-extend = "extend == 'accessibility'">
@@ -519,11 +522,12 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'contact', 'icon-interface-down': extend == 'contact'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'contact'}"
 		ng-click	= "extend = extend == 'contact' ? undefined : 'contact'"
+		title		= "{{extend == 'contact' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_CONTACT' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_CONTACT_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
 
 	<div ic-extend ="extend == 'contact'">
@@ -552,11 +556,12 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'misc', 'icon-interface-down': extend == 'misc'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'misc'}"
 		ng-click	= "extend = extend == 'misc' ? undefined : 'misc'"
+		title		= "{{extend == 'misc' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_MISC' | translate}}
+		{{'INTERFACE.ITEM_EDIT_SECTION_MISC_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
 
 	<div ic-extend ="extend == 'misc'">
@@ -615,6 +620,7 @@
 			ng-if		= 	" 
 									(key != 'lists'  || !ic.config.disableLists) 
 								&&	!['extra', 'mode', 'accessibility', 'state', 'options_ri', 'options_sp'].includes(key)
+								&&	!(key == 'institution_type' && (icEdit|icType).name == 'location')
 							"
 		>
 			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
@@ -681,9 +687,10 @@
 
 	<h3
 		aria-role 	= "button"
-		class		= "icon right"
-		ng-class	= "{'icon-interface-right': extend != 'note', 'icon-interface-down': extend == 'note'}"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'note'}"
 		ng-click	= "extend = extend == 'note' ? undefined : 'note'"
+		title		= "{{extend == 'note' == 'note' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
 		{{'ITEMS.EDITING_NOTE' | translate}}
 	</h3>
@@ -700,17 +707,14 @@
 </section>
 
 
-<article>
-	<div class ="xjust">
-		<div>
-		</div>
-		<button
-			class 			= "icon icon-interface-up"
-			ic-scroll-to 	= "top"
-		>
-		</button>
-	</div>
-</article>
+<div>
+	<button
+		class 			= "icon icon-interface-up border round"
+		ic-scroll-to 	= "top"
+		title			= "{{'INTERFACE.SCROLL_TOP' | translate}}"
+	>
+	</button>
+</div>
 
 
 <article>
