@@ -58,19 +58,21 @@ angular.module("icServices")
 			
 			show: (ic, originalShow) => {
 
-				return true
+				if(ic.site.expandMap) return true
 
-/*				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
+				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
 												.filter( ([section, active ]) => section != 'filter-tags')
 												.filter( ([section, active ]) => active)
 												.length
 
 
-
-				if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
-				if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
+				if(ic.layout.mode.name == 'S')		return numberOfActiveSection <= 1								
+				// if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
+				// if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
 				
-				return originalShow(ic)	*/
+				return true
+
+				// return originalShow(ic)	
 			}
 
 		})

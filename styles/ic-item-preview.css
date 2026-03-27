@@ -1,5 +1,31 @@
-/* reduce styling to layout and positioning */
 
+
+ic-item-preview {
+	border-width:				2px;
+	border-color:				var(--primary-color);
+	border-style:				solid;
+	border-radius:				0.5rem;
+}
+
+ic-item-preview:hover{
+	background-color:			var(--secondary-background-color) !important;
+}
+
+ic-item-preview.active-item {
+	background-color:			var(--emphasized-background-color) !important;
+}
+
+ic-item-preview.active-item:hover {
+	background-color:			var(--primary-color) !important;
+}
+
+ic-item-preview:before {
+	display:					none !important;	
+}
+
+
+
+/* reduce styling to layout and positioning */
 
 ic-item-preview {
 	position:				relative;

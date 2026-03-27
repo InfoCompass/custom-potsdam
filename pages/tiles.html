@@ -20,10 +20,12 @@
 	ic-scroll-repeat-limit-step-size 	= "5"
 >
 		<a
-			ng-repeat		= "item in ic.itemStorage.filteredList | limitTo : displayLimit"
-			ng-href			= "{{ item | icItemLink }}"
+			ng-repeat			= "item in ic.itemStorage.filteredList | limitTo : displayLimit"
+			ng-href				= "{{ item | icItemLink }}"
 			ic-item-tile
-			ic-item			= "item"
+			ic-item				= "item"
+			ic-highlight-item 	= "item"
+
 		>			
 		</a>
 		<button class ="more" ng-if= "noScroll && !noMoreItems" ng-click = "icScrollRepeatLimitIncrease()">...</button>

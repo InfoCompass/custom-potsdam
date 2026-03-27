@@ -5,6 +5,7 @@ ic-item-preview[ic-date] {
 	overflow:				hidden;
 	padding:				0;
 	min-height:				0rem;
+	border-style:			none;
 }
 
 .XS ic-item-preview[ic-date] {

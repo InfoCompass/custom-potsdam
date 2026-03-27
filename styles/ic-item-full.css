@@ -173,11 +173,25 @@ ic-item-full [ic-item-full-footer],
 ic-item-full ic-item-full-footer {
 	padding:					0rem;
 	display: 					flex;
-	padding: 					2rem 4rem;
+	padding-left:				0rem;
+	padding-right:				0rem;
+	padding-top:				2rem;
+	padding-bottom:				0;
 	margin-top: 				1rem;
 	flex-direction: 			column;
 	align-items: 				stretch;
-	background-color:			var(--secondary-background-color);	
+	background-color:			var(--primary-background-color);	
+}
+
+ic-item-full [ic-item-full-footer] > * {
+	padding-left:				4rem;
+	padding-right:				4rem;
+
+}
+
+ic-item-full [ic-item-full-footer]  h4,
+ic-item-full ic-item-full-footer  h4 {
+	margin:						1rem 0;
 }
 
 
@@ -188,6 +202,9 @@ ic-item-full ic-item-full-footer	.buttons {
 	align-items:				flex-start;	
 	gap:						0.5rem;
 	margin:						auto;
+	padding-top:				2rem;
+	padding-bottom:				2rem;
+	background-color:			var(--secondary-background-color);	
 }
 
 ic-item-full [ic-item-full-footer] 	.buttons a,
@@ -201,6 +218,12 @@ ic-item-full ic-item-full-footer	.buttons button {
 	background-color:			var(--primary-background-color, #fff);
 }
 
+ic-item-full [ic-item-full-footer] ic-item-preview {
+	border-width:				2px;
+	border-color:				var(--emphasized-background-color);
+	border-style:				solid;
+	border-radius:				0.5rem;
+}
 
 ic-item-full .auto-translation-notification {
 	box-sizing: 				border-box;

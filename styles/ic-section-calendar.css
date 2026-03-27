@@ -1,3 +1,32 @@
+#section-calendar > article {
+	padding:			1rem;
+	padding-top:		0;
+}
+
+#section-calendar header {
+	padding-top:		1rem;
+	padding-bottom:		1rem;
+	position:			sticky;
+	top:				0;
+	background:			var(--primary-background-color);
+	z-index:			999;
+}
+
+#section-calendar header .heading {
+	display:			flex;	
+	align-items:		center;
+	gap:				1rem;
+}
+
+#section-calendar header .heading:before {
+	content:			'';
+	flex:				1 1 0;
+}
+
+#section-calendar header .heading :first-child {
+	order:				-1;
+}
+
 #section-calendar header .controls {
 	display:			flex;
 	flex-wrap:			wrap;
@@ -29,5 +58,12 @@
 }
 
 
-
+#section-calendar .date h2 {
+	position:			sticky;
+	z-index:			50;
+	top:				9rem;
+	background:			var(--primary-background-color);
+	margin-bottom:		0!important;
+	padding-bottom:		1rem;
+}
 

@@ -1,12 +1,33 @@
 <article
 	ic-settle-scrollbar					= "true"
+	ic-scroll-source 					= "calendar"
 	ic-scroll-snap-anchor 				= "header"
 	ic-scroll-repeat-limit-container 	= "true"
-	class								= "padding"
 	ic-calendar-controls
 >
 	<header>
-		<h1>{{'INTERFACE.CALENDAR' | translate}}</h1>
+		<div class = "heading">
+			<h1>{{'INTERFACE.CALENDAR' | translate}}</h1>
+
+			<button
+				ng-if 		= "!ic.site.visibleSections.filter"
+				class 		= "border icon icon-interface-filter left"
+				ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
+				ic-touch-me 
+			>
+				{{'INTERFACE.FILTER' | translate}}
+			</button>
+
+			<button 
+				ng-if 		= "!ic.site.visibleSections.map"
+				class 		= "border icon icon-interface-map left"
+				ng-click 	= "ic.site.expandMap = true"
+				ic-touch-me 
+			>
+				{{'INTERFACE.MAP' | translate}}
+			</button>
+
+		</div>
 
 		<div class = "controls">
 
@@ -42,24 +63,6 @@
 				ic-touch-me 
 			>
 				{{'INTERFACE.WEEKEND' | translate}}
-			</button>
-
-			<button
-				ng-if = "!ic.site.visibleSections.filter"
-				class 		= "rounded"
-				ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
-				ic-touch-me 
-			>
-				{{'INTERFACE.FILTER' | translate}}
-			</button>
-
-			<button 
-				ng-if = "!ic.site.visibleSections.filter"
-				class 		= "rounded"
-				ng-click 	= "ic.site.expandMap = true"
-				ic-touch-me 
-			>
-				{{'INTERFACE.MAP' | translate}}
 			</button>
 
 			

@@ -6,6 +6,15 @@
 >
 
 	<header>
+		<a 
+			ng-if 		= "ic.site.searchTerm"
+			ng-href		= "/p/extended_search"
+			class 		= "ic-button border tac icon icon-interface-search left"
+			ic-touch-me 
+		>
+			{{'INTERFACE.RETRY_SEARCH' | translate}}
+		</a>
+		
 		<button
 			ng-if 		= "!ic.site.visibleSections.filter"
 			class 		= "border tac"
@@ -16,7 +25,7 @@
 		</button>
 
 		<button 
-			ng-if 		= "!ic.site.visibleSections.filter"
+			ng-if 		= "!ic.site.visibleSections.map"
 			class 		= "border tac"
 			ng-click 	= "ic.site.expandMap = true"
 			ic-touch-me 
@@ -24,14 +33,6 @@
 			{{'INTERFACE.MAP' | translate}}
 		</button>
 
-		<a 
-			ng-if 		= "ic.site.searchTerm"
-			ng-href		= "/p/extended_search"
-			class 		= "ic-button border tac icon icon-interface-search left"
-			ic-touch-me 
-		>
-			{{'INTERFACE.RETRY_SEARCH' | translate}}
-		</a>
 		
 		<div class ="flex-grow"></div>
 		

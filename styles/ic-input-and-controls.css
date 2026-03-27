@@ -205,3 +205,10 @@ ic-toggle {
 	--toggle-on-background:			var(--primary-text-color);
 	--toggle-off-background:		transparent;
 }
+
+
+/* canceling lefacy styles */
+
+button.bg-3 {
+	background-color:				var(--emphasized-background-color) !important;
+}

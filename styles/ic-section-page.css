@@ -294,6 +294,7 @@ ic-footer {
 	display:					flex;
 	background-color:			var(--emphasized-background-color);
 	color:						var(--emphasized-background-contrast);
+	margin-top:					6rem;
 	padding: 					2rem;
 	padding-bottom:				4rem;
 	text-align: 				left;

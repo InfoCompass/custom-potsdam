@@ -25,26 +25,3 @@ ic-search-result-list .more {
 	user-select:				none;
 }
 
-
-ic-search-result-list ic-item-preview {
-	border-width:				2px;
-	border-color:				var(--emphasized-background-color);
-	border-style:				solid;
-	border-radius:				0.5rem;
-}
-
-ic-search-result-list ic-item-preview:hover{
-	background-color:			var(--secondary-background-color) !important;
-}
-
-ic-search-result-list ic-item-preview.active-item {
-	background-color:			var(--secondary-background-color);
-}
-
-ic-search-result-list ic-item-preview.active-item:hover {
-	background-color:			var(--secondary-background-color) !important;
-}
-
-ic-search-result-list ic-item-preview:before {
-	display:					none !important;	
-}

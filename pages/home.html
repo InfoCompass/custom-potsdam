@@ -55,10 +55,12 @@
 		class 	= "ic-item-tiles"
 	>
 		<a
-			ng-repeat 	= "item in ic.itemStorage.data | orderBy: 'lastEditDate' : true | limitTo : 4"
-			ng-href		= "{{ item | icItemLink }}"
-			ic-item		= "item"
+			ng-repeat 			= "item in ic.itemStorage.data | orderBy: 'lastEditDate' : true | limitTo : 4"
+			ng-href				= "{{ item | icItemLink }}"
+			ic-item				= "item"
 			ic-item-tile
+			ic-highlight-item 	= "item"
+
 		>
 		</a>
 	</div>
