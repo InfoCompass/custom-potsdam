@@ -21,6 +21,7 @@
 		<a 
 			ng-href		= "/p/extended_search"
 			title 		= "{{'INTERFACE.SEARCH' | translate}}"
+			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>	
 			<span class = "icon icon-interface-search"></span>	
 			{{'INTERFACE.SEARCH' | translate}}	
@@ -29,6 +30,7 @@
 		<a 	
 			ng-href 	="{{ {calendar: true} | icLink }}"
 			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
+			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>			
 			<span class = "icon icon-interface-calendar"></span>	
 			{{ 'INTERFACE.CALENDAR' | translate}}
@@ -37,6 +39,7 @@
 		<a 
 			ng-href		= "/p/tiles/u/favourite"
 			title		= "{{'INTERFACE.FAVOURITES' | translate}}"		
+			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>
 			<span class = "icon icon-interface-favourites"></span>	
 			{{'INTERFACE.FAVOURITES' | translate}}
@@ -81,22 +84,67 @@
 	
 </div>
 
-<div class="lower-row bg-3 padding">
+<div class="lower-row padding">
 
 		<a 
-			class		= "icon large icon-interface-home"
+			class		= "ic-button icon large icon-interface-home"
 			ng-href		= "/"
+			title		= "{{'INTERFACE.HOME' | translate}}"
+			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>		
 		</a>
 
 		<a 
+			class		= "ic-button icon icon-interface-home left"
+			ng-href		= "/"
+			title		= "{{'INTERFACE.HOME' | translate}}"
+			ng-if		= "['XS', 'S'].includes(ic.layout.mode.name)"
+		>		
+			{{ 'INTERFACE.HOME' | translate : '' }}
+		</a>
+
+
+		<!-- XS S -->
+
+		<a 
+			ng-href		= "/p/extended_search"
+			title 		= "{{'INTERFACE.SEARCH' | translate}}"
+			ng-if		= "['XS', 'S'].includes(ic.layout.mode.name)"
+			class 		= "ic-button icon icon-interface-search left"
+		>	
+			{{'INTERFACE.SEARCH' | translate}}	
+		</a>
+
+		<a 	
+			ng-href 	="{{ {calendar: true} | icLink }}"
+			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
+			ng-if		= "['XS', 'S'].includes(ic.layout.mode.name)"
+			class		= "ic-button icon icon-interface-calendar left"
+		>			
+			{{ 'INTERFACE.CALENDAR' | translate}}
+		</a>
+
+		<a 
+			ng-href		= "/p/tiles/u/favourite"
+			title		= "{{'INTERFACE.FAVOURITES' | translate}}"		
+			ng-if		= "['XS', 'S'].includes(ic.layout.mode.name)"
+			class		= "ic-button icon icon-interface-favourites left"
+		>
+			{{'INTERFACE.FAVOURITES' | translate}}
+		</a>
+
+		<!-- XS S -->
+
+		<a 
 			ng-href		= "/list"
+			class		= "ic-button"
 		>		
 			{{'INTERFACE.FULL_LIST' | translate}}
 		</a>
 
 		<a 
 			ng-href		= "/p/explore"
+			class		= "ic-button"
 		>		
 			{{'INTERFACE.EXPLORE' | translate}}
 		</a>
@@ -109,29 +157,30 @@
 
 		<a 
 			ng-href		= "/item/new"
+			class		= "ic-button"
 		>		
 			{{'INTERFACE.MENU_NEW_ITEM' | translate }}
 		</a>
 
 		<a 
 			ng-href		= "/p/help"
+			class		= "ic-button"
 		>		
 			Alles klar?
 		</a>
 
 		<a 
 			ng-href		= "/p/support"
+			class		= "ic-button"
 		>		
 			Unterstützen
 		</a>
 
 		<a 
 			ng-href		= "/p/partners"
+			class		= "ic-button"
 		>		
 			Partner
 		</a>
-
-
-
 </div>
 

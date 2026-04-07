@@ -7,7 +7,7 @@
 </ic-language-menu>	
 
 <ic-main-menu			
-	ng-class 		= "{'ic-hide': !ic.overlays.show.mainMenu}"		
+	ng-class 		= "{'ic-hide': !ic.overlays.show.mainMenu, 'right': ic.layout.mode != 'XS', 'left': ic.layout.mode == 'XS'}"		
 	class 			= "bg-0 right" 
 	ic-plain 		= "true"
 >

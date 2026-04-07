@@ -5,141 +5,98 @@
 >
 </button>
 
-<ul ng-click = "ic.overlays.toggle('mainMenu', false, true)">
+<nav ng-click = "ic.overlays.toggle('mainMenu', false, true)">
 
-	<li>
-		<a href="/" ic-touch-me>	
-			{{'INTERFACE.HOME' | translate}}
-		</a>	
-	</li>
-	
+	<div 
+		class = "primary"
+		ng-if = "true || ic.layout.mode == 'XS'"
+	>
 
-	<li>
 		<a 
-			ng-href = "{{ {expandMap: true, list: true, activeItem : null, calendar: false} | icLink }}"
+			ng-href		= "/p/extended_search"
+			title 		= "{{'INTERFACE.SEARCH' | translate}}"
+			class		= "ic-button icon icon-interface-search left"
+		>	
+			{{'INTERFACE.SEARCH' | translate}}	
+		</a>
+
+		<a 	
+			ng-href 	="{{ {calendar: true} | icLink }}"
+			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
+			class		= "ic-button icon icon-interface-calendar left"			
+		>			
+			{{ 'INTERFACE.CALENDAR' | translate}}
+		</a>
+
+
+		<a 
+			ng-href		= "/p/tiles/u/favourite"
+			title		= "{{'INTERFACE.FAVOURITES' | translate}}"	
+			class		= "ic-button icon icon-interface-favourites left"				
 		>
-			{{'INTERFACE.MAP' | translate}}
-		</a>	
-	</li>
-	 
+			{{'INTERFACE.FAVOURITES' | translate}}
+		</a>
+	</div>
 
-	<li>
-
-		<a href="/p/tags" ic-touch-me>	
-			{{'INTERFACE.CATEGORIES' 	| translate}}
-		</a>	
-
-	</li>
-		
-	<li>
+	<div class = "secondary">
 
 		<a 
 			ng-href = "{{ {expandMap: false, list: true, activeItem : null, calendar: false} | icLink }}"
+			class	= "ic-button"			
 		>
 			{{'INTERFACE.FULL_LIST' | translate}}
 		</a>	
 
-	</li>
-
-
-	<li ng-if = "ic.config.calendar">
-
 		<a 
-			ng-href = "{{ {expandMap: false, list: false, activeItem : null, calendar: true} | icLink }}"
+			ng-href = "{{ {expandMap: true, list: true, activeItem : null, calendar: false} | icLink }}"
+			class	= "ic-button"			
 		>
-			{{'INTERFACE.CALENDAR' | translate}}
+			{{'INTERFACE.MAP' | translate}}
 		</a>	
 
-	</li>
+	</div>
 
-
-	<li 
-		ng-if = "!ic.user.loggedIn && icPlain"		
-	>
-		<a 
-			href = '/item/new'
-		>			
-			{{'INTERFACE.SUGGEST_NEW_ITEM' | translate }}
-		</a>
-	</li>	
-
-	<li	>
-		<a 
-			class 			= "icon right icon-interface-down white"
-			href=''
-		>
-			{{'INTERFACE.SERVICE' | translate}}
-		</a>		
-
-		<ul>
-			<li 
-				ng-repeat 	= "page in ['manual','accessible_language']"
-				class 		= "bg-0 hover" 
-			> 
-				<a ic-touch-me a ng-href="/p/{{page}}">	{{'INTERFACE.%s' | fill : page| translate}}</a>	
-			</li>
-		</ul>
-
-	</li>
-
-	<li>
-		<a 
-			class 			= "icon right icon-interface-down white"			
-			href=''
-		>
-			{{'INTERFACE.MORE' | translate}}
-		</a>		
-
-		<ul	>
-
-			<li 
-				ng-repeat 	= "page in ic.config.pages"
-				class 		= "hover" 
-				ng-if 		= "['manual','accessible_language', 'stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles', 'test'].indexOf(page) == -1"
-			> 
-				<a ic-touch-me a ng-href="/p/{{page}}">	{{'INTERFACE.%s' | fill : page| translate}}</a>	
-			</li>
-			<li 
-				ng-if = "ic.consent.cases.length > 0" 
-				class = "hover"
-			>
-				<button 
-					ng-click 	= "ic.consent.clear()"
-				>
-					{{'INTERFACE.REVOKE_AND_RELOAD' | translate}}
-				</button>
-
-			</li>
-
-		</ul>
-	</li>
-
-	<li  ng-if = "!icPlain" class 	= "spacer"></li>
-
-	<li
-		ng-if = "!ic.user.can('edit_items') && !icPlain"
-	>
-		<a	
-			href = '/item/new'
-		>			
-			{{'INTERFACE.SUGGEST_NEW_ITEM' | translate }}
-		</a>
-	</li>
-
-	<li 
-		ng-if 			= "ic.user.loggedIn"
-		ic-user_menu
-		icPlain 		= "icPlain"
-	>
-	</li>	
-
-	<li  
+	<div 
+		class	= "public-user"
 		ng-if	= "!ic.user.loggedIn"
 	>
+		<a 
+			href	= '/item/new'
+			class	= "ic-button"
+		>			
+			{{'INTERFACE.SUGGEST_NEW_ITEM' | translate }}
+		</a>
+
+		<button 
+			ng-click 	= "ic.consent.clear()"
+		>
+			{{'INTERFACE.REVOKE_AND_RELOAD' | translate}}
+		</button>
+
 		<button  
 			ng-click = "ic.overlays.toggle('login')"
 		>
 			{{'INTERFACE.LOGIN' | translate }}
 		</button>
-	</li>
-</ul>
+	</div>
+
+
+	<div class = "pages">
+		<a 
+			ng-repeat 	= "page in ic.config.pages"
+			ng-href		= "/p/{{page}}"
+			ng-if 		= "['stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles', 'test'].indexOf(page) == -1"
+			class		= "ic-button"
+		> 
+			{{'INTERFACE.%s' | fill : page| translate}}
+		</a>	
+	</div>
+
+
+
+	<ic-user-menu
+		ng-if = "ic.user.loggedIn"
+	>
+	</ic-user-menu>
+
+</div>

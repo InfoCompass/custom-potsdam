@@ -44,7 +44,7 @@ ic-main-content		.primary-sections,
 	display:					flex;
 	position:					relative;
 	flex-direction:				column;
-	max-width:					max-content;
+	width:						max-content;
 }
 
 ic-main-content		.primary-sections > *,
@@ -169,8 +169,11 @@ ic-main-content		.primary-sections .regular-sections > *,
 	width:						41rem;
 	order:						2;
 	z-index:					48; /* = 50-order */
-	max-width:					41rem;
+}
 
+#section-page ic-page {
+	max-width:					41rem;
+	margin:						auto;
 }
 
 .XS #section-page {
