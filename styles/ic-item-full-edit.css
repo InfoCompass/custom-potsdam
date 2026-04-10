@@ -26,6 +26,20 @@ ic-item-full-edit > section.properties {
 	margin-bottom:				1rem;
 }
 
+
+ic-item-full-edit > section.properties.contains-invalid h3:before {
+	position:					absolute;
+	content:					'!';
+	right:						2rem;
+	border:						2px solid var(--error-color);
+	color:						var(--error-color);
+	border-radius:				100%;
+	height:						1.5rem;
+	line-height:				1.5rem;
+	width:						1.5rem;
+	text-align:					center;
+}
+
 ic-item-full-edit > section.properties {
 	content:					'';
 	display:					block;

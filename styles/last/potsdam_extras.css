@@ -209,8 +209,25 @@ ic-item-property .title {
 
 
 ic-item-full-header.ic-scroll-top nav {
-	top:						0rem;
+	top:								0rem;
 }
 
 
+
+/* 
+	Safeguard to mark section in item edit where the heading indicates a mandatory input, 
+	but the input is in fact not.
+*/
+
+ic-item-full-edit h4.mandatory + ic-item-property-edit:not(.mandatory){
+	background-color:				rgba(100,100,200, 0.5) !important;
+}
+
+ic-item-full-edit h4:not(.mandatory) + ic-item-property-edit.mandatory{
+	background-color:				rgba(100,100,200, 0.5) !important;
+}
+
+ic-item-full-edit h4.mandatory:after {
+	content:							'*';
+}
 

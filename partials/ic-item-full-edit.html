@@ -64,7 +64,7 @@
 <section>
 	<article>
 
-		<h4> {{'ITEMS.TYPE' | translate}}</h4>
+		<h4 class = "mandatory"> {{'ITEMS.TYPE' | translate}}</h4>
 
 		<ic-item-property-edit
 			class						= "long-labels"
@@ -109,6 +109,7 @@
 <section 
 	class 	= "properties"
 	ng-init	= "extend = undefined"
+	ic-mark-contained-class = "invalid"
 >
 
 	<h3
@@ -116,7 +117,7 @@
 		class		= "right ic-extend"
 		ng-class	= "{extended: extend == 'general'}"
 		ng-click	= "extend = extend == 'general' ? undefined : 'general'"
-		title		= "{{extend == 'general' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"
+		title		= "{{extend == 'general' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
 	>
 		{{'INTERFACE.ITEM_EDIT_SECTION_GENERAL_%s'| fill: (icEdit|icType).name | translate}}
 	</h3>
@@ -125,7 +126,7 @@
 
 		<article>
 
-			<h4> {{'ITEMS.TITLE' | translate}}</h4>
+			<h4 class = "mandatory"> {{'ITEMS.TITLE' | translate}}</h4>
 
 			<ic-item-property-edit
 				ic-item					= "icItem"
@@ -152,7 +153,7 @@
 
 		<article>
 
-			<h4> {{'ITEMS.BRIEF' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
+			<h4 class = "mandatory"> {{'ITEMS.BRIEF' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
 
 			<ic-item-property-edit
 				ic-item					= "icItem"
@@ -165,7 +166,7 @@
 
 		<article>
 
-			<h4> {{'ITEMS.DESCRIPTION' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
+			<h4  class = "mandatory"> {{'ITEMS.DESCRIPTION' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
 			
 			<ic-item-property-edit
 				ic-item					= "icItem"
@@ -177,7 +178,7 @@
 		</article>
 
 		<article>
-			<h4> {{'ITEMS.CATEGORY' | translate}}</h4>
+			<h4 class = "mandatory"> {{'ITEMS.CATEGORY' | translate}}</h4>
 
 			<ic-item-property-edit
 				ic-item						= "icItem"
@@ -194,7 +195,7 @@
 
 
 		<article >
-			<h4> {{'ITEMS.PRIMARY_TOPIC' | translate}}</h4>
+			<h4 class = "mandatory"> {{'ITEMS.PRIMARY_TOPIC' | translate}}</h4>
 
 
 			<ic-item-property-edit
