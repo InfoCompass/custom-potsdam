@@ -45,7 +45,7 @@ ic-header .upper-row .end {
 	flex:							1 0 0;
 	display:						flex;
 	justify-content:				flex-end;
-	gap:							0.5rem;
+	gap:							1rem;
 }
 
 ic-header .upper-row .end a .icon {
