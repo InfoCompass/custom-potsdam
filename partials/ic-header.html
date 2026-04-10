@@ -46,11 +46,12 @@
 
 		<a 
 			ng-href		= "/p/acessibility"
-			title		= "{{'INTERFACE.ACCESSIBILITY' | translate}}"		
+			title		= "{{'INTERFACE.VISUAL_AIDS' | translate}}"
+			ng-click	= "ic.overlays.toggle('visualAids')"		
 		>
 			<span class = "icon icon-interface-accessibility"></span>	
 			<span ng-if = "ic.layout.mode.name != 'XS'">
-				{{'INTERFACE.ACCESSIBILITY' | translate}}
+				{{'INTERFACE.VISUAL_AIDS' | translate}}
 			</span>
 		</a>
 
