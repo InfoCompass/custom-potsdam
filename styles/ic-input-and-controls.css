@@ -58,7 +58,7 @@ button,
 .ic-button {
 	display:					inline-flex !important;
 	cursor:						pointer;
-	background-color:			transparent; 
+	background-color:			transparent;
 	border-radius:				var(--button-border-radius);	
 	border-width:				var(--button-border-width);
 	border-color:				transparent;
@@ -185,7 +185,8 @@ button.rounded,
 }
 
 select {
-	appearance: 		none;	
+	appearance: 				none;
+	background-color:			var(--primary-background-color);
 }
 
 .emph {
@@ -207,8 +208,9 @@ ic-toggle {
 }
 
 
-/* canceling lefacy styles */
+/* canceling legacy styles */
 
 button.bg-3 {
 	background-color:				var(--emphasized-background-color) !important;
 }
+

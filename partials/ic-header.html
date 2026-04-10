@@ -2,7 +2,6 @@
 
 <div class="upper-row bg-0 padding">
 
-
 	<div class = "start">
 		<a href = "/">
 			<ic-logo-full>			
@@ -50,7 +49,9 @@
 			title		= "{{'INTERFACE.ACCESSIBILITY' | translate}}"		
 		>
 			<span class = "icon icon-interface-accessibility"></span>	
-			{{'INTERFACE.ACCESSIBILITY' | translate}}
+			<span ng-if = "ic.layout.mode.name != 'XS'">
+				{{'INTERFACE.ACCESSIBILITY' | translate}}
+			</span>
 		</a>
 
 		<button

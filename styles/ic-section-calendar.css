@@ -58,6 +58,11 @@
 }
 
 
+#section-calendar ic-item-preview {
+	scroll-margin:		12rem;
+	scroll-snap-align:	start;
+}
+
 #section-calendar .date h2 {
 	position:			sticky;
 	z-index:			50;

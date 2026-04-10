@@ -9,22 +9,23 @@ ic-overlays ic-main-menu {
 	padding-bottom:				4rem;
 }
 
-ic-main-menu:after {
+ic-overlays ic-main-menu:after {	
 	display:					none !important;
 }
 
-ic-overlays ic-main-menu > button.close {
+ic-overlays ic-main-menu button.close {
 	position:					absolute;
+	font-size:					2rem;
 	top:						0.5rem;
 	right:						0.5rem;
-	font-size:					2rem;
 	padding:					0;
 	width:						auto;
 	background-color:			var(--primary-background-color);
 	border-radius:				100%;
 }
 
-ic-main-menu nav {
+
+ic-overlays ic-main-menu nav {
 	display:					block;
 	columns: 					3 auto;
 	column-gap:					0;
@@ -34,7 +35,8 @@ ic-main-menu nav {
 	width:						auto!important;	
 }
 
-ic-main-menu nav > * {
+
+ic-overlays ic-main-menu nav > * {
 	display:					flex;
 	flex-direction:				column;
 	padding:					0rem;
@@ -45,53 +47,52 @@ ic-main-menu nav > * {
 }
 
 
-ic-main-menu nav > * > * {
+ic-overlays ic-main-menu nav > * > * {
 	display:					flex;
 }
 
 
 
 
-ic-main-menu nav > .primary {
+ic-overlays ic-main-menu nav > .primary {
 	display:					none;
 }
 
 
-ic-main-menu nav > .primary {
+ic-overlays ic-main-menu nav > .primary {
 	display:					none;
 	font-weight:				600;
 }
 
-ic-main-menu nav > .secondary {
+ic-overlays ic-main-menu nav > .secondary {
 	font-weight:				600;
 }
 
 
 
-ic-main-menu nav ic-user-menu ul,
-ic-main-menu nav ic-user-menu ul li {
+ic-overlays ic-main-menu nav ic-user-menu ul,
+ic-overlays ic-main-menu nav ic-user-menu ul li {
 	display:					contents;
 }
 
 
-ic-main-menu nav ic-user-menu ul li {
+ic-overlays ic-main-menu nav ic-user-menu ul li {
 	background:					transparent !important;
 }
 
-ic-main-menu nav ic-user-menu > a {
+ic-overlays ic-main-menu nav ic-user-menu > a {
 	font-weight:				600;
 }
 
-ic-main-menu .ic-button,
-ic-main-menu button {
+ic-overlays ic-main-menu .ic-button,
+ic-overlays ic-main-menu button {
 	display:					flex;
 	justify-content:			space-between;
 }
 
 
-.XS ic-main-menu {
-	padding-top:				0rem;
-	padding-bottom:				3rem;
+.XS ic-overlays ic-main-menu {
+	padding-top:				0.5rem;
 	padding-left:				0 !important;
 	padding-right:				0 !important;
 	max-width:					100%;
@@ -99,19 +100,41 @@ ic-main-menu button {
 	overflow:					scroll;
 }
 
-.XS ic-main-menu nav > * {
+
+
+
+.XS ic-overlays ic-main-menu ic-logo-full {
+	font-size:					3rem;
+	width:						12rem;
+}
+
+.XS ic-overlays ic-main-menu button.close {
+	position:					sticky;
+	display:					block !important;
+	top:						0rem;
+	margin-bottom:				-3rem;
+	margin-left:				auto;
+	margin-right:				0.5rem;
+}
+
+.XS ic-overlays ic-main-menu nav {
+	height:						auto !important;
+	max-height:					none !important;
+}
+
+.XS ic-overlays ic-main-menu nav > * {
 	display:					flex;
 	flex-direction:				column;
 	padding-left:				1rem;
 }
 
-.XS ic-main-menu nav > .primary {
-	padding-top:				3rem;
+.XS ic-overlays ic-main-menu nav > .primary {
+	padding-top:				1rem;
 	padding-bottom:				1rem;
 	background-color:			var(--emphasized-background-color);
 }
 
-.XS ic-main-menu nav {
+.XS ic-overlays ic-main-menu nav {
 	columns:					auto !important;
 }
 

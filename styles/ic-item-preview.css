@@ -1,10 +1,10 @@
-
-
 ic-item-preview {
 	border-width:				2px;
 	border-color:				var(--primary-color);
 	border-style:				solid;
 	border-radius:				0.5rem;
+	scroll-snap-align:			start;
+	scroll-margin-top:			0.5rem;
 }
 
 ic-item-preview:hover{

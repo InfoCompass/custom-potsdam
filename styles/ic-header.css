@@ -25,27 +25,27 @@ ic-header .upper-row > * {
 	gap:							min( max(1rem, 5%), 2rem);
 }
 
+ic-header .upper-row button {
+	padding:						0 !important;
+}
+
 ic-header .upper-row ic-logo-full {
 	font-size:						5rem;
 	margin:							-0.5rem;
 }
 
 ic-header .upper-row .start {
-	flex:							1 0 0;
+	flex:							0 0 auto;
 	display:						flex;
 	justify-content:				flex-start;
 }
 
 
-ic-header .upper-row .center {
-	flex:							0 0 auto;
-	display:						flex;	
-}
-
 ic-header .upper-row .end {
 	flex:							1 0 0;
 	display:						flex;
 	justify-content:				flex-end;
+	gap:							0.5rem;
 }
 
 ic-header .upper-row .end a .icon {
@@ -74,3 +74,26 @@ ic-header .lower-row:after  {
 	flex:							1 1 10%;
 }
 
+
+.XS ic-header .upper-row {
+	padding:						0.5rem;
+	font-size:						1rem;
+}
+
+.XS ic-header .upper-row .start {
+	flex:							0 0 auto;
+}
+
+
+.XS ic-header .upper-row .start ic-logo-full {
+	font-size:						3em;
+}
+
+.XS ic-header .upper-row .end {
+	font-size:						1.5rem;
+}
+
+.XS ic-header .upper-row .icon {
+	font-size:						2rem !important;
+	margin:							0 !important;
+}

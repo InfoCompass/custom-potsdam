@@ -468,54 +468,6 @@
 	</div>
 </section>
 
-<!-- accessibility -->
-<section class = "properties">
-	<h3
-		aria-role 	= "button"
-		class		= "right ic-extend"
-		ng-class	= "{extended: extend == 'accessibility'}"
-		ng-click	= "extend = extend == 'accessibility' ? undefined : 'accessibility'"
-		title		= "{{extend == 'accessibility' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
-	>
-		{{'INTERFACE.ITEM_EDIT_SECTION_ACCESSIBILITY_%s'| fill: (icEdit|icType).name | translate}}
-	</h3>
-
-	<div ic-extend = "extend == 'accessibility'">
-
-		<article>
-
-			<h4> {{'ITEMS.%s' | fill: 'accessibility' | translate}}</h4>		
-			
-			<ic-item-property-edit
-				ng-if						= "key != 'extra'"
-				ic-item						= "icItem"
-				ic-type						= "array"
-				ic-translation-key			= "accessibility"
-				ic-options					= "ic.taxonomy.tags['accessibility']"
-				ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
-				ic-allow-multiple-choices	= "true"
-				ic-key						= "tags"
-			></ic-item-property-edit>
-		</article>
-
-		<article>
-			
-			<h4>{{'ITEMS.%s' | fill: 'accessibility_complement' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
-			
-			<ic-item-property-edit
-				ic-item					= "icItem"
-				ic-key					= "accessibility"
-				ic-translation-key		= "accessibility_complement"				
-				ic-type 				= "text"
-				ic-translatable			= "true"
-			></ic-item-property-edit>
-
-		</article>
-
-	</div>
-</section>
-
-
 <!-- contact -->
 
 <section class = "properties">
@@ -534,7 +486,7 @@
 
 
 		<!-- misc-->
-		<article ng-repeat = "key in ['contact', 'email', 'phone', 'mobile', 'website', 'facebook']">
+		<article ng-repeat = "key in ['contact', 'email', 'phone', 'mobile', 'website']">
 			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
 
 			<ic-item-property-edit
@@ -677,6 +629,56 @@
 
 	</div>
 </section>
+
+<!-- accessibility -->
+<section class = "properties">
+	<h3
+		aria-role 	= "button"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'accessibility'}"
+		ng-click	= "extend = extend == 'accessibility' ? undefined : 'accessibility'"
+		title		= "{{extend == 'accessibility' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
+	>
+		{{'INTERFACE.ITEM_EDIT_SECTION_ACCESSIBILITY_%s'| fill: (icEdit|icType).name | translate}}
+	</h3>
+
+	<div ic-extend = "extend == 'accessibility'">
+
+		<article>
+
+			<h4> {{'ITEMS.%s' | fill: 'accessibility' | translate}}</h4>		
+			
+			<ic-item-property-edit
+				ng-if						= "key != 'extra'"
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "accessibility"
+				ic-options					= "ic.taxonomy.tags['accessibility']"
+				ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
+				ic-allow-multiple-choices	= "true"
+				ic-key						= "tags"
+			></ic-item-property-edit>
+		</article>
+
+		<article>
+			
+			<h4>{{'ITEMS.%s' | fill: 'accessibility_complement' | translate}} ({{'LANGUAGES.%s' | fill: ic.site.currentLanguage | translate}})</h4>
+			
+			<ic-item-property-edit
+				ic-item					= "icItem"
+				ic-key					= "accessibility"
+				ic-translation-key		= "accessibility_complement"				
+				ic-type 				= "text"
+				ic-translatable			= "true"
+			></ic-item-property-edit>
+
+		</article>
+
+	</div>
+</section>
+
+
+
 
 
 
