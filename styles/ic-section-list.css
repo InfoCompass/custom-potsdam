@@ -5,7 +5,6 @@
 	align-items:			center;
 	justify-content:		space-between;	
 	gap:					1rem;
-	scroll-snap-align:		start;
 }
 
 #section-list header > * {

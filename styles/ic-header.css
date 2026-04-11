@@ -59,7 +59,7 @@ ic-header .upper-row .end a .icon {
 ic-header .lower-row {
 	display:						flex;
 	justify-content:				space-between;
-	overflow-x:						scroll;
+	overflow-x:						auto;
 	background-color:				var(--primary-color);
 }
 

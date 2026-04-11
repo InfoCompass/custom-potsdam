@@ -46,12 +46,12 @@
 
 		<a 
 			ng-href		= "/p/acessibility"
-			title		= "{{'INTERFACE.VISUAL_AIDS' | translate}}"
-			ng-click	= "ic.overlays.toggle('visualAids')"		
+			title		= "{{'INTERFACE.FONT_SIZE' | translate}}"
+			ng-click	= "ic.layout.toggleFontSize()"		
 		>
-			<span class = "icon icon-interface-accessibility"></span>	
+			<span class = "icon icon-interface-font_size"></span>	
 			<span ng-if = "ic.layout.mode.name != 'XS'">
-				{{'INTERFACE.VISUAL_AIDS' | translate}}
+				{{'INTERFACE.FONT_SIZE' | translate}}
 			</span>
 		</a>
 
