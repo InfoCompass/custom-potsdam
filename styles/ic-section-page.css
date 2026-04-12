@@ -218,7 +218,8 @@ ic-page p > .image.landscape {
 }
 
 
-ic-page p {
+ic-page p,
+ic-page ul {
 	font-size: 					1rem;
 	margin-top:					1rem;
 	margin-bottom:				1rem;
@@ -264,7 +265,6 @@ ic-page ul {
 	box-sizing: 				border-box;
 	list-style: 				disc outside;	
 	padding-left:				4rem;
-	font-size: 					1.25rem;	
 }
 
 ic-page ul li {
@@ -304,15 +304,13 @@ ic-footer {
 
 ic-footer > * {
 	flex:						1 1 max-content;
+	display:					flex;
+	flex-direction:				column;
+	gap:						0.5rem;
 }
 
 
-ic-footer a {
-	display:					block;
-	border:						none;
-	margin:						1rem 0;
-	white-space:				nowrap;
-}
+
 
 ic-footer h4 {
 	font-weight:				bold;

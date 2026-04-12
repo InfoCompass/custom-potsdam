@@ -10,7 +10,7 @@
 
 	--dark-text-color:					var(--primary-text-color);			/* legacy */
 	--plain-text-color:					var(--secondary-text-color);		/* legacy */
-	--light-text-color:					var(--primary-text-color-contrast);	/* legacy */
+	--light-text-color:					#fff;	/* legacy */
 
 
 	--primary-background-color:			#fff;
@@ -24,6 +24,7 @@
 	--error-color:						red;
 
 
+	/* are these in use? */
 	--primary-accent-color:				var(--primary-color);
 	--primary-accent-contrast:			var(--primary-contrast);
 	--secondary-accent-color:			var(--emphasized-background-color);/*#ffd2bf;*/

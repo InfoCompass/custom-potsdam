@@ -52,10 +52,10 @@ button::-moz-focus-inner {
     border:						0;
 }
 
-
 select,
 button,
 .ic-button {
+	
 	display:					inline-flex !important;
 	cursor:						pointer;
 	background-color:			transparent;

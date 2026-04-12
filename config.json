@@ -15,20 +15,22 @@
     "activeIconColor":      "#000",
     "plainIconColor":       "#666666",
     "pages":                [
+                                "about",
+                                "contact",
+                                "legal",
+                                "privacy", 
+                                "matomo",
+                                "accessibility",
+
+                                "partners",
+
+                                "help",
                                 "tags",
                                 "tiles",
-                                "manual",
-                                "accessible_language",                                
-                                "about",
-                                "newsletter",
-                                "contact",
-                                "accessibility",
-                                "privacy_policy", 
                                 "funding",
-                                "legal",
                                 "sponsors",
-                                "partners",
-                                "matomo",
+                                "support",
+
                                 "extended_search"
 
                             ],
@@ -37,18 +39,18 @@
                                 "url": "https://mittendrin.placemakingberlin.de/wp-json/custom/v1/allPages",
                                 "pages":{
                                     "home":                     23,
-                                    "privacy_policy":           8,
-                                    "vz_brandenburg":           15,
-                                    "stuetzpunkt_potsdam":      10,
+                                    "privacy":                   8,
+
                                     "sponsors":                 13,
-                                    "partners":                 21,
+                                    
                                     "legal":                    12,
                                     "contact":                  9,
-                                    "accessibility":            14,
-                                    "manual":                   17,
-                                    "newsletter":               18,
-                                    "accessible_language":      22,
-                                    "about":                    20
+                                    "about":                    20,
+
+                                    "support":                  52,
+                                    "partners":                 53,
+
+                                    "help":                     0
                                 },
                                 "skipped":{
                                     "digitaloffers_potsdam":    16
