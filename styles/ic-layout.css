@@ -36,6 +36,7 @@ ic-main-content,
 	overflow:					hidden !important;
 	width:						100%;
 	z-index: 					1;	
+	max-width:					100%;	
 }
 
 ic-main-content		.primary-sections,
@@ -45,11 +46,13 @@ ic-main-content		.primary-sections,
 	position:					relative;
 	flex-direction:				column;
 	width:						max-content;
+	max-width:					100%;
 }
 
 ic-main-content		.primary-sections > *,
 [ic-main-content]	.primary-sections > * {
 	flex:						1 0 auto;
+	max-width:					100%;	
 }
 
 ic-main-content		.primary-sections .regular-sections,
@@ -59,6 +62,7 @@ ic-main-content		.primary-sections .regular-sections,
 	z-index:					0;
 	flex:						1 1 auto;
 	overflow:					hidden;
+	max-width:					100%;	
 }
 
 ic-main-content		.primary-sections .regular-sections > *,
@@ -69,6 +73,7 @@ ic-main-content		.primary-sections .regular-sections > *,
 	overflow-x:					hidden;
 	background-color:			var(--primary-background-color)!important;
 	scrollbar-color:			rgba(0,0,0,0.4) rgba(0,0,0,0);
+	max-width:					100%;	
 }
 
 
@@ -172,16 +177,7 @@ ic-main-content		.primary-sections .regular-sections > *,
 }
 
 #section-page ic-page {
-	max-width:					41rem;
-	margin:						auto;
 }
-
-.XS #section-page {
-	max-width:					calc(100%);
-}
-
-
-
 
 
 

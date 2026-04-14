@@ -48,6 +48,7 @@
 			ng-href		= "/p/acessibility"
 			title		= "{{'INTERFACE.FONT_SIZE' | translate}}"
 			ng-click	= "ic.layout.toggleFontSize()"		
+			ng-if		= "ic.layout.mode.name != 'XS' || ic.layout.fontSizeAdjusted"
 		>
 			<span class = "icon icon-interface-font_size"></span>	
 			<span ng-if = "ic.layout.mode.name != 'XS'">
@@ -59,19 +60,21 @@
 			ng-click	= "ic.overlays.open('languageMenu')" 
 			ng-if		= "ic.user.can('update_translations') || ic.languages.availableLanguages.length > (ic.languages.availableLanguages.indexOf('none') == -1 ? 1 :2)"
 			title		= "{{'INTERFACE.LANGUAGES' | translate}}"
+			ng-class	= "{'icon icon-interface-languages': ic.layout.mode.name == 'XS'}"
 		>
-			<span
-				ng-repeat-start = "language in ic.languages.availableLanguages"				
-			>	
-				{{language.toUpperCase()}}
+			<span ng-if ="ic.layout.mode.name != 'XS'">
+				<span
+					ng-repeat-start = "language in ic.languages.availableLanguages"				
+				>	
+					{{language.toUpperCase()}}
+				</span>
+				<span 
+					ng-repeat-end	= ""
+					ng-if			= "!$last"
+				>
+					/
+				</span>
 			</span>
-			<span 
-				ng-repeat-end	= ""
-				ng-if			= "!$last"
-			>
-				/
-			</span>
-
 		</button>
 
 
@@ -148,14 +151,8 @@
 			ng-href		= "/p/tags"
 			class		= "ic-button"
 		>		
-			{{'INTERFACE.CATEGORIES' | translate}}
+			{{'INTERFACE.EXPLORE' | translate}}
 		</a>
-
-		<!-- <a 
-			ng-href		= "/p/engage"
-		>		
-			{{'INTERFACE.ENGAGE' | translate}}
-		</a> -->
 
 		<a 
 			ng-href		= "/item/new"
@@ -175,7 +172,7 @@
 			ng-href		= "/p/support"
 			class		= "ic-button"
 		>		
-			{{'INTERFACE.MENU_SUPPORT' | translate}}
+			{{'INTERFACE.MENU_SUPPORT' | translate }}
 		</a>
 
 		<a 

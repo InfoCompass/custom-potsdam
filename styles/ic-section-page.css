@@ -23,6 +23,7 @@ ic-page > nav {
 	font-size:						1.2rem;
 }
 
+
 ic-page .hero {
 	display:						block;
 	padding-top:					50%;	
@@ -37,6 +38,10 @@ ic-page .hero + nav {
 	align-items:					stretch;
 	gap:							1rem;
 } 
+
+.XS ic-page .hero + nav {
+	flex-direction:					column;
+}
 
 ic-page .hero + nav > * {
 	display:						flex;
@@ -53,28 +58,6 @@ ic-page .hero + nav > * {
 ic-page .hero + nav > * > a {
 	margin-top:						0.5rem;
 }
-
-ic-page  header h2 {
-	display: 						block;
-	position:						absolute;
-	font-size:						2.75;
-	margin-top:						0.5rem;
-	margin-left:					-1rem;
-	padding-left:					1em;
-	font-weight:					500;
-	max-width:						50rem;	
-	text-indent:					-1em;
-	z-index:						5;
-	width:							100%;
-}
-
-ic-page  header h2 span {
-	padding:						0.5rem;
-	-webkit-box-decoration-break: 	clone;
-  	-o-box-decoration-break: 		clone;
-  	box-decoration-break:			clone;
-}
-
 
 ic-page hr {
 	background-color:				var(--neutral-color);
@@ -304,16 +287,18 @@ ic-footer {
 
 ic-footer > * {
 	flex:						1 1 max-content;
-	display:					flex;
+	display:					flex !important;
 	flex-direction:				column;
 	gap:						0.5rem;
 }
-
-
 
 
 ic-footer h4 {
 	font-weight:				bold;
 	margin:						0 0 1rem 0 !important;
 	font-size:					inherit;
+}
+
+.XS ic-footer {
+	flex-direction:				column;
 }
