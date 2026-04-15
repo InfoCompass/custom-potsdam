@@ -202,7 +202,8 @@ ic-page p > .image.landscape {
 
 
 ic-page p,
-ic-page ul {
+ic-page ul,
+ic-page ol {
 	font-size: 					1rem;
 	margin-top:					1rem;
 	margin-bottom:				1rem;
@@ -225,11 +226,17 @@ ic-page p > img + img {
 
 ic-page > a,
 ic-page p a,
-ic-page ul a {
+ic-page ul a,
+ic-page ol a {
 	color:						var(--primary-link-color, var(--primary-color));
 /*	padding-left: 				0.5rem;*/
 /*	padding-right: 				0.5rem;*/
 	text-decoration: 			underline;
+}
+
+ic-page em {
+	font-weight:				500;
+	font-style:					italic;
 }
 
 ic-page em > a {
@@ -244,25 +251,26 @@ ic-page p em:first-child > a {
 	margin-left:				0;
 }
 
-ic-page ul {
+ic-page ul,
+ic-page ol {
 	box-sizing: 				border-box;
+	padding-left:				3rem;
+	fonts-size:					1em;
+}
+
+ic-page ul{
 	list-style: 				disc outside;	
-	padding-left:				4rem;
 }
 
 ic-page ul li {
 	margin:						0.25em 0;
 }
 
-ic-page ol {
-	box-sizing: 				border-box;	
-	padding-left: 				4rem;
-	font-size: 					1.25rem;	
-}
+
 
 ic-page ol li::marker {
 	font-family: 				inherit;
-	font-size: 					1.25rem;
+	font-size: 					1rem;
 }
 
 
