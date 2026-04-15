@@ -1,5 +1,14 @@
 
-<div class = "primary-sections">
+<div 
+	class 		= 	"primary-sections"
+	ng-class 	= 	"
+						{
+							'empty': (ic.site.getVisibleSections() | without: 'map': 'filter-tags').length == 0,
+							'inactive': (ic.site.getActiveSections() | without: 'map': 'filter-tags').length == 0 
+						}
+					"
+>
+	
 
 	<section
 		ng-repeat 		= "section in ic.site.config.sections | filter : {name: 'filter-tags'}"

@@ -61,6 +61,11 @@ ic-header .lower-row {
 	justify-content:				space-between;
 	overflow-x:						auto;
 	background-color:				var(--primary-color);
+	padding:						0.5rem 0;
+}
+
+.XS ic-header .lower-row {
+	padding:						0;
 }
 
 ic-header .lower-row > * {

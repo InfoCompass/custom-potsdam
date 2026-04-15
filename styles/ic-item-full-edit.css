@@ -9,6 +9,11 @@ ic-item-full-edit {
 	padding-right:				5rem !important;
 }
 
+.XS ic-item-full-edit {
+	padding-left:				2.5rem !important;
+	padding-right:				1rem !important;
+}
+
 ic-item-full-edit.new {
 	padding-top:				1rem !important;
 }

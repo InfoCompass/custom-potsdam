@@ -58,7 +58,8 @@ angular.module("icServices")
 			
 			show: (ic, originalShow) => {
 
-				if(ic.site.expandMap) return true
+				if(ic.site.pickCoordinates)		return true
+				if(ic.site.expandMap) 			return true
 
 				const numberOfActiveSection =	 Object.entries(ic.site.activeSections)
 												.filter( ([section, active ]) => section != 'filter-tags')
@@ -66,13 +67,27 @@ angular.module("icServices")
 												.length
 
 
-				if(ic.layout.mode.name == 'S')		return numberOfActiveSection <= 1								
+				if(ic.layout.mode.name == 'S')		return true
+				if(ic.layout.mode.name == 'XS')		return false
+
 				// if(ic.layout.mode.name == 'M')		return numberOfActiveSection <= 2
 				// if(ic.layout.mode.name == 'L')		return numberOfActiveSection <= 3
 				
 				return true
 
 				// return originalShow(ic)	
+			}
+
+		})
+
+		.registerSectionUpdate('filter', {
+			
+			show: (ic, originalShow) => {
+
+				if(ic.layout.mode.name == 'S')		return 		!ic.site.activeSections.list
+															&&	!ic.site.activeSections.calendar
+				
+				return originalShow(ic)	
 			}
 
 		})

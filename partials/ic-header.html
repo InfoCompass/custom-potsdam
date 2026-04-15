@@ -27,7 +27,7 @@
 		</a>
 
 		<a 	
-			ng-href 	="{{ {calendar: true} | icLink }}"
+			ng-href 	="{{ {calendar: true, list: false} | icLink }}"
 			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
 			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>			
@@ -121,7 +121,7 @@
 		</a>
 
 		<a 	
-			ng-href 	="{{ {calendar: true} | icLink }}"
+			ng-href 	="{{ {calendar: true, list: false} | icLink }}"
 			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
 			ng-if		= "['XS', 'S'].includes(ic.layout.mode.name)"
 			class		= "ic-button icon icon-interface-calendar left"

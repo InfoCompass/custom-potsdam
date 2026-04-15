@@ -47,10 +47,16 @@
 	 width:				initial;
 }
 
+.XS #section-calendar header{
+	position:			relative;
+	height:				auto;
+}
+
 .XS #section-calendar header .controls {
-	flex-direction:		column;
-	align-items:		stretch;
-	padding:			0 1rem;
+	flex-direction:		row;
+	align-items:		center;
+	padding:			0;
+	margin-bottom:		-2rem;
 }
 
 .XS #section-calendar header .controls button,
@@ -58,6 +64,10 @@
 	flex:				1 0 40%;
 }
 
+
+.XS #section-calendar header .controls .spacer {
+	display:			none;
+}
 
 #section-calendar ic-item-preview {
 	scroll-margin:		12rem;
@@ -68,13 +78,21 @@
 	margin-bottom:		3rem;
 }
 
-#section-calendar .date h2 {
+html:not(.XS) #section-calendar .date h2 {
 	position:			sticky;
 	z-index:			50;
 	top:				10rem;
 	background:			var(--primary-background-color);
 	margin-bottom:		0!important;
-	padding-bottom:		1rem;
+	padding-bottom:		0.5rem;
 	margin-top:			0 !important;
 }
+
+
+.XS #section-calendar ic-item-preview {
+	margin:				0 -1rem !important;
+	padding:			0 !important; 
+}
+
+
 

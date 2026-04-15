@@ -1,3 +1,11 @@
+#section-list > * > * {
+	padding-right:				1.5rem !important;
+}
+
+.XS #section-list > * > * {
+	padding:					0!important;
+}
+
 #section-list header {
 	padding:				var(--vertical-padding) var(--horizontal-padding);	
 	display:				flex;
@@ -7,8 +15,27 @@
 	gap:					1rem;
 }
 
+.XS #section-list header {
+	padding:				1rem !important;
+}
+
 #section-list header > * {
 	margin-left:			auto;
 }
 
+.XS #section-list header > button {
+	flex:					1 0 0;
+	max-width:				50%;
+}
 
+.XS #section-list header > .flex-grow {
+	display:				none;
+}
+
+.XS #section-list header > ic-sorting {
+	width:					100%;
+}
+
+.XS #section-list header > ic-sorting > * {
+	width:					100%;
+}

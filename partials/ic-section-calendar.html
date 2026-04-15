@@ -10,7 +10,7 @@
 			<h1>{{'INTERFACE.CALENDAR' | translate}}</h1>
 
 			<button
-				ng-if 		= "!ic.site.visibleSections.filter"
+				ng-if 		= "!ic.site.visibleSections.filter && ic.layout.mode.name != 'XS'"
 				class 		= "border icon icon-interface-filter left"
 				ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
 				ic-touch-me 
@@ -19,7 +19,7 @@
 			</button>
 
 			<button 
-				ng-if 		= "!ic.site.visibleSections.map"
+				ng-if 		= "!ic.site.visibleSections.map && ic.layout.mode.name != 'XS'"
 				class 		= "border icon icon-interface-map left"
 				ng-click 	= "ic.site.expandMap = true"
 				ic-touch-me 
@@ -30,6 +30,24 @@
 		</div>
 
 		<div class = "controls">
+
+			<button
+				ng-if 		= "!ic.site.visibleSections.filter && ic.layout.mode.name == 'XS'"
+				class 		= "border icon icon-interface-filter left"
+				ng-click 	= "ic.overlays.toggle('taxonomyFilter')"
+				ic-touch-me 
+			>
+				{{'INTERFACE.FILTER' | translate}}
+			</button>
+
+			<button 
+				ng-if 		= "!ic.site.visibleSections.map && ic.layout.mode.name == 'XS'"
+				class 		= "border icon icon-interface-map left"
+				ng-click 	= "ic.site.expandMap = true"
+				ic-touch-me 
+			>
+				{{'INTERFACE.MAP' | translate}}
+			</button>
 
 			<input 
 				type 		= "date" 

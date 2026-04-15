@@ -21,6 +21,10 @@ ic-item-preview[ic-date] .backdrop {
 	gap:					1rem;
 }
 
+.XS ic-item-preview[ic-date] .backdrop:not(.no-item) {
+	padding-left:			0;
+}
+
 ic-item-preview[ic-date] .backdrop.no-item {
 	align-items:			center;
 	padding-bottom:			1rem;
@@ -125,4 +129,18 @@ ic-item-preview[ic-date] .stats > * {
 	position:				relative;
 	margin-top:				0.5rem;
 }
+
+
+.XS ic-item-preview[ic-date] .stats {
+	display:				inline-flex;
+	flex-direction:			column;
+
+}
+
+.XS ic-item-preview[ic-date] .backdrop .content ic-calendar-sheet {
+	display:				inline-flex;
+	vertical-align:			text-top;
+}
+
+
 

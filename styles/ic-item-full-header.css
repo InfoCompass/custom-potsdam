@@ -14,6 +14,11 @@ ic-item-full-header {
 	height:						0;
 }
 
+.XS ic-item-full-header {
+	margin-left:				0 !important;
+	margin-right:				0 !important;
+}
+
 
 ic-item-full-header .tools {
 	position:					absolute;

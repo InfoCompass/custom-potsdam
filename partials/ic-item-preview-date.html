@@ -1,8 +1,10 @@
 <div
 	ng-if		= "icItem === null"
 	class		= "backdrop no-item"
->
-	<ic-calendar-sheet ic-date = "icDate"></ic-calendar-sheet>	
+>	
+	<ic-calendar-sheet 
+		ic-date = "icDate"
+	></ic-calendar-sheet>	
 
 	<div class ="content">
 
@@ -30,7 +32,12 @@
 >	
 
 	<div class ="front">
-		<ic-calendar-sheet ic-date = "icDate"></ic-calendar-sheet>	
+		
+		<ic-calendar-sheet 
+			ng-if	= "ic.layout.mode.name != 'XS'"
+			ic-date = "icDate
+		"></ic-calendar-sheet>	
+
 		<span 
 			class	= "round mini icon icon-interface-proposals bg-0 fright"
 			ng-if	= "ic.user.can('edit_items') && icItem.proposals.length > 0"
@@ -74,6 +81,11 @@
 
 
 			</div>
+
+			<ic-calendar-sheet 
+				ic-date = "icDate"
+				ng-if	= "ic.layout.mode.name == 'XS'"
+			></ic-calendar-sheet>	
 
 
 			<div 
