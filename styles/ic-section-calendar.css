@@ -10,13 +10,14 @@
 	top:				0;
 	background:			var(--primary-background-color);
 	z-index:			999;
-	height:				8rem;
+	height:				9rem;
 }
 
 #section-calendar header .heading {
 	display:			flex;	
 	align-items:		center;
 	gap:				1rem;
+	margin-bottom:		-1rem;
 }
 
 #section-calendar header .heading:before {
@@ -81,7 +82,7 @@
 html:not(.XS) #section-calendar .date h2 {
 	position:			sticky;
 	z-index:			50;
-	top:				10rem;
+	top:				11rem;
 	background:			var(--primary-background-color);
 	margin-bottom:		0!important;
 	padding-bottom:		0.5rem;
