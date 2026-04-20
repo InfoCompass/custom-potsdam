@@ -573,7 +573,7 @@
 			ng-if		= 	" 
 									(key != 'lists'  || !ic.config.disableLists) 
 								&&	!['extra', 'mode', 'accessibility', 'state', 'options_ri', 'options_sp'].includes(key)
-								&&	!(key == 'institution_type' && (icEdit|icType).name == 'location')
+								&&	(key != 'institution_type' || (icEdit|icType).name == 'location')
 							"
 		>
 			<h4> {{'ITEMS.%s' | fill : key | translate}}</h4>
