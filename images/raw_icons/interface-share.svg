@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 32 32">
+  <circle cx="4.033" cy="4.033" r="3.283" stroke="#000" stroke-width="1.5" transform="rotate(-134.998 17.891 9.892)"/>
+  <circle cx="4.033" cy="4.033" r="3.283" stroke="#000" stroke-width="1.5" transform="rotate(-134.998 14.55 1.826)"/>
+  <circle cx="4.033" cy="4.033" r="3.283" stroke="#000" stroke-width="1.5" transform="rotate(-134.998 7.919 9.285)"/>
+  <path stroke="#000" stroke-width="1.5" d="M0-.75h12.73" transform="rotate(-26.567 37.5 -14.096) skewX(-.003)"/>
+  <path stroke="#000" stroke-width="1.5" d="M0-.75h11.669" transform="rotate(26.567 -33.5 29.797) skewX(.003)"/>
+</svg>
