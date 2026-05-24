@@ -215,10 +215,10 @@
 		],
 
 		institution_type: [
-			'meeting_place',			//Begegnungsstätte
-			'counseling_center',		//Beratungsstelle
-			'education',
-			'caring',
+			'meeting_place',			// Begegnungsstätte
+			'counseling_center',		// Beratungsstelle
+			'educational_institution',  // Bildungseinrichtung (neu!)
+			'nursing_facility',			// Pflegeinrichtung (neu!)
 			'other'
 		],
 
