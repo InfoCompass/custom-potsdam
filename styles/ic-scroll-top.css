@@ -1,0 +1,18 @@
+#section-list > button[ic-scroll-watch],
+#section-page > button[ic-scroll-watch] {
+	position:					absolute;
+	bottom:						0.5rem;
+	right:						0.5rem;
+	z-index: 					1000;
+	background-color:			var(--primary-background-color);
+	color:						var(--primary-background-contrast);
+	opacity:					1;
+	transition:					all 250ms ease-in;
+	transform:					translateY(0);
+}
+
+#section-list > button[ic-scroll-watch]:not(.ic-scroll-top),
+#section-page > button[ic-scroll-watch]:not(.ic-scroll-top) {
+	opacity:					0;
+	transform:					translateY(5rem);
+}

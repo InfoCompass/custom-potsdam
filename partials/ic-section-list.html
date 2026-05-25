@@ -2,7 +2,7 @@
 	ic-settle-scrollbar					= "true"
 	ic-scroll-snap-anchor 				= "header"
 	ic-scroll-repeat-limit-container 	= "true"
-	class								= ""
+	ic-scroll-source					= "list"
 >
 
 	<header>
@@ -47,3 +47,12 @@
 	</ic-search-result-list>
 
 </article>
+
+<button 
+	class ="round border icon icon-interface-up large"
+	ic-scroll-watch = "'list'"
+	ng-click = "scrollTop()"
+	ic-touch-me
+>
+	<span class ="visibly-hidden">{{'INTERFACE.SCROLL_TOP' | translate}}</span>
+</button>
