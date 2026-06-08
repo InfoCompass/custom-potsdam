@@ -37,11 +37,15 @@
 	class 		= "bg-1 left"
 	focus-me	= "ic.overlays.show.taxonomyFilter"
 	ic-tab-group
->
-	
+>	
 </ic-taxonomy-filter >
 
-<ic-lor-filter			ng-class = "{'ic-hide': !ic.overlays.show.lorFilter}" 		class = "bg-0 center">							</ic-lor-filter >
+<button 
+	class 		= "icon icon-interface-close large close bg-0 round drop-shadow"
+	ng-click	= "ic.overlays.toggle()" 
+	ng-class 	= "{'ic-hide': !ic.overlays.show.taxonomyFilter}" 	
+>
+</button>
 
 <ic-auto-popup				
 	ng-if 			= "ic.overlays.show.autoPopup" 							

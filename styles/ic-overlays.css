@@ -54,7 +54,7 @@ ic-overlays.ic-hide {
 	}
 }
 
-ic-overlays > * {
+ic-overlays > *:not(button.close) {
 	position:				absolute;
 	box-sizing:				border-box;
 	transform:				translateX(0) translateY(0);
@@ -73,6 +73,13 @@ ic-overlays > * {
 	box-sizing:				border-box;
 	box-shadow:				0 0 4rem 0 rgba(0,0,0,0.6);
 	opacity:				1;
+}
+
+
+ic-overlays button.close {
+	position:				absolute;
+	top:					0.5rem;
+	right:					0.5rem;
 }
 
 ic-overlays > *.ic-hide {
