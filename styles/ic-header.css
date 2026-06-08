@@ -25,6 +25,7 @@ ic-header .upper-row > * {
 	gap:							min( max(1rem, 5%), 2rem);
 }
 
+ic-header .upper-row .ic-button,
 ic-header .upper-row button {
 	padding:						0 !important;
 }

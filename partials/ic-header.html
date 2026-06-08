@@ -18,6 +18,18 @@
 	<div class = "end">
 
 		<a 
+			ng-href = "{{ {expandMap: true, list: true, activeItem : null, calendar: false} | icLink }}"
+			class	= "ic-button"
+			ng-if	= "['XS', 'S'].includes(ic.layout.mode.name)"
+			title	= "{{'INTERFACE.MAP' | translate}}"
+		>
+			<span class = "icon icon-interface-map"></span>			
+			<span class = "sr-only">
+				{{'INTERFACE.MAP' | translate}}
+			</span>
+		</a>		
+
+		<a 
 			ng-href		= "/p/extended_search"
 			title 		= "{{'INTERFACE.SEARCH' | translate}}"
 			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
@@ -50,11 +62,13 @@
 			ng-click	= "ic.layout.toggleFontSize()"		
 			ng-if		= "ic.layout.mode.name != 'XS' || ic.layout.fontSizeAdjusted"
 		>
-			<span class = "icon icon-interface-font_size"></span>	
-			<span ng-if = "ic.layout.mode.name != 'XS'">
+			<span class 	= "icon icon-interface-font_size"></span>	
+			<span ng-class 	= "{'sr-only': ic.layout.mode.name != 'XS'}">
 				{{'INTERFACE.FONT_SIZE' | translate}}
 			</span>
 		</a>
+
+
 
 		<button
 			ng-click	= "ic.overlays.open('languageMenu')" 
@@ -95,7 +109,6 @@
 			class		= "ic-button icon large icon-interface-home"
 			ng-href		= "/"
 			title		= "{{'INTERFACE.HOME' | translate}}"
-			ng-if		= "!['XS', 'S'].includes(ic.layout.mode.name)"
 		>		
 		</a>
 
@@ -145,13 +158,6 @@
 			class		= "ic-button"
 		>		
 			{{'INTERFACE.FULL_LIST' | translate}}
-		</a>
-
-		<a 
-			ng-href		= "/p/tags"
-			class		= "ic-button"
-		>		
-			{{'INTERFACE.EXPLORE' | translate}}
 		</a>
 
 		<a 

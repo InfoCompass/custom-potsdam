@@ -32,8 +32,9 @@
 	display:				none;
 }
 
+
 .XS #section-list header > ic-sorting {
-	width:					100%;
+	width:					100%;	
 }
 
 .XS #section-list header > ic-sorting > * {

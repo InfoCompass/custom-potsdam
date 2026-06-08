@@ -81,11 +81,15 @@ ic-main-content		.primary-sections .regular-sections > *,
 	box-sizing:					border-box;
 	position:					relative;
 	overflow-x:					hidden;
-	background-color:			var(--primary-background-color)!important;
-	scrollbar-color:			rgba(0,0,0,0.4) rgba(0,0,0,0);
-	max-width:					100%;	
+	background-color:			var(--primary-background-color)!important;	
+	max-width:					100%;
+	overflow:					hidden;
 }
 
+ic-main-content		.primary-sections .regular-sections > * > *,
+[ic-main-content]	.primary-sections .regular-sections > * >* {
+	scrollbar-color:			rgba(0,0,0,0.4) rgba(0,0,0,0);
+}
 
 #section-map{
 	position:					relative;
@@ -178,8 +182,6 @@ ic-main-content		.primary-sections.inactive + #section-map ic-map-expand-control
 	z-index:					43; /* = 50-order */	
 	max-width:					100%;
 }
-
-
 
 #section-page {
 	width:						41rem;

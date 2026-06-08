@@ -78,10 +78,11 @@
 		display:			contents !important;
 	}
 
-	html:not(.item-print-off) ic-main-content 	> #section-item, 
-	html:not(.item-print-off) [ic-main-content]	> #section-item {
+	html:not(.item-print-off) ic-main-content 	 #section-item, 
+	html:not(.item-print-off) [ic-main-content]	 #section-item {
 		display:			block !important;
 		box-sizing:			border-box;
+		width:				100%;
 		height:				100%;
 		padding:			0 !important;
 		overflow: 			visible !important;
@@ -89,6 +90,7 @@
 		margin:				0 !important;
 		border:				none!important
 	}
+
 
 
 

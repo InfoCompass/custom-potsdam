@@ -15,11 +15,10 @@
 
 <nav ng-click = "ic.overlays.toggle('mainMenu', false, true)">
 
-	<div 
+<!-- 	<div 
 		class = "primary"
-		ng-if = "true || ic.layout.mode == 'XS'"
+		ng-if = "ic.layout.mode == 'XS'"
 	>
-
 		<a 
 			ng-href		= "/p/extended_search"
 			title 		= "{{'INTERFACE.SEARCH' | translate}}"
@@ -28,25 +27,135 @@
 			{{'INTERFACE.SEARCH' | translate}}	
 		</a>
 
+
+	</div> -->
+
+	<div>
+		<a 
+			ng-href		= "/p/extended_search"
+			title 		= "{{'INTERFACE.SEARCH' | translate}}"
+			class		= "ic-button"
+		>	
+			{{'INTERFACE.SEARCH' | translate}}	
+		</a>
+
+		<a 
+			ng-href = "{{ {expandMap: false, list: true, activeItem : null, calendar: false} | icLink }}"
+			class	= "ic-button"			
+		>
+			{{'INTERFACE.FULL_LIST' | translate}}
+		</a>	
+
+		<a 
+			ng-href		= "/p/tags"
+			title 		= "{{'INTERFACE.EXPLORE' | translate}}"
+			class		= "ic-button icon"
+		>	
+			{{'INTERFACE.EXPLORE' | translate}}	
+		</a>
+
+		<a 
+			ng-href = "{{ {expandMap: true, list: true, activeItem : null, calendar: false} | icLink }}"
+			class	= "ic-button"			
+		>
+			{{'INTERFACE.MAP' | translate}}
+		</a>
+
 		<a 	
 			ng-href 	="{{ {calendar: true, list: false} | icLink }}"
 			title 		= "{{'INTERFACE.CALENDAR' | translate}}"
-			class		= "ic-button icon icon-interface-calendar left"			
+			class		= "ic-button"			
 		>			
 			{{ 'INTERFACE.CALENDAR' | translate}}
 		</a>
-
-
+	
 		<a 
 			ng-href		= "/p/tiles/u/favourite"
 			title		= "{{'INTERFACE.FAVOURITES' | translate}}"	
-			class		= "ic-button icon icon-interface-favourites left"				
+			class		= "ic-button"				
 		>
 			{{'INTERFACE.FAVOURITES' | translate}}
 		</a>
 	</div>
 
-	<div class = "secondary">
+	<div>
+		<a 
+			ng-href		= "/item/new"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.MENU_NEW_ITEM' | translate }}
+		</a>
+
+		<a 
+			ng-href		= "/p/help"
+			title		= "{{'INTERFACE.HELP_QA' | translate }}"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.HELP_QA' | translate }}
+		</a>
+
+		<a 
+			ng-href		= "/p/support"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.MENU_SUPPORT' | translate }}
+		</a>
+
+		<a 
+			ng-href		= "/p/partners"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.MENU_PARTNERS' | translate}}
+		</a>
+
+	</div>
+
+	<div>
+		<a 
+			ng-repeat	= "page in ['about', 'sponsors', 'contact']"
+			ng-href		= "/p/{{page}}"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.%s' | fill: page| translate}}
+		</a>
+	</div>
+
+	<div>
+		<a 
+			ng-repeat	= "page in ['legal', 'privacy']"
+			ng-href		= "/p/{{page}}"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.%s' | fill: page| translate}}
+		</a>
+
+		<button 
+			ng-click 	= "ic.consent.clear()"
+		>
+			{{'INTERFACE.REVOKE_AND_RELOAD' | translate}}
+		</button>
+
+		<a 
+			ng-repeat	= "page in ['matomo', 'accessibility']"
+			ng-href		= "/p/{{page}}"
+			class		= "ic-button"
+		>		
+			{{'INTERFACE.%s' | fill: page| translate}}
+		</a>
+	</div>
+
+	<!-- <div class = "pages">
+		<a 
+			ng-repeat 	= "page in ic.config.pages"
+			ng-href		= "/p/{{page}}"
+			ng-if 		= "['extended_search', 'stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles', 'test'].indexOf(page) == -1"
+			class		= "ic-button"
+		> 
+			{{'INTERFACE.%s' | fill : page| translate}}
+		</a>	
+	</div> -->
+
+	<!-- <div class = "secondary">
 
 		<a 
 			ng-href = "{{ {expandMap: false, list: true, activeItem : null, calendar: false} | icLink }}"
@@ -62,9 +171,9 @@
 			{{'INTERFACE.MAP' | translate}}
 		</a>	
 
-	</div>
+	</div> -->
 
-	<div 
+	<!-- <div 
 		class	= "public-user"
 		ng-if	= "!ic.user.loggedIn"
 	>
@@ -72,7 +181,7 @@
 			href	= '/item/new'
 			class	= "ic-button"
 		>			
-			{{'INTERFACE.SUGGEST_NEW_ITEM' | translate }}
+			{{'INTERFACE.MENU_NEW_ITEM' | translate }}
 		</a>
 
 		<button 
@@ -86,21 +195,17 @@
 		>
 			{{'INTERFACE.LOGIN' | translate }}
 		</button>
+	</div> -->
+
+
+
+	<div ng-if = "!ic.user.loggedIn">
+		<button  
+			ng-click = "ic.overlays.toggle('login')"
+		>
+			{{'INTERFACE.LOGIN' | translate }}
+		</button>
 	</div>
-
-
-	<div class = "pages">
-		<a 
-			ng-repeat 	= "page in ic.config.pages"
-			ng-href		= "/p/{{page}}"
-			ng-if 		= "['stuetzpunkt_potsdam','home','funding','legal','tags','vz_brandenburg', 'tiles', 'test'].indexOf(page) == -1"
-			class		= "ic-button"
-		> 
-			{{'INTERFACE.%s' | fill : page| translate}}
-		</a>	
-	</div>
-
-
 
 	<ic-user-menu
 		ng-if = "ic.user.loggedIn"

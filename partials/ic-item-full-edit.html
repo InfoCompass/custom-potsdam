@@ -228,8 +228,22 @@
 
 		</article>
 
+		<article 			
+			ng-if =	"(icEdit|icType).name == 'location'"
+		>
+			<h4> {{'ITEMS.INSTITUTION_TYPE' | translate}}</h4>
 
+			<ic-item-property-edit				
+				ic-item						= "icItem"
+				ic-type						= "array"
+				ic-translation-key			= "institution_type"
+				ic-options					= "ic.taxonomy.tags.institution_type"
+				ic-option-label				= "'UNSORTED_TAGS.%s' | fill: option | translate"
+				ic-allow-multiple-choices	= "true"
+				ic-key						= "tags"				
+			></ic-item-property-edit>
 
+		</article>
 
 
 		<article ng-if ="ic.user.can('edit_items')">
@@ -597,37 +611,6 @@
 
 		</article>
 
-		<hr ng-if = "ic.user.can('edit_items')" class  = "bg-2"/>
-
-		<article ng-if = "ic.user.can('edit_items')" >
-			<h4> {{'ITEMS.RESUBMISSION_DATE' | translate}}</h4>
-
-			<ic-item-property-edit
-				ic-item						= "icItem"
-				ic-type						= "string"				
-				ic-key						= "resubmissionDate"
-				ic-date						= "true"
-				ic-skip-time				= "true"
-			></ic-item-property-edit>
-		</article>
-
-		<div ng-if = "ic.user.can('edit_items')"><div> <!-- spacer --> </div><hr class  = "bg-2"/></div>
-
-		<article ng-if = "ic.user.can('edit_items')" >
-				<h4> {{'ITEMS.STATE' | translate}}</h4>
-
-				<ic-item-property-edit
-					ic-item						= "icItem"
-					ic-type						= "string"
-					ic-options					= "true"
-					ic-option-label				= "'ITEMS.STATE_%s' | fill: option | translate"
-					ic-allow-multiple-choices	= "false"
-					ic-force-choice				= "true"
-					ic-key						= "state"
-				></ic-item-property-edit>
-		</article>
-
-
 	</div>
 </section>
 
@@ -709,6 +692,53 @@
 
 </section>
 
+
+<!-- internal -->
+<section 
+	class = "properties"
+	ng-if = "ic.user.loggedIn"
+>
+
+	<h3
+		aria-role 	= "button"
+		class		= "right ic-extend"
+		ng-class	= "{extended: extend == 'internal'}"
+		ng-click	= "extend = extend == 'internal' ? undefined : 'internal'"
+		title		= "{{extend == 'note' == 'internal' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"		
+	>
+		{{'INTERFACE.ITEM_EDIT_SECTION_INTERNAL' | translate}}
+	</h3>
+
+	<div ic-extend ="extend == 'internal'">		
+
+		<article ng-if = "ic.user.can('edit_items')" >
+			<h4> {{'ITEMS.RESUBMISSION_DATE' | translate}}</h4>
+
+			<ic-item-property-edit
+				ic-item						= "icItem"
+				ic-type						= "string"				
+				ic-key						= "resubmissionDate"
+				ic-date						= "true"
+				ic-skip-time				= "true"
+			></ic-item-property-edit>
+		</article>
+
+		<article ng-if = "ic.user.can('edit_items')" >
+				<h4 class ="mandatory"> {{'ITEMS.STATE' | translate}}</h4>
+
+				<ic-item-property-edit
+					ic-item						= "icItem"
+					ic-type						= "string"
+					ic-options					= "true"
+					ic-option-label				= "'ITEMS.STATE_%s' | fill: option | translate"
+					ic-allow-multiple-choices	= "false"
+					ic-force-choice				= "true"
+					ic-key						= "state"
+				></ic-item-property-edit>
+		</article>
+	</div>
+
+<section>
 
 <div>
 	<button

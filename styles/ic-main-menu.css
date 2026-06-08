@@ -29,7 +29,6 @@ ic-overlays ic-main-menu nav {
 	display:					block;
 	columns: 					3 auto;
 	column-gap:					0;
-	max-height:					20rem;
 	padding:					0;
 	margin:						0;
 	width:						auto!important;	
@@ -68,7 +67,9 @@ ic-overlays ic-main-menu nav > .secondary {
 	font-weight:				600;
 }
 
-
+ic-overlays ic-main-menu nav ic-user-menu {
+	break-inside: 				avoid;
+}
 
 ic-overlays ic-main-menu nav ic-user-menu ul,
 ic-overlays ic-main-menu nav ic-user-menu ul li {

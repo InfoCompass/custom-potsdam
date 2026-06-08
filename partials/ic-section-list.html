@@ -3,6 +3,7 @@
 	ic-scroll-snap-anchor 				= "header"
 	ic-scroll-repeat-limit-container 	= "true"
 	ic-scroll-source					= "list"
+	ng-init								= "hideArchived = true"
 >
 
 	<header>
@@ -41,9 +42,8 @@
 
 	</header>
 
-	
 
-	<ic-search-result-list>
+	<ic-search-result-list ic-hide-archived = "!ic.filterConfig.isActive('state_archived')">
 	</ic-search-result-list>
 
 </article>
@@ -54,5 +54,5 @@
 	ng-click = "scrollTop()"
 	ic-touch-me
 >
-	<span class ="visibly-hidden">{{'INTERFACE.SCROLL_TOP' | translate}}</span>
+	<span class ="sr-only">{{'INTERFACE.SCROLL_TOP' | translate}}</span>
 </button>
