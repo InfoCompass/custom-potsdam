@@ -54,13 +54,13 @@ ic-overlays.ic-hide {
 	}
 }
 
-ic-overlays > *:not(button.close) {
+ic-overlays > * {
 	position:				absolute;
 	box-sizing:				border-box;
 	transform:				translateX(0) translateY(0);
 	top:					0;
 	display:				block;
-	min-height:				100%;
+	max-height:				100%;
 	min-width:				20rem;
 	width:					auto;
 	width:					calc(min-content + 10%);
@@ -76,10 +76,11 @@ ic-overlays > *:not(button.close) {
 }
 
 
-ic-overlays button.close {
+ic-overlays > button.close {
 	position:				absolute;
 	top:					0.5rem;
 	right:					0.5rem;
+	min-width:				auto;
 }
 
 ic-overlays > *.ic-hide {
