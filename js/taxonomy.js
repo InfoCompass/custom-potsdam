@@ -42,6 +42,7 @@
 				    	'exercise_dance',
 				    	'exercise_memory',
 				    	'exercise_prevention',
+						'exercise_walk',
 				    ]
 		},
 
@@ -49,7 +50,6 @@
 			name:	'health',				//Gesundheit_und_Wohlbefinden
 			colors:	['#00ADC3'],
 			tags:	[
-						'exercise_walk',
 			   			'exercise_nutrition',
 
 				   		'pharmacy',				// Apotheken
