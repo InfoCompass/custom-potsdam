@@ -823,7 +823,7 @@
 
 		<button
 			class 		= "prio border"
-			ng-click 	= "submit()"	 
+			ng-click 	= "submit(false, {customButtonLabels: ['A', 'B']})"	 
 			ic-touch-me
 		>
 			{{"INTERFACE.SUBMIT_EDIT_SUGGESTION" | translate}}
@@ -876,7 +876,7 @@
 
 		<button
 			class 		= "prio border"
-			ng-click 	= "submit()"
+			ng-click 	= "submit(false, {customButtonLabels: ['INTERFACE.CANCEL_TO_ADD_NOTE', 'INTERFACE.CONTINUE_WITHOUT_NOTE']})"
 			ic-touch-me
 		>
 			{{"INTERFACE.SUBMIT_SUGGESTION" | translate}}

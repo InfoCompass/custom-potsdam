@@ -44,9 +44,14 @@
 #section-calendar header .controls input {
 	 line-height:		initial;
 	 margin:			initial;
-	 background:		initial;
 	 width:				initial;
 }
+
+#section-calendar header .controls input[type="date"] {
+	apperance:			none;
+	/*background-image: 	var(--icon-interface-calendar) !important;*/
+}
+
 
 .XS #section-calendar header{
 	position:			relative;
