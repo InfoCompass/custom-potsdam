@@ -3,6 +3,7 @@
 	ic-scroll-snap-anchor 				= "header"
 	ic-scroll-repeat-limit-container 	= "true"
 	ic-scroll-source					= "list"
+	ng-init								= "hideArchived = true"
 >
 
 	<header>
@@ -42,7 +43,7 @@
 	</header>
 
 
-	<ic-search-result-list ic-hide-archived = "!ic.filterConfig.isActive('state_archived')">
+	<ic-search-result-list ic-hide-archived = "!ic.site.filterByUnsortedTag.includes('state_archived')">
 	</ic-search-result-list>
 
 </article>
