@@ -80,13 +80,18 @@
 	<h2>{{'CONTENT.HOME_EXPLORE_CATEGORIES' | translate}}</h2>
 	<div class = "ic-category-tiles">
 
-		<ic-category-tile 
-			ic-category = "'arts'"
+		<a 
+			ng-repeat = "cat in ic.taxonomy.categories | mapToKey : 'name' | rotatingSubset : 'hour' : 4 "
+			ng-href ="/list/c/{{cat}}"
 		>
-			{{'CATEGORIES.HEADLINE_ARTS' | translate}}
-		</ic-category-tile>
+			<ic-category-tile 
+				ic-category = "cat"
+			>
+				{{'CATEGORIES.%s' | fill : cat | translate}} – {{'CATEGORIES.%s_NOTE' | fill : cat | translate}}
+			</ic-category-tile>
+		</a>
 
-		<ic-category-tile 
+		<!-- <ic-category-tile 
 			ic-category = "'encounters'"
 		>
 			{{'CATEGORIES.HEADLINE_ENCOUNTERS' | translate}}
@@ -102,7 +107,7 @@
 			ic-category = "'exercise'"
 		>
 			{{'CATEGORIES.HEADLINE_EXERCISE' | translate}}
-		</ic-category-tile>
+		</ic-category-tile> -->
 
 	</div>
 
