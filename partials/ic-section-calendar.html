@@ -57,6 +57,20 @@
 				title 		= "{{'INTERFACE.PICK_DAY' | translate}}"
 			>	 					
 
+			<button
+				ng-click = "previousDay()"
+				class = "rounded border margin-auto icon icon-interface-left padding"		
+				title = "{{'INTERFACE.CALENDAR_PREVIOUS_DAY' | translate}}"
+			>				
+			</button>
+
+			<button
+				ng-click = "nextDay()"
+				class = "rounded border margin-auto icon icon-interface-right padding"		
+				title = "{{'INTERFACE.CALENDAR_NEXT_DAY' | translate}}"
+			>				
+			</button>
+
 			<div class ="spacer"></div>
 
 			<button
@@ -94,6 +108,16 @@
 		ic-exclude-tags	= "'location'"
 	>
 	</ic-search-result-calendar>
+
+
+	<div class ="flex xvcenter padding">
+		<button
+			ng-click = "nextDay()"
+			class = "rounded border margin-auto"		
+		>
+			{{'INTERFACE.CALENDAR_NEXT_DAY' | translate}}
+		</button>
+	</div>
 
 	
 </article>
