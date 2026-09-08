@@ -5,6 +5,7 @@
     "publicItems":          "https://public.mittendrin.in/items",
     "xtilesUrl":            "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
     "xxtilesUrl":           "https://cms.mittendrin.in/allTiles",
+    "tiles":                false,
     "publicApi":            "https://public.mittendrin.in",
     "mappo":                "https://mappo.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
