@@ -4,7 +4,7 @@
     "frontendLocation":     "https://www.mittendrin.in",
     "publicItems":          "https://public.mittendrin.in/items",
     "xtilesUrl":            "https://cms.mittendrin.in/wp-json/custom/v1/allTiles",
-    "tilesUrl":             "https://mittendrin.placemakingberlin.de/wp-json/custom/v1/allTiles",
+    "tilesUrl":             "https://mittendrin.in/allTiles",
     "publicApi":            "https://public.mittendrin.in",
     "mappo":                "https://mappo.mittendrin.in",
     "tilesUrlToken":        "r0gF zS1Y ibDM Npw2 rt6L KQw7",
@@ -36,7 +36,7 @@
                             ],
     "remotePages":          {
                                 "xurl": "https://cms.mittendrin.in/wp-json/custom/v1/allPages",
-                                "url": "https://mittendrin.placemakingberlin.de/wp-json/custom/v1/allPages",
+                                "url": "https://mittendrin.in/allPages",
                                 "pages":{
                                     "home":                     23,
                                     "privacy":                   8,
