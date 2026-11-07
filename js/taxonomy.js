@@ -94,7 +94,7 @@
 		        'society_volunteering',
 		        'society_politics',
 		        'society_religion',
-		        'society_enviroment',
+		        'society_environment',
 		        'society_information'
 		      ]
 		},
