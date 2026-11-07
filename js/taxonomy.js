@@ -171,7 +171,7 @@
 			'migrants', 		// Migrant*innen
 			'women', 			// Frauen
 			'men',				// Männer
-			'lgtbiq', 			// LSBTI*
+			'lgbtiq', 			// LSBTI*
 			'young_and_old',	// Jung und Alt
 			'care_needs',
 			'affiliated'
