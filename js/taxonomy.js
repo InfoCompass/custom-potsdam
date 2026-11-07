@@ -81,7 +81,7 @@
 						'arts_handicrafts',
 						'arts_choir',
 						'arts_music',
-						'arts_fotographie',
+						'arts_photography',
 						'arts_literature',
 						'arts_excursions'
 					]
