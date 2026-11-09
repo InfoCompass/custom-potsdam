@@ -21,7 +21,6 @@
 	</div>
 </section>
 
-
 <section ng-if = "ic.user.can('edit_items') && icItem.proposals && icItem.proposals.length > 0">
 
 	<div>
@@ -60,6 +59,79 @@
 		ng-bind-html ="'INTERFACE.SUGGEST_NEW_ITEM_NOTE' | translate | markdown">
 	</div>
 </section>
+
+
+<section 
+	ng-if 	= "ic.user.can('edit_items') && ic.config.useAiSuggestions && icItem.internal.new"
+	ng-init = "extendAi"
+>
+	<article>
+		<h4
+			class		= "right ic-extend"
+			ng-class	= "{extendAi: extendAi == 'ai'}"
+			ng-click	= "extendAi = extendAi == 'ai' ? undefined : 'ai'"
+			title		= "{{extendAi == 'ai' ? 'INTERFACE.CLICK_TO_COLLAPSE' : 'INTERFACE.CLICK_TO_EXTEND' | translate}}"
+		>
+			{{'INTERFACE.AI_CONTENT_TO_ENTRY' | translate}}
+		</h4>
+		<div ic-extend = "extendAi == 'ai'">
+			<textarea 
+				ng-model = "freeText"
+				placeholder = "{{'INTERFACE.AI_CONTENT_TO_ENTRY_PLACEHOLDER' | translate}}"
+			>
+			</textarea>
+			<p>{{'INTERFACE.AI_CONTENT_TO_ENTRY_DESCRIPTION' | translate}}</p>
+
+			<div class = "controls">
+				<button 
+					ng-click 	= "fetchAiEntityData(freeText)"
+					class		= "border"
+					ng-class	= "{ 'prio': !aiEntryData }"
+					ng-disabled	= "!freeText.trim() || waitingForAiResponse"
+				>
+					<span>{{'INTERFACE.AI_GET_ENTRY_DATA'  | translate}}</span>
+					&nbsp;
+					<span 
+						class		= "icon" 
+						ng-class 	= "{ 'icon-interface-save' : aiEntryData, 'icon-interface-new': !aiEntryData }"
+					></span>
+				</button>
+
+				<div>
+					<ic-spinner class = "large" active = "waitingForAiResponse"></ic-spinner>
+				</div>
+
+				<button
+					class		= "border"
+					ng-class	= "{ 'prio': !aiDataImported && aiEntryData}"
+					ng-click	= "importAiEntry()"
+					ng-disabled = "!aiEntryData"
+				>
+					<span>{{'INTERFACE.AI_IMPORT_ENTRY_DATA'  | translate}}</span>
+					&nbsp;
+					<span 
+						class		= "icon" 
+						ng-class 	= "{ 'icon-interface-save' : aiDataImported, 'icon-interface-new': !aiDataImported }"
+					></span>
+				</button>
+			</div>
+
+			<p 
+				ng-if = "aiRemarks"
+				style = "white-space: pre-line;"
+			>
+				{{aiRemarks}}
+			</p>
+
+			</div>
+
+
+
+		</div>
+	</article>
+	<br/>
+</section>
+
 
 <section>
 	<article>

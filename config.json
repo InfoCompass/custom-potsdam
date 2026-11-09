@@ -82,6 +82,7 @@
                                                         }
                             },
 
+    "useAiSuggestions":     true,                        
     "calendar":             {
                                 "recurringRulesKey":    "recurring_event",
                                 "exclusionTag":         "exlude_from_calendar" 
@@ -101,7 +102,6 @@
     },
 
     "matomo":{
-        "urlx":      "https://place-making-matomo.jointech.dev",
         "url":      "https://matomo.mittendrin.in",
         "siteId":   "2"
     }

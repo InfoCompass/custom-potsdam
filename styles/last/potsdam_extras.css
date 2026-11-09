@@ -231,3 +231,6 @@ ic-item-full-edit h4.mandatory:after {
 	content:							'*';
 }
 
+ic-spinner .foreground {
+	background-image: 		--icon-interface-translate_robot;
+}
