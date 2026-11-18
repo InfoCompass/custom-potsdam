@@ -76,59 +76,60 @@
 		</h4>
 		<div ic-extend = "extendAi == 'ai'">
 			<textarea 
-				ng-model = "freeText"
+				ng-model = "ai.freeText"
 				placeholder = "{{'INTERFACE.AI_CONTENT_TO_ENTRY_PLACEHOLDER' | translate}}"
 			>
 			</textarea>
+
 			<p>{{'INTERFACE.AI_CONTENT_TO_ENTRY_DESCRIPTION' | translate}}</p>
 
 			<input id ="aifile" type = "file" name ="file"></input> 
 			
 			<div class ="tac">
-				<ic-spinner ng-if = "uploading" class = "large" active = "uploading"></ic-spinner>
-				<span ng-if = "!uploading && aiFileName && aiFileId" class ="icon icon-interface-save"></span>
-				<span ng-if = "!uploading && aiFileName && !aiFileId" class ="icon icon-interface-close"></span>
+				<ic-spinner ng-if = "ai.uploading" class = "large" active = "ai.uploading"></ic-spinner>
+				<span ng-if = "!ai.uploading && ai.fileName && ai.fileId" class ="icon icon-interface-save"></span>
+				<span ng-if = "!ai.uploading && ai.fileName && !ai.fileId" class ="icon icon-interface-close"></span>
 			</div>			
 
 			<div class = "controls">
 				<button 
-					ng-click 	= "fetchAiEntityData(freeText)"
+					ng-click 	= "fetchAiEntityData()"
 					class		= "border"
-					ng-class	= "{ 'prio': !aiEntryData }"
-					ng-disabled	= "!(freeText.trim() || aiFileId) || waitingForAiResponse"
+					ng-class	= "{ 'prio': !ai.entryData }"
+					ng-disabled	= "!(ai.freeText.trim() || ai.fileId) || ai.waitingForResponse"
 				>
 					<span>{{'INTERFACE.AI_GET_ENTRY_DATA'  | translate}}</span>
 					&nbsp;
 					<span 
 						class		= "icon" 
-						ng-class 	= "{ 'icon-interface-save' : aiEntryData, 'icon-interface-new': !aiEntryData }"
+						ng-class 	= "{ 'icon-interface-save' : ai.entryData, 'icon-interface-new': !ai.entryData }"
 					></span>
 				</button>
 
 				<div>
-					<ic-spinner class = "large" active = "waitingForAiResponse"></ic-spinner>
+					<ic-spinner class = "large" active = "ai.waitingForResponse"></ic-spinner>
 				</div>
 
 				<button
 					class		= "border"
-					ng-class	= "{ 'prio': !aiDataImported && aiEntryData}"
+					ng-class	= "{ 'prio': !ai.dataImported && ai.entryData}"
 					ng-click	= "importAiEntry()"
-					ng-disabled = "!aiEntryData"
+					ng-disabled = "!ai.entryData"
 				>
 					<span>{{'INTERFACE.AI_IMPORT_ENTRY_DATA'  | translate}}</span>
 					&nbsp;
 					<span 
 						class		= "icon" 
-						ng-class 	= "{ 'icon-interface-save' : aiDataImported, 'icon-interface-new': !aiDataImported }"
+						ng-class 	= "{ 'icon-interface-save' : ai.dataImported, 'icon-interface-new': !ai.dataImported }"
 					></span>
 				</button>
 			</div>
 
 			<p 
-				ng-if = "aiRemarks"
+				ng-if = "ai.remarks"
 				style = "white-space: pre-line;"
 			>
-				{{aiRemarks}}
+				{{ai.remarks}}
 			</p>
 
 			</div>
