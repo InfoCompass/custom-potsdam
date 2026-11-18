@@ -82,12 +82,20 @@
 			</textarea>
 			<p>{{'INTERFACE.AI_CONTENT_TO_ENTRY_DESCRIPTION' | translate}}</p>
 
+			<input id ="aifile" type = "file" name ="file"></input> 
+			
+			<div class ="tac">
+				<ic-spinner ng-if = "uploading" class = "large" active = "uploading"></ic-spinner>
+				<span ng-if = "!uploading && aiFileName && aiFileId" class ="icon icon-interface-save"></span>
+				<span ng-if = "!uploading && aiFileName && !aiFileId" class ="icon icon-interface-close"></span>
+			</div>			
+
 			<div class = "controls">
 				<button 
 					ng-click 	= "fetchAiEntityData(freeText)"
 					class		= "border"
 					ng-class	= "{ 'prio': !aiEntryData }"
-					ng-disabled	= "!freeText.trim() || waitingForAiResponse"
+					ng-disabled	= "!(freeText.trim() || aiFileId) || waitingForAiResponse"
 				>
 					<span>{{'INTERFACE.AI_GET_ENTRY_DATA'  | translate}}</span>
 					&nbsp;
